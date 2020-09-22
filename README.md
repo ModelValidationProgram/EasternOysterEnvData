@@ -6,6 +6,10 @@
 
 - [Google drive for environmental data](https://drive.google.com/drive/folders/1DPGnsGSdGTwVbHA_YD-h6j0ddkx7jg1w)
 
+- [List of populations and data source for each population](https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit?pli=1#gid=488191574) Ultimately this is the table we want to fill in
+
+- [List of datasources and what filters were applied, data cleaning](https://docs.google.com/spreadsheets/d/1ySYfxii6Z8q7BmNCyhmOYNfLbcpDIpsFER24YW5m08M/edit#gid=1467712745)
+
 # What we want to calculate for each dataset
 
 ### Apply filters
