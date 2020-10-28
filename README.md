@@ -35,3 +35,26 @@ NERR data:
 * Mean_max_Salinity_ppt : average of (maximums for each year)
 * Salinity_n: number of datapoints
 * Salinity_years: number of years
+
+
+
+## 2020_10_28
+
+Things left to do:
+
+Map for each locations and/or a single map with all locations
+* some locations have their map with populations and datasources
+
+Email Dina with questions
+
+In tables, check
+* N_all...
+* Should calculate stdDev for other parameters (mean_yearly_max, dd_15, etc)?
+* Include data range and resolution for all tables (some already have, some are missing)
+
+Add datafile names to each notebook
+
+Make a big table with all data
+
+Talk with Katie about pros/cons about considering whole years
+
