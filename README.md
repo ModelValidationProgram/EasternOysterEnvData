@@ -58,3 +58,4 @@ Make a big table with all data
 
 Talk with Katie about pros/cons about considering whole years
 
+Is it useful to see data availability per year/month? I included this for some populations but not all.
