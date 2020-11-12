@@ -15,7 +15,7 @@ NERR_MARABWQ is ok for both temperature and salinity; both temp and sal have bee
 | Parameter             | Temp C NERR MARABWQ Flag-filtered | Sal ppt NERR MARABWQ Flag-filtered |
 | ----------------------| :-------------------------------: | :--------------------------------: |
 | N_all_datapoints      |              373291               |                 350150             |
-| Mean_all_datapoints   |               23.1                |                   8.1              |
+| Mean_all_datapoints   |               23.1                |                  28.1              |
 | StdDev_all_datapoints |               6.2                 |                  7.2               |
 | N_years               |               13                  |                   13               |
 | Mean_yearly_max       |               31.7                |                   38.0             |
@@ -35,6 +35,6 @@ Temp: TX_PM_LM_High_W_Temp.xlsx
 Sal: TX_PM_LM_High_W_Sal.xlsx
 
 
-## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question) (simple plots made in excel).
+## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
 ![TX_PM_LM_High_W_summary_plots](../img/TX_PM_LM_High_W_summary_plots.png)
