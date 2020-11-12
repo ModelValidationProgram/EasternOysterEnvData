@@ -39,7 +39,7 @@ Temp: VA_CB_HC_Med_W_Temp.xlsx
 
 Sal: VA_CB_HC_Med_W_Sal.xlsx
 
-## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question) (simple plots made in excel).
+## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
 ![VA_CB_HC_Med_W_summary_plots](../img/VA_CB_HC_Med_W_summary_plots.png)
 
