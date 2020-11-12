@@ -37,4 +37,4 @@ Sal: TX_PM_LM_High_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
-![TX_PM_LM_High_W_summary_plots](../img/TX_PM_LM_High_W_summary_plots.png)
+![TX_PM_LM_High_W_summary_plots](../img/TX_PM_LM_High_W_summary_plots.PNG)
