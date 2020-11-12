@@ -12,19 +12,19 @@ NERR_MARABWQ is ok for both temperature and salinity; both temp and sal have bee
 
 ## Summary table:
 
-| Parameter             | Temp C NERR MARABWQ Flag-filtered | Sal C NERR MARABWQ Flag-filtered |
-| ----------------------| :-------------------------------: | :------------------------------: |
-| N_all_datapoints      |              373291               |               350150             |
-| Mean_all_datapoints   |               23.1                |                28.1              |
-| StdDev_all_datapoints |               6.2                 |                7.2               |
-| N_years               |               13                  |                 13               |
-| Mean_yearly_max       |               31.7                |                 38.0             |
-| StdDev_yearly_max     |                0.3                |                 2.9              |
-| Mean_yearly_min       |               9.6                 |               15.5               |
-| StdDev_yearly_min     |                2.3                |                7.1               |
+| Parameter             | Temp C NERR MARABWQ Flag-filtered | Sal ppt NERR MARABWQ Flag-filtered |
+| ----------------------| :-------------------------------: | :--------------------------------: |
+| N_all_datapoints      |              373291               |                 350150             |
+| Mean_all_datapoints   |               23.1                |                   8.1              |
+| StdDev_all_datapoints |               6.2                 |                  7.2               |
+| N_years               |               13                  |                   13               |
+| Mean_yearly_max       |               31.7                |                   38.0             |
+| StdDev_yearly_max     |                0.3                |                   2.9              |
+| Mean_yearly_min       |               9.6                 |                 15.5               |
+| StdDev_yearly_min     |                2.3                |                  7.1               |
 | Data range            |Apr 2007 to Aug 2020 missing Sep 2017 to Jan 2019|Apr 2007 to Aug 2020 missing Sep 2017 to Jan 2019|
-| Data frequency        |           every 15 min            |               every 15 min       |
-| Missing winter        |            FALSE                  |                FALSE             |
+| Data frequency        |           every 15 min            |                 every 15 min       |
+| Missing winter        |            FALSE                  |                  FALSE             |
 
 ## Data source and filenames:
 
