@@ -42,4 +42,4 @@ Sal: LA_GI_CL_High_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
-![LA_GI_CL_High_W_summary_plots](../img/LA_GI_CL_High_W_summary_plots.PNG)
+![LA_GI_CL_High_W_summary_plots](../img/LA_GI_CL_High_W_summary_plots.png)
