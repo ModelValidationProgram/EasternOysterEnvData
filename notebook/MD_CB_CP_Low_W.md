@@ -39,4 +39,7 @@ Temp: MD_CB_CP_Low_W_Temp_Sal.xlsx
 
 Sal: MD_CB_CP_Low_W_Temp_Sal.xlsx
 
+## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
+
+![MD_CB_CP_Low_W_summary_plots](../img/MD_CB_CP_Low_W_summary_plots.png)
 
