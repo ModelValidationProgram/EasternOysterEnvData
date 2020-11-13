@@ -33,8 +33,13 @@ Data is given as Daily Mean, Max and Min; in the table below:
 
 ## Data source and filenames:
 
-Website: https://waterdata.usgs.gov/la/nwis/uv?site_no=08017118
+Website: https://waterdata.usgs.gov/la/nwis/uv?site_no=08017118 (temp and sal)
 
 Temp: LA_GI_CL_High_W_Temp.xlsx
 
 Sal: LA_GI_CL_High_W_Sal.xlsx
+
+
+## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
+
+![LA_GI_CL_High_W_summary_plots](../img/LA_GI_CL_High_W_summary_plots.PNG)
