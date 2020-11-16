@@ -11,9 +11,11 @@ https://www.google.com/maps/d/edit?mid=1KyIL7K8RPJjthwQmd2DkPyaIniMr3Tk5&ll=39.4
 
 ## Summary notes:
 
-- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-29 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below.
+- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-29 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below; URI data given at 30 min intervals Jun 2012-Nov2015 & Ship J Shoal data given hourly, Jan 2002-Nov2019.
 
-- Sal: from the 2020-10-29 meeting notes, I understood we should use the salinity calculated from conductivity data from the primary source (URI) - this is what is presented in the Summary table below. Let me know if I misunderstood the meeting notes, and if I was supposed to compare/combine salinity URI with salinity Ship J Shoal instead.
+- Sal: Primary source only, data available is conductivity, I calculated salinity from conductivity and temperature. Data given in 30 min intervals, May 2013-Nov2015, missing winters.
+
+> Sal: from the 2020-10-29 meeting notes, I understood we should use the salinity calculated from conductivity data from the primary source (URI) - this is what is presented in the Summary table below. Let me know if I misunderstood the meeting notes, and if I was supposed to compare/combine salinity URI with salinity Ship J Shoal instead.
 
 ## Summary table:
 
