@@ -8,7 +8,7 @@ Lat/long for Hog Island is not listed by Erin but is in the datafile so I assume
 
 Lat/long for Upper Damaricotta and dockdata are listed by Erin but does not say if exact or approximate.
 
-https://www.google.com/maps/d/edit?mid=1OiSklGJLcWVodJQ1RF-YQ6gr1y6NxpIh&ll=44.18825219512222%2C-69.11313829785156&z=10
+https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.97459732790813%2C-69.55995300000001&z=12
 
 ## Summary notes:
 
@@ -34,7 +34,7 @@ https://www.google.com/maps/d/edit?mid=1OiSklGJLcWVodJQ1RF-YQ6gr1y6NxpIh&ll=44.1
 | StdDev_yearly_max     |                   3.8             |                    0.7            |
 | Mean_yearly_min       |                    1.6            |                    18.8           |
 | StdDev_yearly_min     |                   4.7             |                     5.4           |
-| Data range            |  1990-2020 but see summary notes  |  1990-2019 but see summary notes  |
+| Data range            |1990 to 2020 but see summary notes |1990 to 2019 but see summary notes |
 | Data frequency        |hourly to monthly see summary notes|hourly to monthly see summary notes|
 | Missing winter        |    FALSE but see summary notes    |      FALSE but see summary notes  |
 
