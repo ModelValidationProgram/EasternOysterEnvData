@@ -18,7 +18,7 @@ https://www.google.com/maps/d/edit?mid=1nn3dDjEdRucUUBBNbLN-0jViRpSoG33U&ll=39.0
 
 | Parameter             | Temp C NOAA blip-removed  |          Sal ppt           |
 | ----------------------| :-----------------------: | :------------------------: |
-| N_all_datapoints      |           168903          |             NA             |
+| N_all_datapoints      |           168705          |             NA             |
 | Mean_all_datapoints   |            14.5           |             NA             |
 | StdDev_all_datapoints |             7.7           |             NA             |
 | N_years               |             22            |             NA             |
@@ -39,4 +39,7 @@ Temp: NJ_DB_CS_Med_W_Temp.xlsx
 
 Sal: NA
 
+## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
+
+![NJ_DB_CS_Med_W_summary_plots](../img/NJ_DB_CS_Med_W_summary_plots.png)
 
