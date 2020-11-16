@@ -59,3 +59,27 @@ Make a big table with all data
 Talk with Katie about pros/cons about considering whole years
 
 Is it useful to see data availability per year/month? I included this for some populations but not all.
+
+## 2020_11_16
+
+**Notebook entries labelled chronologically have info regarging the following populations:**
+
+2020_09_25 VA_CB_HC_Med_W
+
+2020_09_29 TX_PM_LM_High_W
+
+2020_10_01 LA_GI_CL_High_W
+
+2020_10_06 LA_CL_SL_Low_W
+
+2020_10_07 MD_CB_CP_Low_W
+
+2020_10_13 NJ_DB_CS_Med_W
+
+2020_10_16 NJ_DB_HC_Low_W
+
+2020_10_20 ME_DR_HI_High_W & ME_SR_SM_Low_W
+
+2020_10_26 
+
+2020_10_27
