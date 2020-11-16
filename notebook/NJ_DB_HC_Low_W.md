@@ -27,7 +27,9 @@ https://www.google.com/maps/d/edit?mid=1KyIL7K8RPJjthwQmd2DkPyaIniMr3Tk5&ll=39.4
 | StdDev_yearly_max |                     5.3            |                       2.2                      |
 | Mean_yearly_min   |                   1.7              |                       1.3                      |
 | StdDev_yearly_min |                   3.9              |                        1.5                     |
-
+| Data range        | Jun 2012 to Nov 2015 Jan 2002 to Nov 2019|        May 2013 to Nov 2015              |
+| Data frequency    |       30 min to hourly intervals   |             30 min intervals                   |
+| Missing winter    |         FALSE                      |                      TRUE                      |
 
 ## Data source and filename:
 
