@@ -80,6 +80,6 @@ Is it useful to see data availability per year/month? I included this for some p
 
 2020_10_20 ME_DR_HI_High_W & ME_SR_SM_Low_W
 
-2020_10_26 
+2020_10_26 NC_WI_HC_High_W & NC_PC_CH_Low_W
 
-2020_10_27
+2020_10_27 NY_LI_L_High_W & NY_LI_CM_High_W
