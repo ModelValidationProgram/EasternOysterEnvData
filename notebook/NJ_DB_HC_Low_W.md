@@ -11,7 +11,9 @@ https://www.google.com/maps/d/edit?mid=1KyIL7K8RPJjthwQmd2DkPyaIniMr3Tk5&ll=39.4
 
 ## Summary notes:
 
-- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-29 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below; URI data given at 30 min intervals Jun 2012-Nov2015 & Ship J Shoal data given hourly, Jan 2002-Nov2019.
+- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-29 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below; URI data given at 30 min intervals Jun 2012-Nov2015 & Ship J Shoal data given hourly, Jan 2002-Nov2019. 
+
+> Two datasources overlap Jun 2012-Nov 2015, URI is missing winters.
 
 - Sal: Primary source only, data available is conductivity, I calculated salinity from conductivity and temperature. Data given in 30 min intervals, May 2013-Nov2015, missing winters.
 
@@ -29,9 +31,9 @@ https://www.google.com/maps/d/edit?mid=1KyIL7K8RPJjthwQmd2DkPyaIniMr3Tk5&ll=39.4
 | StdDev_yearly_max |                     5.3            |                       2.2                      |
 | Mean_yearly_min   |                   1.7              |                       1.3                      |
 | StdDev_yearly_min |                   3.9              |                        1.5                     |
-| Data range        | Jun 2012 to Nov 2015 Jan 2002 to Nov 2019|        May 2013 to Nov 2015              |
+| Data range        |Jan 2002 to Nov 2019 but see summary notes|        May 2013 to Nov 2015              |
 | Data frequency    |       30 min to hourly intervals   |             30 min intervals                   |
-| Missing winter    |         FALSE                      |                      TRUE                      |
+| Missing winter    |   FALSE but see summary notes      |                      TRUE                      |
 
 ## Data source and filename:
 
