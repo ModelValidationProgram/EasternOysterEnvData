@@ -16,19 +16,19 @@ https://www.google.com/maps/d/edit?mid=1nn3dDjEdRucUUBBNbLN-0jViRpSoG33U&ll=39.0
 
 ## Summary table:
 
-| Parameter             | Temp C NOAA blip-removed  |          Sal ppt           |
-| ----------------------| :-----------------------: | :------------------------: |
-| N_all_datapoints      |           168705          |             NA             |
-| Mean_all_datapoints   |            14.5           |             NA             |
-| StdDev_all_datapoints |             7.7           |             NA             |
-| N_years               |             22            |             NA             |
-| Mean_yearly_max       |             27.2          |             NA             |
-| StdDev_yearly_max     |             1.1           |             NA             |
-| Mean_yearly_min       |             0.6           |             NA             |
-| StdDev_yearly_min     |             2.4           |             NA             |
+| Parameter             | Temp C NOAA 8536110 blip-removed |          Sal ppt           |
+| ----------------------| :------------------------------: | :------------------------: |
+| N_all_datapoints      |                168705            |             NA             |
+| Mean_all_datapoints   |                   14.5           |             NA             |
+| StdDev_all_datapoints |                     7.7          |             NA             |
+| N_years               |                    22            |             NA             |
+| Mean_yearly_max       |                    27.2          |             NA             |
+| StdDev_yearly_max     |                    1.1           |             NA             |
+| Mean_yearly_min       |                    0.6           |             NA             |
+| StdDev_yearly_min     |                    2.4           |             NA             |
 | Data range            |May 1997 to Aug 2010, Mar 2011 to Jul 2014, Mar 2017 to Apr 2018, Aug 2018 to Oct 2020|    NA    |
-| Data frequency        |            hourly         |             NA             |
-| Missing winter        |            FALSE          |             NA             |
+| Data frequency        |                   hourly         |             NA             |
+| Missing winter        |                   FALSE          |             NA             |
 
 
 ## Data source and filenames:
