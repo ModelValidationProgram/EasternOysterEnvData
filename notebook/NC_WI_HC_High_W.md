@@ -2,7 +2,7 @@
 
 ## Map:
 
-Lat/long for this population are exact; 
+Lat/long for this population are exact.
 
 Lat/long for the datasource (same source for temp and sal) are also exact.
 
@@ -14,24 +14,25 @@ Using CMSDOCK all years for both temp and sal
 
 > Data quality not evaluated by provider - I deleted "-6999" values, seemed like code for missing data in the temperature dataset; and I deleted zeros in the salinity dataset.
 
+Only one whole year - 
 2018 data begins in November
 2020 up until October (can probably retrieve more).
 
 ## Summary table:
 
-| Parameter             | Temp C CMSDOCK  | Sal ppt CMSDOCK |
-| ----------------------| :-------------: | :-------------: |
-| N_all_datapoints      |       618878    |       61931     |
-| Mean_all_datapoints   |       19.8      |       27.4      |
-| StdDev_all_datapoints |       7.0       |       4.5       |
-| N_years               |        3        |        3        |
-| Mean_yearly_max       |      27.5       |     35.6        |
-| StdDev_yearly_max     |       9.3       |       1.2       |
-| Mean_yearly_min       |        6.6      |       12.5      |
-| StdDev_yearly_min     |       1.4       |       1.4       |
-| Data range            |   2018-2020     |  2018-2020      |
-| Data frequency        | 15 min intervals| 15 min intervals|
-| Missing winter        |FALSE but see summary notes|FALSE but see summary notes|
+| Parameter             |  Temp C CMSDOCK  | Sal ppt CMSDOCK  |
+| ----------------------| :--------------: | :--------------: |
+| N_all_datapoints      |        618878    |       61930      |
+| Mean_all_datapoints   |        19.8      |       27.4       |
+| StdDev_all_datapoints |        7.0       |       4.5        |
+| N_years               |         3        |        3         |
+| Mean_yearly_max       |       27.5       |     35.6         |
+| StdDev_yearly_max     |        9.3       |       1.2        |
+| Mean_yearly_min       |         6.6      |       12.5       |
+| StdDev_yearly_min     |        1.4       |       1.4        |
+| Data range            |Nov2018 to Oct2020|Nov2018 to Oct2020|
+| Data frequency        |  15 min intervals| 15 min intervals |
+| Missing winter        |       FALSE      |      FALSEy notes|
 
 ## Datasources and filenames:
 
