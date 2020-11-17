@@ -10,6 +10,8 @@ https://www.google.com/maps/d/edit?mid=1UHAc9v-VUwsR3XSjI2Ifod2rbY6d_gOh&ll=40.9
 
 ## Summary notes:
 
+**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so summary notes are the same.**
+
 Temp: datasource is NOAA "National data Buoy center 44040 Western Long Island Sound";
 - temperature data available hourly for years 2004 and 2005 (confirmed by checking the source website); 
 - 2004 is missing Oct9-Dec14; 
@@ -20,6 +22,8 @@ Sal: data source is "Save the Sound" https://www.savethesound.org/water-monitori
 Our meeting notes are confusing me re salinity - it says to label this site as "High" but also that we did not trust the salinity data and should call it NA. I did both but seems contradictory now, **ask Katie**.
 
 ## Summary table:
+
+**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so summary table is the same.**
 
 | Parameter             | Temp C NOAA NDBC 44040  |      Sal ppt    |
 | ----------------------| :---------------------: | :-------------: |
@@ -37,6 +41,8 @@ Our meeting notes are confusing me re salinity - it says to label this site as "
 
 
 ## Datasources and filenames:
+
+**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so datasource, content of datafiles and plots below are the same.**
 
 Website: https://www.ndbc.noaa.gov/station_page.php?station=44040 (temp only); NA for salinity.
 
