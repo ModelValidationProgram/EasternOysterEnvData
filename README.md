@@ -4,7 +4,7 @@
 - [old repo, previous analysis done by Erin](https://github.com/MarineEvoEcoLab/OysterGenomeProject/tree/master/popstructureOutliers/data/environment)
 - some issues with data used; some issues with not filtering out bad data
 
-- [Google drive for environmental data](https://drive.google.com/drive/folders/1DPGnsGSdGTwVbHA_YD-h6j0ddkx7jg1w)
+- [Google drive for final environmental data by thais](https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL?usp=sharing)
 
 - [List of populations and data source for each population](https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit?pli=1#gid=488191574) Ultimately this is the table we want to fill in. See this table for potential data sources for each population.
   - Skip the selection line populations - populations whose name ends in an "S"
