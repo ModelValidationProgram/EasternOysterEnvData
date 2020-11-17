@@ -14,31 +14,31 @@ Temp: combined USGS Croatan (station ID: 0208117950) all yrs and NOAA Orin7 all 
 
 Sal: use USGS Croatan station (ID: 0208117950) all years.
 
-USGS data - only using data flagged as "A" (approved); all data were "A" for the Croatan station but there were some blips that I deleted; 
+USGS data
+- only using data flagged as "A" (approved); all data were "A" for the Croatan station but there were some blips that I deleted; 
+- data range 1990-93; data given as daily max, min and mean. Elevation = 5 for temp and 10 for salinity (I don't know what that means). 
+- some months are missing data.
 
-Data range 1990-93; data given as daily max, min and mean. Elevation = 5 for temp and 10 for salinity (I don't know what that means). 
+NOAA data 
+- data range 2005-19; data given as 9 readings per hour which was too much for excel to handle so I extracted hourly data.
 
-Some months are missing data.
-
-NOAA data - data range 2005-19; data given as 9 readings per hour which was too much for excel to handle so I extracted hourly data.
-
-To make the merged spreadsheet, I copied and pasted the hourly data under the columns max, mean and min.
+To make the combined spreadsheet, I copied and pasted the hourly data from Orin7 under the columns max, mean and min from USGS.
 
 ## Summary table:
 
-| Parameter             | Temp C Croatan & Orin7| Sal ppt Croatan |
-| ----------------------| :-------------------: | :-------------: |
-| N_all_datapoints      |       120371          |        944      |
-| Mean_all_datapoints   |         18.3          |        7.2      |
-| StdDev_all_datapoints |          7.7          |        5.1      |
-| N_years               |          19           |        4        |
-| Mean_yearly_max       |          31.6         |        23.8     |
-| StdDev_yearly_max     |          0.8          |        3.1      |
-| Mean_yearly_min       |          1.9          |          0.9    |
-| StdDev_yearly_min     |          1.5          |          0.5    |
+| Parameter             | Temp C USGS Croatan & Orin7 combined| Sal ppt Croatan |
+| ----------------------| :---------------------------------: | :-------------: |
+| N_all_datapoints      |                     120371          |        944      |
+| Mean_all_datapoints   |                       18.3          |        7.2      |
+| StdDev_all_datapoints |                        7.7          |        5.1      |
+| N_years               |                        19           |        4        |
+| Mean_yearly_max       |                        31.6         |        23.8     |
+| StdDev_yearly_max     |                        0.8          |        3.1      |
+| Mean_yearly_min       |                        1.9          |          0.9    |
+| StdDev_yearly_min     |                        1.5          |          0.5    |
 | Data range            | Jan1990 to Jul1993 and Jan2005 to Dec2019   | Jan1990 to Jul1993 |
 | Data frequency        |daily max min mean or houly see summary notes| daily max min mean |
-| Missing winter        |         FALSE         | FALSE but some months missing |
+| Missing winter        |                       FALSE         | FALSE but some months missing |
 
 ## Datasources and filenames:
 
