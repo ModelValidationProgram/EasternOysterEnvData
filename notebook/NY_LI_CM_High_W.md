@@ -36,7 +36,7 @@ Our meeting notes are confusing me re salinity - it says to label this site as "
 
 ## Datasources and filenames:
 
-*Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so summary datasources and content of datafile is the same.*
+**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so summary datasources and content of datafile and plots below are the same.**
 
 Website: https://www.ndbc.noaa.gov/station_page.php?station=44040 (temp only); NA for salinity.
 
