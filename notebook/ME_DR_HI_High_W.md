@@ -43,9 +43,9 @@ https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.9
 
 Website: NA
 
-Temp: ME_DR_HI_High_W_temp.xlsx
+Temp: ME_DR_HI_High_W_Temp.xlsx
 
-Sal: ME_DR_HI_High_W_sal.xlsx
+Sal: ME_DR_HI_High_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
