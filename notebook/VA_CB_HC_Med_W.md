@@ -1,9 +1,9 @@
-## Pop ID: VA_CB_HC_Med_W
+## Pop ID: VA_CB_HC_High_W
 
 ## Map:
 
 Lat/long for population is approximate, this is Erin's note on it: *APPROXIMATE- picture of the sampling site on a map was provided by Jess. Lat and Long approximate by Erin on google maps using this. I checked it today and got a slightly more accurate number based on the map provided.*
-Lat/long for environmental data temp is exact and for sal it is the same as the populations lat/long.
+Lat/long for environmental data temp is exact and for sal it is the same as the population's lat/long.
 
 https://www.google.com/maps/d/edit?mid=1ggc_n7JouNgYYtTQXOugT8_ILX3KdCen&ll=37.52139233253085%2C-76.02792199999999&z=9
 
@@ -35,13 +35,13 @@ VIMS_Sonde_Marker_119 is ok for salinity; sal data has not been through any qual
 
 Website: http://cdmo.baruch.sc.edu/dges/ (temperature only); NA for salinity.
 
-Temp: VA_CB_HC_Med_W_Temp.xlsx
+Temp: VA_CB_HC_High_W_Temp.xlsx
 
-Sal: VA_CB_HC_Med_W_Sal.xlsx
+Sal: VA_CB_HC_High_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
-![VA_CB_HC_Med_W_summary_plots](../img/VA_CB_HC_Med_W_summary_plots.png)
+![VA_CB_HC_High_W_summary_plots](../img/VA_CB_HC_Med_W_summary_plots.png)
 
 
 
