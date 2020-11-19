@@ -38,7 +38,7 @@ To make the combined spreadsheet, I copied and pasted the hourly data from Orin7
 | StdDev_yearly_min     |                        1.5          |          0.5    |
 | Data range            |Jan 1990 to Jul 1993 and Jan 2005 to Dec 2019| Jan 1990 to Jul 1993 |
 | Data frequency        |daily max min mean or houly see summary notes| daily max min mean   |
-| Missing winter        |                       FALSE         |FALSE but some months missing |
+| Missing winter        |                       FALSE         |       FALSE     |
 
 ## Datasources and filenames:
 
