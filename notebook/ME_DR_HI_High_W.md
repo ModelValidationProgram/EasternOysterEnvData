@@ -34,7 +34,7 @@ https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.9
 | StdDev_yearly_max     |                   3.8             |                    0.7            |
 | Mean_yearly_min       |                    1.6            |                    18.8           |
 | StdDev_yearly_min     |                   4.7             |                     5.4           |
-| Data range            |1990 to 2020 but see summary notes |1990 to 2019 but see summary notes |
+| Data range            |Jul 1990 to Mar 2020 but see summary notes |Jul 1990 to Nov 2019 but see summary notes |
 | Data frequency        |hourly to monthly see summary notes|hourly to monthly see summary notes|
 | Missing winter        |    FALSE but see summary notes    |      FALSE but see summary notes  |
 
