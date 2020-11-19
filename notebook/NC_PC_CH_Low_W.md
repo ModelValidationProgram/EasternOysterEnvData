@@ -44,9 +44,9 @@ To make the combined spreadsheet, I copied and pasted the hourly data from Orin7
 
 Website: USGS Croatan temp and sal https://waterdata.usgs.gov/nc/nwis/dv/?referred_module=qw&site_no=0208117950 NOAA temp https://www.ndbc.noaa.gov/station_page.php?station=orin7
 
-Temp: NC_PC_CH_Low_W_temp.xlsx
+Temp: NC_PC_CH_Low_W_Temp.xlsx
 
-Sal: NC_PC_CH_Low_W_sal.xlsx
+Sal: NC_PC_CH_Low_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
