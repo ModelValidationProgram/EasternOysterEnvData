@@ -28,7 +28,7 @@ https://www.google.com/maps/d/edit?mid=1bDW7P9ApuPxG8zARjNX5EMrpzYmVWOmT&ll=44.1
 | StdDev_yearly_max     |                 6.1            |             NA         |
 | Mean_yearly_min       |                1.5             |             NA         |
 | StdDev_yearly_min     |                 3.3            |             NA         |
-| Data range            |  1991 to 2017 see summary notes|                   NA   |
+| Data range            |Mar 1991 to Jul 2017 see summary notes|                   NA   |
 | Data frequency        |monthly to 15min intervals see summary notes|       NA   |
 | Missing winter        |     FALSE but see summary notes|                   NA   |
 
