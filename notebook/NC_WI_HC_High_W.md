@@ -20,19 +20,19 @@ Only one whole year -
 
 ## Summary table:
 
-| Parameter             |  Temp C CMSDOCK  | Sal ppt CMSDOCK  |
-| ----------------------| :--------------: | :--------------: |
-| N_all_datapoints      |        618878    |       61930      |
-| Mean_all_datapoints   |        19.8      |       27.4       |
-| StdDev_all_datapoints |        7.0       |       4.5        |
-| N_years               |         3        |        3         |
-| Mean_yearly_max       |       27.5       |     35.6         |
-| StdDev_yearly_max     |        9.3       |       1.2        |
-| Mean_yearly_min       |         6.6      |       12.5       |
-| StdDev_yearly_min     |        1.4       |       1.4        |
-| Data range            |Nov2018 to Oct2020|Nov2018 to Oct2020|
-| Data frequency        |  15 min intervals| 15 min intervals |
-| Missing winter        |       FALSE      |      FALSEy notes|
+| Parameter             |  Temp C CMSDOCK    | Sal ppt CMSDOCK    |
+| ----------------------| :----------------: | :----------------: |
+| N_all_datapoints      |        618878      |       61930        |
+| Mean_all_datapoints   |        19.8        |       27.4         |
+| StdDev_all_datapoints |        7.0         |       4.5          |
+| N_years               |         3          |        3           |
+| Mean_yearly_max       |       27.5         |     35.6           |
+| StdDev_yearly_max     |        9.3         |       1.2          |
+| Mean_yearly_min       |         6.6        |       12.5         |
+| StdDev_yearly_min     |        1.4         |       1.4          |
+| Data range            |Nov 2018 to Oct 2020|Nov 2018 to Oct 2020|
+| Data frequency        |  15 min intervals  | 15 min intervals   |
+| Missing winter        |       FALSE        |      FALSE         |
 
 ## Datasources and filenames:
 
