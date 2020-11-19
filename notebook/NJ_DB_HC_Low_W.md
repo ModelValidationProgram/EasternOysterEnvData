@@ -11,7 +11,7 @@ https://www.google.com/maps/d/edit?mid=1KyIL7K8RPJjthwQmd2DkPyaIniMr3Tk5&ll=39.4
 
 ## Summary notes:
 
-- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-29 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below; URI data given at 30 min intervals Jun 2012-Nov2015 & Ship J Shoal data given hourly, Jan 2002-Nov2019. 
+- Temp: I compared primary source (URI) with Ship J Shoal (cleaned up a bit, see notes on 2020-10-16 entry) (see KEL and TB notes from meeting on 2020-10-29) and combined them in the Summary table presented below; URI data given at 30 min intervals Jun 2012-Nov2015 & Ship J Shoal data given hourly, Jan 2002-Nov2019. 
 
 > Two datasources overlap Jun 2012-Nov 2015, URI is missing winters.
 
