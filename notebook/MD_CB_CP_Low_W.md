@@ -35,9 +35,9 @@ No flags or data quality control in this file, and units are assumed (C and ppt/
 
 Website: NA
 
-Temp: MD_CB_CP_Low_W_Temp_Sal.xlsx
+Temp: MD_CB_CP_Low_W_Temp.xlsx
 
-Sal: MD_CB_CP_Low_W_Temp_Sal.xlsx
+Sal: MD_CB_CP_Low_W_Sal.xlsx
 
 ## Plots: all data over time and data availability per month per year (this helps visualize the 'missing winter' question and other gaps in data) (simple plots made in excel).
 
