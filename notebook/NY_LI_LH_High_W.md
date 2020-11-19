@@ -35,7 +35,7 @@ Our meeting notes are confusing me re salinity - it says to label this site as "
 | StdDev_yearly_max     |            1.0          |       NA        |
 | Mean_yearly_min       |            0.0          |       NA        |
 | StdDev_yearly_min     |            0.0          |       NA        |
-| Data range            |      2004 to 2005       |       NA        |
+| Data range            |   Jan 2004 to Nov 2005  |       NA        |
 | Data frequency        |hourly but missing some months|    NA      |
 | Missing winter        |  FALSE but see summary notes |    NA      |
 
