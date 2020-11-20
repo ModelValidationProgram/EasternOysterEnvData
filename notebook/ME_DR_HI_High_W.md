@@ -14,7 +14,7 @@ https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.9
 
 **Temp: combine from 3 sources: Robledo Hog Island (3 stations, pre-combined), Upper Damariscotta and DockData (all years).**
 
-**Sal: combine from 2 sources: Hog Island (3 stations, pre-combined) and Upper Damaricotta (all years - KEL notes says 'Hog Island whole years', but I think it's a typo and I used all years).**
+**Sal: combine from 2 sources: Robledo Hog Island (3 stations, pre-combined) and Upper Damaricotta (all years - KEL notes says 'Hog Island whole years', but I think it's a typo and I used all years).**
 
 - The overall data range is 1990-2020 and the datas sources overlap in 2015-2016.
 - Data frequency is different for each source: monthly for Hog Island, hourly for Upper Damariscotta and multiple times (but not daily or weekly) per month for DockData.
