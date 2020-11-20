@@ -2,7 +2,7 @@
 
 ## Map:
 
-Lat/long for this population is probably approximate, Erin's note says "give a site on land". 
+Lat/long for this population is probably approximate, Erin/Dina's note says "give a site on land". 
 
 Lat/long for datasources are exact (*and the same as for NY_LI_LH_High_W*).
 
