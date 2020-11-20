@@ -4,7 +4,7 @@
 
 Lat/long for this population - unclear whether exact or approximate; Erin/Dina's note says "farmer collected samples". 
 
-Lat/long for datasource are exact.
+Lat/long for datasource are exact (*an the same as for NY_LI_CM_High_W*).
 
 https://www.google.com/maps/d/edit?mid=1UHAc9v-VUwsR3XSjI2Ifod2rbY6d_gOh&ll=40.928845298385255%2C-73.53738506317139&z=13
 
