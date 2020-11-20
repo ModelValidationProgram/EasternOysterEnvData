@@ -16,7 +16,7 @@ https://www.google.com/maps/d/edit?mid=1nn3dDjEdRucUUBBNbLN-0jViRpSoG33U&ll=39.0
 
 ## Summary table:
 
-| Parameter             | Temp C NOAA T&C Cape May blip-removed |          Sal ppt           |
+| Parameter             |    Temp C NOAA Cape May blip-removed  |          Sal ppt           |
 | ----------------------| :-----------------------------------: | :------------------------: |
 | N_all_datapoints      |                168705                 |             NA             |
 | Mean_all_datapoints   |                   14.5                |             NA             |
