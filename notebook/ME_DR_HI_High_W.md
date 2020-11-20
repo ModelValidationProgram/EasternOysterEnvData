@@ -4,15 +4,15 @@
 
 Lat/long for this population is exact; 
 
-Lat/long for Hog Island is not listed by Erin but is in the datafile so I assume it is exact; 
+Lat/long for Robledo Hog Island is not listed by Erin/Dina but is in the datafile so I assume it is exact; 
 
-Lat/long for Upper Damaricotta and dockdata are listed by Erin but does not say if exact or approximate.
+Lat/long for Upper Damaricotta and dockdata are listed by Erin/Dina but does not say if exact or approximate.
 
 https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.97459732790813%2C-69.55995300000001&z=12
 
 ## Summary notes:
 
-**Temp: combine from 3 sources: Hog Island (3 stations, pre-combined), Upper Damariscotta and DockData (all years).**
+**Temp: combine from 3 sources: Robledo Hog Island (3 stations, pre-combined), Upper Damariscotta and DockData (all years).**
 
 **Sal: combine from 2 sources: Hog Island (3 stations, pre-combined) and Upper Damaricotta (all years - KEL notes says 'Hog Island whole years', but I think it's a typo and I used all years).**
 
