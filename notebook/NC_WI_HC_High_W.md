@@ -10,7 +10,7 @@ https://www.google.com/maps/d/edit?mid=1rEf7tvAZ_25XVQyKttSuM7aCJ4hmllf1&ll=34.1
 
 ## Summary notes:
 
-Using CMSDOCK all years for both temp and sal 
+Using University of North Carolina Wilmington, Coastal Oean Research and Monitoring Program, Station ID CMSDOCK all years for both temp and sal 
 
 > Data quality not evaluated by provider - I deleted "-6999" values, seemed like code for missing data in the temperature dataset; and I deleted zeros in the salinity dataset.
 
