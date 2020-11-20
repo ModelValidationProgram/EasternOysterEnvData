@@ -108,11 +108,11 @@ Map of all Wild Populations and their respective environmental data locations: h
 
 Thais entered Temp and Sal env data for Wild populations as well as their respective file names in the project data sheet EasternOysterSeascape Data https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit#gid=488191574
 
-Thais copied all files to https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL
+Thais copied all files to the google drive folder Site_Envi_Data_QC202011_Thais https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL
 
 The following populations do not have salinity data:
 
-NJ_DB_CS_Med_W
-ME_SR_SM_Low_W
-NY_LI_LH_High_W
-NY_LI_CM_High_W
+- NJ_DB_CS_Med_W
+- ME_SR_SM_Low_W
+- NY_LI_LH_High_W
+- NY_LI_CM_High_W
