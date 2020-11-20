@@ -2,7 +2,8 @@
 
 ## Map:
 
-Lat/long for population is approximate, this is Erin's note on it: *APPROXIMATE- picture of the sampling site on a map was provided by Jess. Lat and Long approximate by Erin on google maps using this. I checked it today and got a slightly more accurate number based on the map provided.*
+Lat/long for population is approximate, this is Erin/Dinas's note on it: *APPROXIMATE- picture of the sampling site on a map was provided by Jess. Lat and Long approximate by Erin on google maps using this. I checked it today and got a slightly more accurate number based on the map provided.*
+
 Lat/long for environmental data temp is exact and for sal it is the same as the population's lat/long.
 
 https://www.google.com/maps/d/edit?mid=1ggc_n7JouNgYYtTQXOugT8_ILX3KdCen&ll=37.52139233253085%2C-76.02792199999999&z=9
