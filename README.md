@@ -100,3 +100,19 @@ Is it useful to see data availability per year/month? I included this for some p
 2020_10_26 NC_WI_HC_High_W & NC_PC_CH_Low_W
 
 2020_10_27 NY_LI_L_High_W & NY_LI_CM_High_W
+
+
+## 2020_11_20
+
+Map of all Wild Populations and their respective environmental data locations: https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing
+
+Thais entered Temp and Sal env data for Wild populations as well as their respective file names in the project data sheet EasternOysterSeascape Data https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit#gid=488191574
+
+Thais copied all files to https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL
+
+The following populations do not have salinity data:
+
+NJ_DB_CS_Med_W
+ME_SR_SM_Low_W
+NY_LI_LH_High_W
+NY_LI_CM_High_W
