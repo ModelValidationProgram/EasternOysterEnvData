@@ -4,7 +4,7 @@
 
 Lat/long for population is unknown so using lat/long of data sources. Erin/Dina's note: *APPROXIMATE-none provided by sampler, taken from USGS buoy 08017118 (where env data was collected)*
 
-https://www.google.com/maps/d/edit?mid=18h3Ke7K1dtPntCNleEkjDlioXjJ7L4mz&ll=29.86556595082024%2C-92.18845631068028&z=9
+https://www.google.com/maps/d/edit?mid=18h3Ke7K1dtPntCNleEkjDlioXjJ7L4mz&ll=29.675514823263715%2C-93.3485311319538&z=10
 
 ## Summary notes:
 
