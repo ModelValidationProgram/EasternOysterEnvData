@@ -19,7 +19,7 @@ Temp: datasource is NOAA National Data Buoy Center Station ID Western Long Islan
 
 Sal: data source is "Save the Sound" https://www.savethesound.org/water-monitoring-ecological-health 2018_UWS_Data.xlsx; I believe they requested the datafile over email because I don't see a place to download data on the website. Data available May-Oct 2018, two readings per month.
 
-Our meeting notes are confusing me re salinity - it says to label this site as "High" but also that we did not trust the salinity data and should call it NA. I did both (labelled as high but enter NA for sal) but seems contradictory now, **Katie knows**.
+Our meeting notes are confusing me re salinity - it says to label this site as "High" but also that we did not trust the salinity data and should call it NA. I did both (labelled as high but enter NA for sal) but seems contradictory now.
 
 ## Summary table:
 
@@ -42,7 +42,7 @@ Our meeting notes are confusing me re salinity - it says to label this site as "
 
 ## Datasources and filenames:
 
-**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so datasource, content of datafiles and plots below are the same.**
+**Environmental data for this population are exactly the same as for population NY_LI_CM_High_W; so datasource, content of datafiles and plots below are the same.**
 
 Website: https://www.ndbc.noaa.gov/station_page.php?station=44040 (temp only); NA for salinity.
 
