@@ -2,13 +2,13 @@
 
 ## Map: 
 
-Lat/long are exact for the population; unknown lat/long for datasource - but the datasource spreadsheet is named Horn Point, so I looked up lat/long for Horn Point MD and included in the map.
+Lat/long are exact for the population; Erin/Dina's notes says unknown lat/long for datasource Tobash Horn Point - but the datasource spreadsheet is named 'Horn Point', so I looked up lat/long for 'Horn Point MD' and included in the map.
 
 https://www.google.com/maps/d/edit?mid=1plve9DbTtR5RGaxtCvS84ZtysDWnR9Dq&ll=38.83014681588834%2C-76.28455825625495&z=11
 
 ## Summary notes:
 
-Steph Tobash Horn Point data 1997-2020 HPLOH_Sal_and_Temp.xlsl is the only datasource found for both temperature and salinity.
+Stephanie Tobash Horn Point data 1997-2020 (HPLOH_Sal_and_Temp.xlsl) is the only datasource listed by Erin/Dina for both temperature and salinity.
 
 Daily readings (or less frenquent) at random times (I wouldn't say they are daily means).
 
@@ -33,7 +33,7 @@ No flags or data quality control in this file, and units are assumed (C and ppt/
  
 ## Data source and filenames:
 
-Website: NA
+Website: NA; data file probably sent directly to Erin/Dina.
 
 Temp: MD_CB_CP_Low_W_Temp.xlsx
 
