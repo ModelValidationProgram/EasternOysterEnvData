@@ -24,19 +24,19 @@ https://www.google.com/maps/d/edit?mid=1MRZg_V-LkUdngEIVlnOvaQ94ACuZuobR&ll=43.9
 
 ## Summary table:
 
-| Parameter             | Temp C Hog UDamaris Dock combined |     Sal ppt Hog UDamaris combined |
-| ----------------------| :-------------------------------: | :-------------------------------: |
-| N_all_datapoints      |               20762               |                 19636             |
-| Mean_all_datapoints   |                  15.7             |                  29.9             |
-| StdDev_all_datapoints |                   5.3             |                   2.0             |
-| N_years               |                  31               |                    30             |
-| Mean_yearly_max       |                 22.4              |                    31.5           |
-| StdDev_yearly_max     |                   3.8             |                    0.7            |
-| Mean_yearly_min       |                    1.6            |                    18.8           |
-| StdDev_yearly_min     |                   4.7             |                     5.4           |
+| Parameter             | Temp C Hog UDamaris & Dock combined |   Sal ppt Hog & UDamaris combined |
+| ----------------------| :---------------------------------: | :-------------------------------: |
+| N_all_datapoints      |               20762                 |                 19636             |
+| Mean_all_datapoints   |                  15.7               |                  29.9             |
+| StdDev_all_datapoints |                   5.3               |                   2.0             |
+| N_years               |                  31                 |                    30             |
+| Mean_yearly_max       |                 22.4                |                    31.5           |
+| StdDev_yearly_max     |                   3.8               |                    0.7            |
+| Mean_yearly_min       |                    1.6              |                    18.8           |
+| StdDev_yearly_min     |                   4.7               |                     5.4           |
 | Data range            |Jul 1990 to Mar 2020 but see summary notes |Jul 1990 to Nov 2019 but see summary notes |
-| Data frequency        |hourly to monthly see summary notes|hourly to monthly see summary notes|
-| Missing winter        |    FALSE but see summary notes    |      FALSE but see summary notes  |
+| Data frequency        |hourly to monthly see summary notes  |hourly to monthly see summary notes|
+| Missing winter        |    FALSE but see summary notes      |      FALSE but see summary notes  |
 
 
 ## Datasources and filenames:
