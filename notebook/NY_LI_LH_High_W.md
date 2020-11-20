@@ -10,7 +10,7 @@ https://www.google.com/maps/d/edit?mid=1UHAc9v-VUwsR3XSjI2Ifod2rbY6d_gOh&ll=40.9
 
 ## Summary notes:
 
-**Environmental data for this population are exactly the same as for population NY_LI_LH_High_W; so summary notes are the same.**
+**Environmental data for this population are exactly the same as for population NY_LI_CM_High_W; so summary notes are the same.**
 
 Temp: datasource is NOAA National Data Buoy Center Station ID Western Long Island Sound #44040;
 - temperature data available hourly for years 2004 and 2005 (confirmed by checking the source website); 
