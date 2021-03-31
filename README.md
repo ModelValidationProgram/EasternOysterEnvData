@@ -6,10 +6,16 @@
 
 - [Google drive for final environmental data by thais](https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL?usp=sharing)
 
-- [List of populations and data source for each population](https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit?pli=1#gid=488191574) Ultimately this is the table we want to fill in. See this table for potential data sources for each population.
+- Filtered, clean environment data [Site_Envi_Data_QC202011_Thais](https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL)
+
+- [List of populations and data source for each population](https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit?pli=1#gid=488191574) 
+  - Entered by Thais in Dec 2020 
   - Skip the selection line populations - populations whose name ends in an "S"
 
 - [List of datasources and what filters were applied, data cleaning](https://docs.google.com/spreadsheets/d/1ySYfxii6Z8q7BmNCyhmOYNfLbcpDIpsFER24YW5m08M/edit#gid=1467712745)
+
+- [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing)
+
 
 # What we want to calculate for each dataset
 
@@ -36,81 +42,7 @@ NERR data:
 * Salinity_n: number of datapoints
 * Salinity_years: number of years
 
-
-
-## 2020_10_28
-
-Things left to do:
-
-Map for each locations and/or a single map with all locations
-* some locations have their map with populations and datasources
-
-Email Dina with questions
-
-In tables, check
-* N_all...
-* Should calculate stdDev for other parameters (mean_yearly_max, dd_15, etc)?
-* Include data range and resolution for all tables (some already have, some are missing)
-
-Add datafile names to each notebook
-
-Make a big table with all data
-
-Talk with Katie about pros/cons about considering whole years
-
-Is it useful to see data availability per year/month? I included this for some populations but not all.
-
-
-## 2020_10_29 KEL & TB Meeting notes
-
-## KEL thoughts on initial analysis
-- it would be nice to have separate files for each site/population in the notebook entry title. We should talk about making edits to individual posts (which I'm fine with) vs. making new chronological posts. **DONE. I made notes based on our meeting on top of each YYYY_MM_DD_TB post to reflect/summarize what was decided in our meeting; those notes start with 'YYYY_MM_DD Thais's notes following meeting'. Then I made one new post per population named as each POP ID with the 'final' data for each population and some plots. So, the 'YYYY_MM_DD_TB posts' have all the 'history' of environmental data selection for each population, some of these posts have more than one pop; and the 'POP ID posts' have only what was selected as good environmental data for each POP plus some plots for easy/quick visualization of these data; all POP ID posts have a single POP per post.(TB)**
-
-- let's make sure to put NA's in any calculation that is clearly bad or biased (e.g. calculating degree days when less than 365 days in data) **We decided to drop these measurements altogether**
-  - degree days in general seems biased in most places. should we drop it? it seems very few have measured dd below 0. I'm wondering if we should increase it to ddb5 to make it a more meaningful metric. **We decided to drop these measurements altogether**
-  - we discussed this and decided to drop this **DONE (TB)**
-
-- in each report table it would be good to add :
-  - the frequency of observations (e.g. hourly, daily) in addition to the number of years **DONE (TB)**
-  - maybe we should add a column for whether the data is missing winter? **DONE but this is not super straightforward - for some datasets we are missing some winter data but not all - this has been noted in the "Summary table" based on "Summary notes" for each population (TB)**
-- in some cases we should pool all the data together. **DONE; populations for which more than one environmental datasource is available and good, I pooled the data. Data pooling is indicated in the heading of "Summary table" - there is one summary table per population (TB)***
-
-
-
-## 2020_11_16
-
-**Notebook entries labelled chronologically have info regarding the following populations:**
-
-2020_09_25 VA_CB_HC_Med_W
-
-2020_09_29 TX_PM_LM_High_W
-
-2020_10_01 LA_GI_CL_High_W
-
-2020_10_06 LA_CL_SL_Low_W
-
-2020_10_07 MD_CB_CP_Low_W
-
-2020_10_13 NJ_DB_CS_Med_W
-
-2020_10_16 NJ_DB_HC_Low_W
-
-2020_10_20 ME_DR_HI_High_W & ME_SR_SM_Low_W
-
-2020_10_26 NC_WI_HC_High_W & NC_PC_CH_Low_W
-
-2020_10_27 NY_LI_L_High_W & NY_LI_CM_High_W
-
-
-## 2020_11_20
-
-Map of all Wild Populations and their respective environmental data locations: https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing
-
-Thais entered Temp and Sal env data for Wild populations as well as their respective file names in the project data sheet EasternOysterSeascape Data https://docs.google.com/spreadsheets/d/1UPv-Lo2Ak2PhheqoyhA-HvnRhvn80Mdw85bakwYTvFU/edit#gid=488191574
-
-Thais copied all files to the google drive folder Site_Envi_Data_QC202011_Thais https://drive.google.com/drive/folders/1gsdFaAyLbL1BcN6Ss4fb1TjRDr-K7vaL
-
-The following populations do not have salinity data:
+## The following populations from the resequencing project do not have salinity data:
 
 - NJ_DB_CS_Med_W
 - ME_SR_SM_Low_W
