@@ -20,9 +20,16 @@
 
 TO DO: MAKE A LIST
 
-# Sites to collect from in future
+# Map
 
 - [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
+
+- One color for salinity only data
+- One color for temperature only data
+- One color for both salinity and temp data
+- "P" for whole-genome samples we have
+- "C" for sites to collect from based on collaborator info
+- See if we can add information on general salinity (<15ppt, 15-25, or >25) for the bouy
 
 
 # What we want to calculate for each dataset
