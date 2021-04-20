@@ -24,8 +24,10 @@ TO DO: MAKE A LIST
 
 # Map
 
-- [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
-- [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
+- [NEW MAP WITH COMBINED INFO](https://www.google.com/maps/d/edit?mid=1lgMGFGFNZIHxBEfI2eZBPsmDu_zM06nI&ll=30.31532912127891%2C-85.05581390625001&z=5)
+
+- [OLD Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
+- [OLD Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
 
 - One color for salinity only data
 - One color for temperature only data
