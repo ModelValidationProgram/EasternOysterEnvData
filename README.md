@@ -26,15 +26,15 @@ TO DO: MAKE A LIST
 # Map
 
 - [NEW MAP WITH COMBINED INFO](https://www.google.com/maps/d/edit?mid=1lgMGFGFNZIHxBEfI2eZBPsmDu_zM06nI&ll=30.31532912127891%2C-85.05581390625001&z=5)
-  - - One color for salinity only data
-  - One color for temperature only data
-  - One color for both salinity and temp data
-  - "P" for whole-genome samples we have
-  - "C" for sites to collect from based on collaborator info
+  - One color for salinity only data NONE
+  - One color for temperature only data BLUE
+  - One color for both salinity and temp data GREEN
+  - "P" for whole-genome samples we have ORANGE "P"
+  - "C" for sites to collect from based on collaborator info RED "C"
   - See if we can add information on:
-    -  general salinity (<15ppt, 15-25, or >25) for the bouy
+    -  general salinity (<15ppt, 15-25, or >25) for the bouy THIS INFO IS IN THE 'TITLE' OF EACH P LOCATION AND UNDER 'SALINITY INFO' FOR EACH C LOCATION
     - website link for bouy data
-    - use "datasource" as name in map
+    - use "datasource" as name in map - DONE
 
 
 - [OLD Map of bouy sites that have salinity data](https://www.google.com/maps/d/viewer?ll=40.33360977259689%2C-78.13703889&z=6&mid=1KSCN-iwrqxIKESxX4FkWQZUVBUPrbAJk)
