@@ -25,19 +25,21 @@ TO DO: MAKE A LIST
 # Map
 
 - [NEW MAP WITH COMBINED INFO](https://www.google.com/maps/d/edit?mid=1lgMGFGFNZIHxBEfI2eZBPsmDu_zM06nI&ll=30.31532912127891%2C-85.05581390625001&z=5)
+  - - One color for salinity only data
+  - One color for temperature only data
+  - One color for both salinity and temp data
+  - "P" for whole-genome samples we have
+  - "C" for sites to collect from based on collaborator info
+  - See if we can add information on:
+    -  general salinity (<15ppt, 15-25, or >25) for the bouy
+    - website link for bouy data
+    - use "datasource" as name in map
+
 
 - [OLD Map of bouy sites that have salinity data](https://www.google.com/maps/d/viewer?ll=40.33360977259689%2C-78.13703889&z=6&mid=1KSCN-iwrqxIKESxX4FkWQZUVBUPrbAJk)
 - [OLD Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
 
-- One color for salinity only data
-- One color for temperature only data
-- One color for both salinity and temp data
-- "P" for whole-genome samples we have
-- "C" for sites to collect from based on collaborator info
-- See if we can add information on:
-  -  general salinity (<15ppt, 15-25, or >25) for the bouy
-  - website link for bouy data
-  - use "datasource" as name in map
+
 
 # What we want to calculate for each dataset
 
