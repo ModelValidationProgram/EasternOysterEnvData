@@ -20,6 +20,8 @@
 
 TO DO: MAKE A LIST
 
+- List of range-wide bouys we assessed for salinity data(https://docs.google.com/spreadsheets/d/1Juhol1DScMhPRLlBX7P23sqfddnqQ2pT2KkXKv1yAUk/edit#gid=552433388)
+
 # Map
 
 - [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
@@ -29,8 +31,10 @@ TO DO: MAKE A LIST
 - One color for both salinity and temp data
 - "P" for whole-genome samples we have
 - "C" for sites to collect from based on collaborator info
-- See if we can add information on general salinity (<15ppt, 15-25, or >25) for the bouy
-
+- See if we can add information on:
+  -  general salinity (<15ppt, 15-25, or >25) for the bouy
+  - website link for bouy data
+  - use "datasource" as name in map
 
 # What we want to calculate for each dataset
 
