@@ -14,15 +14,31 @@
 
 - [List of datasources and what filters were applied, data cleaning](https://docs.google.com/spreadsheets/d/1ySYfxii6Z8q7BmNCyhmOYNfLbcpDIpsFER24YW5m08M/edit#gid=1467712745)
 
-- [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
+
 
 ## Data we need
 
 TO DO: MAKE A LIST
 
-# Sites to collect from in future
+- [List of range-wide bouys we assessed for salinity data](https://docs.google.com/spreadsheets/d/1Juhol1DScMhPRLlBX7P23sqfddnqQ2pT2KkXKv1yAUk/edit#gid=552433388)
 
-- [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
+# Map
+
+- [NEW MAP WITH COMBINED INFO](https://www.google.com/maps/d/edit?mid=1lgMGFGFNZIHxBEfI2eZBPsmDu_zM06nI&ll=30.31532912127891%2C-85.05581390625001&z=5)
+  - - One color for salinity only data
+  - One color for temperature only data
+  - One color for both salinity and temp data
+  - "P" for whole-genome samples we have
+  - "C" for sites to collect from based on collaborator info
+  - See if we can add information on:
+    -  general salinity (<15ppt, 15-25, or >25) for the bouy
+    - website link for bouy data
+    - use "datasource" as name in map
+
+
+- [OLD Map of bouy sites that have salinity data](https://www.google.com/maps/d/viewer?ll=40.33360977259689%2C-78.13703889&z=6&mid=1KSCN-iwrqxIKESxX4FkWQZUVBUPrbAJk)
+- [OLD Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
+
 
 
 # What we want to calculate for each dataset
