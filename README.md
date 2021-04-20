@@ -32,8 +32,8 @@ TO DO: MAKE A LIST
   - "P" for whole-genome samples we have ORANGE "P"
   - "C" for sites to collect from based on collaborator info RED "C"
   - See if we can add information on:
-    -  general salinity (<15ppt, 15-25, or >25) for the bouy THIS INFO IS IN THE 'TITLE' OF EACH P LOCATION AND UNDER 'SALINITY INFO' FOR EACH C LOCATION
-    - website link for bouy data
+    -  general salinity (<15ppt, 15-25, or >25) for the bouy THIS INFO IS IN THE 'TITLE' OF EACH P LOCATION AND UNDER 'SALINITY INFO' FOR EACH C LOCATION (note that data have not been cleaned up for the C locations).
+    - website link for buoy DONE
     - use "datasource" as name in map - DONE
 
 
