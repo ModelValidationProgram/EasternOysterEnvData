@@ -1,5 +1,5 @@
 
-# Information about the data
+# Information about the data we have
 
 - [old repo, previous analysis done by Erin](https://github.com/MarineEvoEcoLab/OysterGenomeProject/tree/master/popstructureOutliers/data/environment)
 - some issues with data used; some issues with not filtering out bad data
@@ -15,6 +15,12 @@
 - [List of datasources and what filters were applied, data cleaning](https://docs.google.com/spreadsheets/d/1ySYfxii6Z8q7BmNCyhmOYNfLbcpDIpsFER24YW5m08M/edit#gid=1467712745)
 
 - [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
+
+## Data we need
+
+TO DO: MAKE A LIST
+
+# Sites to collect from in future
 
 - [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
 
