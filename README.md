@@ -14,17 +14,18 @@
 
 - [List of datasources and what filters were applied, data cleaning](https://docs.google.com/spreadsheets/d/1ySYfxii6Z8q7BmNCyhmOYNfLbcpDIpsFER24YW5m08M/edit#gid=1467712745)
 
-- [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
+
 
 ## Data we need
 
 TO DO: MAKE A LIST
 
-- List of range-wide bouys we assessed for salinity data(https://docs.google.com/spreadsheets/d/1Juhol1DScMhPRLlBX7P23sqfddnqQ2pT2KkXKv1yAUk/edit#gid=552433388)
+- [List of range-wide bouys we assessed for salinity data](https://docs.google.com/spreadsheets/d/1Juhol1DScMhPRLlBX7P23sqfddnqQ2pT2KkXKv1yAUk/edit#gid=552433388)
 
 # Map
 
 - [Map of bouy sites that have salinity data]() NEED TO UPDATE LINK
+- [Map of all Wild Populations and their respective environmental data locations](https://www.google.com/maps/d/edit?mid=1-ViurISNSSC9OIeHt1w02nIc-fzWxsrE&usp=sharing) FIX THIS LINK
 
 - One color for salinity only data
 - One color for temperature only data
