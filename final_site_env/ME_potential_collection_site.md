@@ -6,10 +6,11 @@
 ## Plot of Sheepscot salinity, all data.
 
 
+![ME_potential_site_Sheepscot_plot](../img/ME_potential_Sheepscot.png)
 
 ## Plot of Damariscotta salinity, all data (this is the same dataset used for ME_DR_HI_High_W).
 
-
+![ME_potential_site_Damariscota_plot](../img/ME_potential_Damariscotta.png)
 
 
 ## Summary table of all salinity data for each station, and combined. 
