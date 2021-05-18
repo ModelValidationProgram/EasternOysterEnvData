@@ -1,7 +1,7 @@
 # ME Sheepscot river as a potential new collection site - Salinity data we have so far
 
-> Data for "Sheepscot" in file Temp_Sal_Hog_Island_Sheepscot_Lewis_ME
-> Data in file UpperDamariscotta_Temp_Sal
+- Data for "Sheepscot" in file Temp_Sal_Hog_Island_Sheepscot_Lewis_ME
+- Data in file UpperDamariscotta_Temp_Sal
 
 ## Plot of Sheepscot salinity, all data.
 
