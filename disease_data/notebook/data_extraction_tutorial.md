@@ -18,7 +18,7 @@ Where to find published articles?
 * Create a PubCode, copy/paste title & DOI into sheet
 * Read abstract, introduction, results. If anything is unclear, read the methods section. Can message Eric and/or Thais for clarification(s). 
 * Write a summary and add location data (including lat/long if given) to the tab.
-*Add comments/questions to the furthest right column in the entry.
+* Add comments/questions to the furthest right column in the entry.
 
 
 3. Map Tab
