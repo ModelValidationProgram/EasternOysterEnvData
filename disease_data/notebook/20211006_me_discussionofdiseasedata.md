@@ -10,3 +10,5 @@ The focus moving forward for data collection is on susceptible oysters. Papers w
 
 All google folders involved in the data collection will be linked to the README.md disease_data page in github.
 
+Flowchart for approved papers & figures:
+Confirm use of a Figure in study → Take a screenshot of the figure, add to Google Drive → Extract data from Figure → Compare to Eric’s data → Clean and format data in spreadsheet → Label paper as complete
