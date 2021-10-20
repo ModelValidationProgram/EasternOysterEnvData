@@ -42,4 +42,5 @@ Where to find published articles?
 
 
 5. Individual Data Tab (Madeline / Final = Data_Summary3)
+
 Create a new tab in the spreadsheet: Data_summary tab is Luke’s data; Data_summary2 is Eric’s raw extracted data.
