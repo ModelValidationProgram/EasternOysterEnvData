@@ -1,4 +1,4 @@
-Oyster Disease Report Sheet Flowchart - Data Extraction Written Tutorial
+### Oyster Disease Report Sheet Flowchart - Data Extraction Written Tutorial
 
 1. Locate papers online
 
@@ -28,7 +28,7 @@ Where to find published articles?
 * Select TRUE/FALSE for presence of disease (Dermo and/or MSX) in the data validation menu for each individual study site. 
 
 
-4. Data Collection - also see linked data extraction tutorial video
+4. Data Collection - also see linked data extraction tutorial video [here](https://drive.google.com/file/d/1TYChS9C8Lo5I-Omiuza4lkFpwKkE1XBK/view?usp=sharing) 
 
 * Take a screenshot of the graph you’re extracting data from and save it into a folder specifically for each publication, named with the PubCode. Name the image with the figure name from the article. 
 * Use a digitizer tool (Data Thief or Web Plot Digitizer) to load the screenshot.
