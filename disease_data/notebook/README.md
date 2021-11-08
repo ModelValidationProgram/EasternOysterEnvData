@@ -12,3 +12,4 @@ Completed Papers:
 * Andrews, 1984
 * Haskin, 1988
 * Cook, 1998
+* Sunila, 1999
