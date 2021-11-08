@@ -25,11 +25,14 @@ Multiple replicate trays are not collected for the disease dataset. Instead, one
 # Cook 1998
 [Located Here](https://drive.google.com/drive/folders/1N59uU3J2WRxCvuDhbqyfCUMWQqS0PjR9?usp=sharing)
 
+### Prevalence Data
+Currently waiting on receipt of Ford 1996 to extract superimposed MSX prevalence values. 
+
 ### Cumulative Mortality
 Avoid collecting cumulative mortality data - we need to be able to combine mortality with salinity and temperature on a more precise timescale.
 
-### Extraneous Salinity Data
-For the following sites: Atlantic City, NJ; Newport, RI; Woods Hole, MA. Can be collected when disease data is extracted for the same sites. 
+### Extraneous Annual and 5-year Averaged Salinity Data
+For the following sites: Atlantic City, NJ; Newport, RI; Bridgeport, CT; Woods Hole, MA. Can be collected (if we are interested in these averaged values?) when disease data is extracted for the same sites.
 
 
 # Discarded Data
