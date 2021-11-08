@@ -28,6 +28,8 @@ Multiple replicate trays are not collected for the disease dataset. Instead, one
 ### Cumulative Mortality
 Avoid collecting cumulative mortality data - we need to be able to combine mortality with salinity and temperature on a more precise timescale.
 
+## Extraneous Salinity Data
+For the following sites: Atlantic City, NJ; Newport, RI; Woods Hole, MA. Can be collected when disease data is extracted for the same sites. 
 
 
 # Discarded Data
