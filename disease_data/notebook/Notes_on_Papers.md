@@ -9,10 +9,12 @@ We are not currently interested in collecting weighted incidence or intensity in
 # Andrews 1984
 [Located Here](https://drive.google.com/drive/folders/1tAAlzwyj7u1H0t4kUyxwNCV30eLlpG31?usp=sharing)
 
+* A1984F5: No location listed for figure. If location is found, data can be extracted.
+
 ### Replicate Trays
 Multiple replicate trays are not collected for the disease dataset. Instead, one replicate is chosen as the representative sample. 
 
-* A1984F5: No location listed for figure. If location is found, data can be extracted.
+
 
 
 # Haskin 1988
