@@ -5,3 +5,10 @@
 [Extracted Data Figures](https://drive.google.com/drive/folders/1axbNEDITSG8RdqttYBcfQtv5Wrmhkvyp)
 
 [Data Extraction Tutorial](https://drive.google.com/file/d/1TYChS9C8Lo5I-Omiuza4lkFpwKkE1XBK/view?usp=sharing) 
+
+
+Completed Papers:
+* Andrews, 1964
+* Andrews, 1984
+* Haskin, 1988
+* Cook, 1998
