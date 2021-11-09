@@ -13,3 +13,4 @@ Completed Papers:
 * Haskin, 1988
 * Cook, 1998
 * Sunila, 1999
+* Brown, 2005
