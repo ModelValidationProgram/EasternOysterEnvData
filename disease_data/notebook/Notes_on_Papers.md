@@ -34,6 +34,10 @@ Avoid collecting cumulative mortality data - we need to be able to combine morta
 ### Extraneous Annual and 5-year Averaged Salinity Data
 For the following sites: Atlantic City, NJ; Newport, RI; Bridgeport, CT; Woods Hole, MA. Can be collected (if we are interested in these averaged values?) when disease data is extracted for the same sites.
 
+# Brown 2005
+[Located Here](https://drive.google.com/drive/folders/1puv7lGy7UcEQfCnKwHPxgO1rPx4mnXdg?usp=sharing)
+### Extraneous Salinity Data
+Unextracted salinity data for low- and high- salinity sites in the Chesapeake Bay from 1995 - 2001. (Piankatank River and Lynnhaven Bay).
 
 # Discarded Data
 # Ford 1987
