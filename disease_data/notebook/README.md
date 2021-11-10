@@ -14,3 +14,4 @@ Completed Papers:
 * Cook, 1998
 * Sunila, 1999
 * Brown, 2005
+* Wang, 2012
