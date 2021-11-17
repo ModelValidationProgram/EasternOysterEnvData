@@ -15,3 +15,9 @@ Completed Papers:
 * Sunila, 1999
 * Brown, 2005
 * Wang, 2012
+
+In Progress:
+* Carnegie 2011
+* Andrews 1957
+* Burreson 1996
+* Encomio 2005
