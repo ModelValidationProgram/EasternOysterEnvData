@@ -46,24 +46,25 @@ TO DO: MAKE A LIST
 
 ### Apply filters
 
-USGS: Flags are A Approved for publication, Processing and review completed or P Provisional data subject to revision.
+**USGS**: Flags are A Approved for publication, Processing and review completed or P Provisional data subject to revision.
 
-NERR data: multiple flags, we focused on the QC Flags below:
+**NERR** data: multiple flags, we focused on the QC Flags below - **excluded** and **included** flags are listed below; flags not marked were not encountered in the datasets.
 
 QC Flags
+
 Each parameter in the exported data file contains a flag column. The flag column, F_param, contains a quality control (QC) flag and may contain additional QC codes. In a chart mouse-over, the QAQC flag and any codes are displayed behind the F_param: designation. Refer to the list below for the available QC flags and their descriptions.
 
-**exclude** -5 Outside high sensor range
-**exclude** -4 Outside low sensor range
-**exclude** -3 Data rejected due to QAQC
-**exclude** -2 Missing data
--1 Optional parameter not collected
- 0 Passed initial QAQC checks
- 1 Suspect data
- 2 Reserved for future use
- 3 Calculated data: non-vented depth/level sensor correction for changes in barometric pressure
- 4 Historical: Pre-auto QAQC
- 5 Corrected data
+**exclude** -5 Outside high sensor range  
+**exclude** -4 Outside low sensor range  
+**exclude** -3 Data rejected due to QAQC  
+**exclude** -2 Missing data  
+-1 Optional parameter not collected  
+**include** 0 Passed initial QAQC checks  
+**include** 1 Suspect data  
+ 2 Reserved for future use  
+ 3 Calculated data: non-vented depth/level sensor correction for changes in barometric pressure  
+**include** 4 Historical: Pre-auto QAQC  
+**include** 5 Corrected data  
  
 QC Codes by Dataset
 - Water Quality:
@@ -77,7 +78,7 @@ GNF Deployment tube clogged / no flow
 GOW Out of water event
 GPF Power failure / low battery
 GQR Data rejected due to QAQC checks
-GSM See metadata
+**include** GSM See metadata
 Corrected Depth/Level Data Codes
 
 GCC Calculated with data that were corrected during QAQC
@@ -94,12 +95,12 @@ SDF Depth port frozen
 SDG Suspect due to sensor diagnostics
 SDO DO suspect
 SDP DO membrane puncture
-SIC Incorrect calibration / contaminated standard
-SNV Negative value
+**exclude** SIC Incorrect calibration / contaminated standard
+**include for temp** SNV Negative value
 SOW Sensor out of water
-SPC Post calibration out of range
+**exclude** SPC Post calibration out of range
 SQR Data rejected due to QAQC checks
-SSD Sensor drift
+**exclude** SSD Sensor drift
 **exclude** SSM Sensor malfunction
 SSR Sensor removed / not deployed
 **exclude** STF Catastrophic temperature sensor failure
@@ -110,18 +111,18 @@ Comments
 CAB* Algal bloom
 CAF Acceptable calibration/accuracy error of sensor
 CAP Depth sensor in water, affected by atmospheric pressure
-CBF Biofouling
-CCU Cause unknown
+**exclude** CBF Biofouling
+**exclude** CCU Cause unknown
 CDA* DO hypoxia (<3 mg/L)
 CDB* Disturbed bottom
-CDF Data appear to fit conditions
+**include** CDF Data appear to fit conditions
 CFK* Fish kill
 CIP* Surface ice present at sample station
 CLT* Low tide
-CMC* In field maintenance/cleaning
+**exclude** CMC* In field maintenance/cleaning
 CMD* Mud in probe guard
-CND New deployment begins
-CRE* Significant rain event
+**include** CND New deployment begins
+**include** CRE* Significant rain event
 **exclude** CSM* See metadata
 CTS Turbidity spike
 CVT* Possible vandalism/tampering
