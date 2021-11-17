@@ -46,88 +46,97 @@ TO DO: MAKE A LIST
 
 ### Apply filters
 
-**USGS**: Flags are A Approved for publication, Processing and review completed or P Provisional data subject to revision.
+1. **USGS**: Flags are:  
+A Approved for publication, Processing and review completed or   
+P Provisional data subject to revision.
 
-**NERR** data: multiple flags, we focused on the QC Flags below - **excluded** and **included** flags are listed below; flags not marked were not encountered in the datasets.
+2. **NERR** data: [multiple flags](http://cdmo.baruch.sc.edu/data/qaqc.cfm), QC Flags and QC codes are combined; QC may be combined with 1 or more QC codes.  
+* We focused on the QC Flags & Codes below - **exclude** and **include** flags/codes are listed below; **NA** were flags/codes not encountered in the datasets that we looked at so far. 
 
 QC Flags
 
 Each parameter in the exported data file contains a flag column. The flag column, F_param, contains a quality control (QC) flag and may contain additional QC codes. In a chart mouse-over, the QAQC flag and any codes are displayed behind the F_param: designation. Refer to the list below for the available QC flags and their descriptions.
 
-**exclude** -5 Outside high sensor range  
-**exclude** -4 Outside low sensor range  
-**exclude** -3 Data rejected due to QAQC  
-**exclude** -2 Missing data  
--1 Optional parameter not collected  
-**include** 0 Passed initial QAQC checks  
-**include** 1 Suspect data  
- 2 Reserved for future use  
- 3 Calculated data: non-vented depth/level sensor correction for changes in barometric pressure  
-**include** 4 Historical: Pre-auto QAQC  
-**include** 5 Corrected data  
+| QC Flag | criteria |
+|---------|----------|
+|-5 Outside high sensor range |**exclude**  |   
+|-4 Outside low sensor range |**exclude**  |   
+|-3 Data rejected due to QAQC |**exclude**  |   
+|-2 Missing data |**exclude**   |
+|-1 Optional parameter not collected  | **NA**|
+|0 Passed initial QAQC checks |**include**     
+|1 Suspect data |**include**     
+|2 Reserved for future use |  **NA**|
+|3 Calculated data: non-vented depth/level sensor correction for changes in barometric pressure   |  **NA**|
+|4 Historical: Pre-auto QAQC |**include**   |  
+|5 Corrected data |**include**     |
  
-QC Codes by Dataset
-- Water Quality:
-General Errors
+QC Codes by Dataset  
+- Water Quality:  
 
-GIC No instrument deployed due to ice
-**exclude** GIM Instrument malfunction 
-**exclude** GIT Instrument recording error; recovered telemetry data
-GMC No instrument deployed due to maintenance/calibration
-GNF Deployment tube clogged / no flow
-GOW Out of water event
-GPF Power failure / low battery
-GQR Data rejected due to QAQC checks
-**include** GSM See metadata
-Corrected Depth/Level Data Codes
+| QC Code | criteria |
+|---------|----------|
+|General Errors||  
+|||
+|GIC No instrument deployed due to ice|  **NA**|
+|GIM Instrument malfunction| **exclude**   |
+| GIT Instrument recording error; recovered telemetry data| **exclude** |
+|GMC No instrument deployed due to maintenance/calibration|  **NA**|
+|GNF Deployment tube clogged / no flow | **NA**|
+|GOW Out of water event  |**NA**|
+|GPF Power failure / low battery | **NA**|
+|GQR Data rejected due to QAQC checks  |**NA**|
+|GSM See metadata| **include**  |
+|Corrected Depth/Level Data Codes | **NA**|
+|||
+|GCC Calculated with data that were corrected during QAQC | **NA**|
+|GCM Calculated value could not be determined due to missing data | **NA**|
+|GCR Calculated value could not be determined due to rejected data|  **NA**|**NA**|
+|GCS Calculated value suspect due to questionable data  |**NA**|
+|GCU Calculated value could not be determined due to unavailable data  |**NA**|
+|Sensor Errors  ||
+|||
+|SBO Blocked optic | **NA**|
+|SCF Conductivity sensor failure | **NA**|
+|SCS Chlorophyll spike | **NA**|
+|SDF Depth port frozen | **NA**|
+|SDG Suspect due to sensor diagnostics| **NA**|
+|SDO DO suspect  |**NA**|
+|SDP DO membrane puncture  |**NA**|
+|SIC Incorrect calibration / contaminated standard  |**exclude** |
+|SNV Negative value  |**include for temp, exclude for sal** |
+|SOW Sensor out of water  |**NA**|
+|SPC Post calibration out of range  |**exclude** |
+|SQR Data rejected due to QAQC checks  |**NA**|
+|SSD Sensor drift  |**exclude** |
+| SSM Sensor malfunction |**exclude** |
+|SSR Sensor removed / not deployed | **NA**|
+|STF Catastrophic temperature sensor failure  |**exclude** |
+|STS Turbidity spike | **NA**|
+|SWM Wiper malfunction / loss|  **NA**|
+|Comments  ||
+|||
+|CAB* Algal bloom  |**NA**|
+|CAF Acceptable calibration/accuracy error of sensor  |**NA**|
+|CAP Depth sensor in water, affected by atmospheric pressure  |**NA**|
+|CBF Biofouling  |  **exclude**    |
+|CCU Cause unknown  |  **exclude**   |
+|CDA* DO hypoxia (<3 mg/L)  |**NA**|
+|CDB* Disturbed bottom  |**NA**|
+|CDF Data appear to fit conditions  |**include**    |
+|CFK* Fish kill  |**NA**|
+|CIP* Surface ice present at sample station | **NA**|
+|CLT* Low tide  |**NA**|
+|CMC* In field maintenance/cleaning  | **exclude**    |
+|CMD* Mud in probe guard  |**NA**|
+|CND New deployment begins |  **include**    |
+|CRE* Significant rain event  | **include**    |
+|CSM* See metadata  |**exclude**     |
+|CTS Turbidity spike  |**NA**|
+|CVT* Possible vandalism/tampering | **NA**|
+|CWD* Data collected at wrong depth | **exclude** |
+|CWE* Significant weather event  |**NA**|
 
-GCC Calculated with data that were corrected during QAQC
-GCM Calculated value could not be determined due to missing data
-GCR Calculated value could not be determined due to rejected data
-GCS Calculated value suspect due to questionable data
-GCU Calculated value could not be determined due to unavailable data
-Sensor Errors
-
-SBO Blocked optic
-SCF Conductivity sensor failure
-SCS Chlorophyll spike
-SDF Depth port frozen
-SDG Suspect due to sensor diagnostics
-SDO DO suspect
-SDP DO membrane puncture
-**exclude** SIC Incorrect calibration / contaminated standard
-**include for temp** SNV Negative value
-SOW Sensor out of water
-**exclude** SPC Post calibration out of range
-SQR Data rejected due to QAQC checks
-**exclude** SSD Sensor drift
-**exclude** SSM Sensor malfunction
-SSR Sensor removed / not deployed
-**exclude** STF Catastrophic temperature sensor failure
-STS Turbidity spike
-SWM Wiper malfunction / loss
-Comments
-
-CAB* Algal bloom
-CAF Acceptable calibration/accuracy error of sensor
-CAP Depth sensor in water, affected by atmospheric pressure
-**exclude** CBF Biofouling
-**exclude** CCU Cause unknown
-CDA* DO hypoxia (<3 mg/L)
-CDB* Disturbed bottom
-**include** CDF Data appear to fit conditions
-CFK* Fish kill
-CIP* Surface ice present at sample station
-CLT* Low tide
-**exclude** CMC* In field maintenance/cleaning
-CMD* Mud in probe guard
-**include** CND New deployment begins
-**include** CRE* Significant rain event
-**exclude** CSM* See metadata
-CTS Turbidity spike
-CVT* Possible vandalism/tampering
-**exclude** CWD* Data collected at wrong depth
-CWE* Significant weather event
 *Indicates comments that can be applied to an entire record in the F_Record column.
 
 ### Temperature
@@ -136,7 +145,8 @@ CWE* Significant weather event
 * Mean_min_temperature_C	: average of (minimums for each year)
 * Temperature_st_dev: SD of all available data (if only daily averages are reported separately from mean/max daily this SD could be biased)
 * Temperature_n: number of datapoints
-* Temperature_years: number of years
+* Temperature_years: number of years  
+**no longer including the following 3:**
 *	dd_0: number of days where temp fell below 0
 * dd_15: number of days where temp above 15C
 * dd_30: number of days where temp above 30C
