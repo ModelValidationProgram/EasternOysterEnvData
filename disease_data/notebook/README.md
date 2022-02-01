@@ -27,3 +27,4 @@ In Progress:
 * Casas 2017
 * Leonhardt 2012
 * Powell 2017
+* Lavaud 2017
