@@ -4,7 +4,9 @@
 
 [Extracted Data Figures](https://drive.google.com/drive/folders/1axbNEDITSG8RdqttYBcfQtv5Wrmhkvyp)
 
-[Data Extraction Tutorial](https://drive.google.com/file/d/1TYChS9C8Lo5I-Omiuza4lkFpwKkE1XBK/view?usp=sharing) 
+[Data Extraction Tutorial - Web Plot Digitizer](https://drive.google.com/file/d/1TYChS9C8Lo5I-Omiuza4lkFpwKkE1XBK/view?usp=sharing) 
+
+[Multiple Axis Alignment Tutorial - Web Plot Digitizer] (https://drive.google.com/file/d/1gsXCPSmzxf2KtP4trYKr1OmV0784WKGs/view?usp=sharing)
 
 
 Completed Papers:
@@ -15,9 +17,12 @@ Completed Papers:
 * Sunila, 1999
 * Brown, 2005
 * Wang, 2012
-
-In Progress:
 * Carnegie 2011
 * Andrews 1957
 * Burreson 1996
 * Encomio 2005
+* Calvo 2003
+
+In Progress:
+* Casas 2017
+* Leonhardt 2012
