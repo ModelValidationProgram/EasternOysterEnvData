@@ -28,3 +28,4 @@ In Progress:
 * Leonhardt 2012
 * Powell 2017
 * Lavaud 2017
+* Haskin 1982
