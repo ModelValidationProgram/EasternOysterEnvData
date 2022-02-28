@@ -22,10 +22,11 @@ Completed Papers:
 * Burreson 1996
 * Encomio 2005
 * Calvo 2003
+* Leonhardt 2012
+* Casas 2017
+* Haskin 1982
+* Lavaud 2017
 
 In Progress:
-* Casas 2017
-* Leonhardt 2012
 * Powell 2017
-* Lavaud 2017
-* Haskin 1982
+* Pollack 2011
