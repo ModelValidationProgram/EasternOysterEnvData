@@ -10,13 +10,13 @@
 
 
 Completed Papers:
-* Andrews, 1964
-* Andrews, 1984
-* Haskin, 1988
-* Cook, 1998
-* Sunila, 1999
-* Brown, 2005
-* Wang, 2012
+* Andrews 1964
+* Andrews 1984
+* Haskin 1988
+* Cook 1998
+* Sunila 1999
+* Brown 2005
+* Wang 2012
 * Carnegie 2011
 * Andrews 1957
 * Burreson 1996
@@ -30,3 +30,5 @@ Completed Papers:
 In Progress:
 * Powell 2017
 * Pollack 2011
+* Ray 1954
+* Russell 2004
