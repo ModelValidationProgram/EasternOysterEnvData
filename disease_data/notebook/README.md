@@ -35,4 +35,5 @@ Completed Papers:
 In Progress:
 * Powell 2017
 * Brown 2005b
+* Barber 1997
 
