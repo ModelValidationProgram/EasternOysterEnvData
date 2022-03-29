@@ -30,6 +30,7 @@ Completed Papers:
 * Ray 1954
 * Russell 2004
 * Coen 1995
+* Paraso 1999
 
 In Progress:
 * Powell 2017
