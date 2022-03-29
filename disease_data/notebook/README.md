@@ -26,9 +26,12 @@ Completed Papers:
 * Casas 2017
 * Haskin 1982
 * Lavaud 2017
-
-In Progress:
-* Powell 2017
 * Pollack 2011
 * Ray 1954
 * Russell 2004
+* Coen 1995
+
+In Progress:
+* Powell 2017
+* Brown 2005b
+
