@@ -34,6 +34,7 @@ Completed Papers:
 * Powell 2017
 * Brown 2005b
 * Barber 1997
+* Ford 2007
 
 In Progress:
 * Wilbur 2012
