@@ -31,9 +31,13 @@ Completed Papers:
 * Russell 2004
 * Coen 1995
 * Paraso 1999
-
-In Progress:
 * Powell 2017
 * Brown 2005b
 * Barber 1997
+
+In Progress:
+* Wilbur 2012
+* Burreson 1991
+* Powell 1999
+* Morrison 1992
 
