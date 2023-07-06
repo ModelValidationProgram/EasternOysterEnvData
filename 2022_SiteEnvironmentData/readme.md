@@ -1,5 +1,5 @@
-### Read Me
-Folder contains all environmental data from sites processed in 2022
+### 2022_SiteEnvironmentData Folder 
+Folder contains all environmental data from all seascape sites that were processed in 2022
 
 ### Final spreadsheets with salinity and temperature data from all sites
 - Both .CSV files in Seascape_Processed folder
