@@ -7,3 +7,5 @@ Folder contains all environmental data from sites processed in 2022
 ### R files for each site using the EnvrDataTemplate
 - Sites codes are named based on state and latitude position
 - See Seascape Samples Data Sheet to see names of sites
+
+### Raw .CSV files containing downloaded environmental data for each site that are used as input for the EnvrDataTemplate
