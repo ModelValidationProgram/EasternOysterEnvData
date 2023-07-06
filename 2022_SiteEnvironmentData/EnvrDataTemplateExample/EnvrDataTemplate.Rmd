@@ -203,6 +203,9 @@ Temperature_years <- nrow(OL_MI_SC_envryear)
 #Create a data frame to store the temperature results
 OL_MI_SC_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
 print(OL_MI_SC_temp)
+
+write.table(OL_MI_SC_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_temperature.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+
 ```
 
 ```{r}
@@ -218,5 +221,7 @@ Salinity_years <- nrow(OL_MI_SC_envryear)
 #Create a data frame to store the temperature results
 OL_MI_SC_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
 print(OL_MI_SC_salinity)
+
+write.table(OL_MI_SC_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
 ```
 
