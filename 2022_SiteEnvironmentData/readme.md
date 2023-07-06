@@ -1,8 +1,8 @@
 ### Read Me
 Folder contains all environmental data from sites processed in 2022
 
-### Final spreadsheet with data from all sites
-- Attached in folder
+### Final spreadsheets with salinity and temperature data from all sites
+- Both .CSV files in Seascape_Processed folder
 
 ### R files for each site using the EnvrDataTemplate
 - Sites codes are named based on state and latitude position
