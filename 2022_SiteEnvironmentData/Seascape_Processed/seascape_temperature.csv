@@ -1,4 +1,3 @@
 ﻿site_name,download_date,source_description,lat,lon,firstyear,finalyear,Mean_Annual_Temperature_C,Mean_max_temperature_C,Mean_min_temperature_C,Temperature_st_dev,Temperature_n,Temperature_years
 SC2,7/6/23,BCCWMS Coastal Volunteer Monitoring Data,33.52401,-79.06198,2008,2022,19.9819453,28.95777778,8.557777778,6.829213378,323,15
-TX2,7/7/23,NERR Centralized Data. Mission Aransas - Copano Bay West,28.0841,-97.2009,2008,2021,23.10540882,32.01764706,7.988235294,6.385468216,490107,17"TX2","07-07-2023","NERR Centralized Data. Mission Aransas - Copano Bay West","28.0841","-97.2009","2008","2021","23.1054088188906","32.0176470588235","7.98823529411765","6.38546821611257","490107","17"
-"TX2","07-07-2023","NERR Centralized Data. Mission Aransas - Copano Bay West","28.0841","-97.2009","2008","2021","23.1054088188906","32.0176470588235","7.98823529411765","6.38546821611257","490107","17"
+TX2,7/7/23,NERR Centralized Data. Mission Aransas - Copano Bay West,28.0841,-97.2009,2008,2021,23.10540882,32.01764706,7.988235294,6.385468216,490107,17
