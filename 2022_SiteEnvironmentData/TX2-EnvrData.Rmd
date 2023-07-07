@@ -47,9 +47,11 @@ View(raw_TX2)
 # SKIP combining, date and time of collection is already in a column together 
 # combined_datetime <- paste(raw_SC2$collection_date, raw_SC2$collection_time) 
 
-#Convert to POSIXct format. Store it into a column named datetime in the data frame. Use the year-month-day hours:minutes:seconds format. 
-raw_TX2$datetime <- strptime(raw_TX2$DateTimeStamp, "%m-%d-%y %I:%M:%S %p")
-raw_TX2$datetime <- as.POSIXct(raw_TX2$datetime)
+unclass(raw_TX2$DateTimeStamp)
+# The data is stored in month-day-yearXX hours(12):minutes format
+
+#Convert to POSIXct format. Store it into a column named datetime in the data frame.
+raw_TX2$datetime <- as.POSIXct(raw_TX2$DateTimeStamp, "%m/%d/%y %H:%M", tz = "")
 
 #Print the new data frame and examine to make sure the new datetime column is in the correct format. 
 print(raw_TX2)
@@ -72,8 +74,8 @@ print(summary(raw_TX2$temp))
 
 
 #Store variables that we will include in the final data frame
-lat <- 33.52401
-lon <- -79.06198
+lat <- 28.08410
+lon <- -97.20090
 firstyear <- 2008
 finalyear <- 2021
 ```
@@ -97,17 +99,9 @@ TX2 <- filtered_TX2
 
 ### Visualize the salinity, temperature, and date ranges over time. This can help us see if there are any anomalies or gaps in the data and make sure the filtering was done correctly. Sanity check - do the temperature and salinity ranges look appropriate for the geography of the site (ex. near full ocean salinity for coastal sites, lower salinity for estuaries or near rivers)?
 ```{r}
-envrplot <- ggplot(TX2, aes(x = datetime)) +
-    geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
-    geom_line(aes(y = temp, color = "Temperature (C)")) +
-    ylim(0, 45) +
-    labs(x = "Time", y = "Range of environmental variables") +
-    scale_color_manual(values = c("Salinity (ppt)" = "blue", "Temperature (C)" = "red")) +
-    theme_minimal()
-
 salplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
-    ylim(0,40) +
+    ylim(0,45) +
     labs(x = "Time", y = "Salinity ppt") +
     scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
     theme_minimal()
@@ -120,7 +114,7 @@ tempplot <- ggplot(TX2, aes(x = datetime)) +
     theme_minimal()
 
 
-envrplot
+
 salplot
 tempplot
 ```
@@ -128,7 +122,7 @@ tempplot
 ### We need to calculate the mean, maximum, and minimum values for salinity and temperature per month and year. First make two data frames to contain each of the annual and monthly averages.
 ```{r}
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each month. 
-SC2_envrmonth <- SC2 %>%
+TX2_envrmonth <- TX2 %>%
     mutate(year = year(datetime), month = month(datetime)) %>%
     group_by(year, month) %>%
     summarise(
@@ -141,11 +135,11 @@ SC2_envrmonth <- SC2 %>%
       mean_temp = mean(temp),
       length_temp = length(temp))
   
-print(SC2_envrmonth)
+print(TX2_envrmonth)
 
 
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each year. 
-SC2_envryear <- SC2 %>%
+TX2_envryear <- TX2 %>%
     mutate(year = year(datetime)) %>%
     group_by(year) %>%
     summarise(
@@ -156,12 +150,12 @@ SC2_envryear <- SC2 %>%
       max_temp = max(temp),
       mean_temp = mean(temp))
 
-print(SC2_envryear)
+print(TX2_envryear)
 
 ```
 ### Plot the months and years of data collection to check if there are any collection gaps in the data.
 ```{r}
-timeplot <- ggplot(SC2_envrmonth, aes(x = year)) +
+timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
     labs(x = "Time", y = "Month") +
     ylim(1,12) +
@@ -190,34 +184,34 @@ Our list of variables includes:
 
 ```{r}
 #Calculate temperature variables. 
-Mean_Annual_Temperature_C <- mean(SC2$temp)
-Mean_max_temperature_C <- mean(SC2_envryear$max_temp)
-Mean_min_temperature_C <- mean(SC2_envryear$min_temp)
-Temperature_st_dev <- sd(SC2$temp)
-Temperature_n <- nrow(SC2)
-Temperature_years <- nrow(SC2_envryear)
+Mean_Annual_Temperature_C <- mean(TX2$temp)
+Mean_max_temperature_C <- mean(TX2_envryear$max_temp)
+Mean_min_temperature_C <- mean(TX2_envryear$min_temp)
+Temperature_st_dev <- sd(TX2$temp)
+Temperature_n <- nrow(TX2)
+Temperature_years <- nrow(TX2_envryear)
 
 #Create a data frame to store the temperature results
-SC2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
-print(SC2_temp)
+TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
+print(TX2_temp)
 
-write.table(SC2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_temperature.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+write.table(TX2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_temperature.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
 
 ```
 
 ```{r}
 #Calculate the salinity variables
-Mean_Annual_Salinity_ppt <- mean(SC2$salinity)
-Mean_max_Salinity_ppt <- mean(SC2_envryear$max_salinity)
-Mean_min_Salinity_ppt <- mean(SC2_envryear$min_salinity)
-Salinity_st_dev <- sd(SC2$salinity)
-Salinity_n <- nrow(SC2)
-Salinity_years <- nrow(SC2_envryear)
+Mean_Annual_Salinity_ppt <- mean(TX2$salinity)
+Mean_max_Salinity_ppt <- mean(TX2_envryear$max_salinity)
+Mean_min_Salinity_ppt <- mean(TX2_envryear$min_salinity)
+Salinity_st_dev <- sd(TX2$salinity)
+Salinity_n <- nrow(TX2)
+Salinity_years <- nrow(TX2_envryear)
 
 
 #Create a data frame to store the temperature results
-SC2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
-print(SC2_salinity)
+TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
+print(TX2_salinity)
 
-write.table(SC2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+write.table(TX2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
 ```
