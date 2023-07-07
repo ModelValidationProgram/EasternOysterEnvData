@@ -1,5 +1,5 @@
 ---
-title: "Environmental Data Extraction Template"
+title: "SC2 - Processed Environmental Data"
 author: "Madeline Eppley"
 date: "7/6/2023"
 output: github_document
