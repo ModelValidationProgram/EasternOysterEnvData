@@ -1,4 +1,4 @@
-Environmental Data Extraction Template
+SC2 - Processed Environmental Data
 ================
 Madeline Eppley
 7/6/2023
@@ -215,20 +215,30 @@ envrplot <- ggplot(SC2, aes(x = datetime)) +
     theme_minimal()
 
 salplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
+    geom_line(aes(y = salinity, color = "Salinity (ppt)", title = "Salinity Plot for SC2 - Oyster Landing")) +
     ylim(0,40) +
     labs(x = "Time", y = "Salinity ppt") +
     scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
     theme_minimal()
+```
 
+    ## Warning in geom_line(aes(y = salinity, color = "Salinity (ppt)", title =
+    ## "Salinity Plot for SC2 - Oyster Landing")): Ignoring unknown aesthetics: title
+
+``` r
 tempplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = temp, color = "Temperature (C)")) +
+    geom_line(aes(y = temp, color = "Temperature (C)"), title = "Temperature Plot for SC2 - Oyster Landing") +
     ylim(0, 45) +
     labs(x = "Time", y = "Temperature C") +
     scale_color_manual(values = c( "Temperature (C)" = "red")) +
     theme_minimal()
+```
 
+    ## Warning in geom_line(aes(y = temp, color = "Temperature (C)"), title =
+    ## "Temperature Plot for SC2 - Oyster Landing"): Ignoring unknown parameters:
+    ## `title`
 
+``` r
 envrplot
 ```
 
@@ -328,7 +338,7 @@ print(SC2_envryear)
 ``` r
 timeplot <- ggplot(SC2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
-    labs(x = "Time", y = "Month") +
+    labs(x = "Time", y = "Month", title = "Timeplot for SC2 - Oyster Landing") +
     ylim(1,12) +
     theme_minimal()
 
@@ -397,6 +407,11 @@ write.table(SC2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_Si
     ## appending column names to file
 
 ``` r
+# Write to a unique new CSV file
+write.csv(SC2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/SC2_temperature.csv")
+```
+
+``` r
 #Calculate the salinity variables
 Mean_Annual_Salinity_ppt <- mean(SC2$salinity)
 Mean_max_Salinity_ppt <- mean(SC2_envryear$max_salinity)
@@ -427,3 +442,8 @@ write.table(SC2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/202
     ## Warning in write.table(SC2_salinity,
     ## "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", :
     ## appending column names to file
+
+``` r
+# Write to a unique new CSV file
+write.csv(SC2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/SC2_salinity.csv")
+```

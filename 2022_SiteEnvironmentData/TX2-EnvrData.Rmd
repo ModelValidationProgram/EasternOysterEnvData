@@ -158,7 +158,7 @@ print(TX2_envryear)
 ```{r}
 timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
-    labs(x = "Time", y = "Month", title = "Timplot for TX2 - Copano Bay") +
+    labs(x = "Time", y = "Month", title = "Timeplot for TX2 - Copano Bay") +
     ylim(1,12) +
     theme_minimal()
 
