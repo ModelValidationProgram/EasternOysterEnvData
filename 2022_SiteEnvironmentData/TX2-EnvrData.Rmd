@@ -47,14 +47,15 @@ View(raw_TX2)
 # SKIP combining, date and time of collection is already in a column together 
 # combined_datetime <- paste(raw_SC2$collection_date, raw_SC2$collection_time) 
 
-unclass(raw_TX2$DateTimeStamp)
+# Use unclass to view the way that the time and date are stored 
+# unclass(raw_TX2$DateTimeStamp)
 # The data is stored in month-day-yearXX hours(12):minutes format
 
 #Convert to POSIXct format. Store it into a column named datetime in the data frame.
 raw_TX2$datetime <- as.POSIXct(raw_TX2$DateTimeStamp, "%m/%d/%y %H:%M", tz = "")
 
 #Print the new data frame and examine to make sure the new datetime column is in the correct format. 
-print(raw_TX2)
+summary(raw_TX2)
 ```
 
 ### Analyze the ranges of all of our variables of interest - time, salinity, and temperature. Make sure that the latitude and longitude values are consistent for a static collection site. This is a quick check so we can determine how to conduct the next filtering step. 
