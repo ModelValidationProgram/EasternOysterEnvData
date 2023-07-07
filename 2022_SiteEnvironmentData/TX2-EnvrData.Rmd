@@ -102,14 +102,14 @@ TX2 <- filtered_TX2
 salplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
     ylim(0,45) +
-    labs(x = "Time", y = "Salinity ppt") +
+    labs(x = "Time", y = "Salinity ppt", title = "Salinity Plot for TX2 - Copano Bay") +
     scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
     theme_minimal()
 
 tempplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = temp, color = "Temperature (C)")) +
     ylim(0, 45) +
-    labs(x = "Time", y = "Temperature C") +
+    labs(x = "Time", y = "Temperature C", title = "Temperature Plot for TX2 - Copano Bay") +
     scale_color_manual(values = c( "Temperature (C)" = "red")) +
     theme_minimal()
 
@@ -157,7 +157,7 @@ print(TX2_envryear)
 ```{r}
 timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
-    labs(x = "Time", y = "Month") +
+    labs(x = "Time", y = "Month", title = "Timplot for TX2 - Copano Bay") +
     ylim(1,12) +
     theme_minimal()
 
@@ -195,7 +195,11 @@ Temperature_years <- nrow(TX2_envryear)
 TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
 print(TX2_temp)
 
+# Write to the combined file with all sites 
 write.table(TX2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_temperature.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+
+# Write to a unique new CSV file
+write.csv(TX2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/TX2_temperature.csv")
 
 ```
 
@@ -213,5 +217,10 @@ Salinity_years <- nrow(TX2_envryear)
 TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
 print(TX2_salinity)
 
+# Write to the combined file with all sites 
 write.table(TX2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+
+# Write to a unique new CSV file
+write.csv(TX2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/TX2_salinity.csv")
+
 ```
