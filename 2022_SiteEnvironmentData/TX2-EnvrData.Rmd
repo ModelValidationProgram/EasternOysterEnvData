@@ -99,7 +99,7 @@ TX2 <- filtered_TX2
 ```
 
 ### Visualize the salinity, temperature, and date ranges over time. This can help us see if there are any anomalies or gaps in the data and make sure the filtering was done correctly. Sanity check - do the temperature and salinity ranges look appropriate for the geography of the site (ex. near full ocean salinity for coastal sites, lower salinity for estuaries or near rivers)?
-```{r}
+```{r salinity-plot}
 salplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
     ylim(0,45) +
@@ -107,6 +107,12 @@ salplot <- ggplot(TX2, aes(x = datetime)) +
     scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
     theme_minimal()
 
+
+salplot
+
+```
+
+```{r temperature-plot}
 tempplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = temp, color = "Temperature (C)")) +
     ylim(0, 45) +
@@ -115,10 +121,10 @@ tempplot <- ggplot(TX2, aes(x = datetime)) +
     theme_minimal()
 
 
-
-salplot
 tempplot
+
 ```
+
 
 ### We need to calculate the mean, maximum, and minimum values for salinity and temperature per month and year. First make two data frames to contain each of the annual and monthly averages.
 ```{r}
@@ -155,7 +161,7 @@ print(TX2_envryear)
 
 ```
 ### Plot the months and years of data collection to check if there are any collection gaps in the data.
-```{r}
+```{r timeplot}
 timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
     labs(x = "Time", y = "Month", title = "Timeplot for TX2 - Copano Bay") +

@@ -100,32 +100,42 @@ SC2 <- filtered_SC2
 ```
 
 ### Visualize the salinity, temperature, and date ranges over time. This can help us see if there are any anomalies or gaps in the data and make sure the filtering was done correctly. Sanity check - do the temperature and salinity ranges look appropriate for the geography of the site (ex. near full ocean salinity for coastal sites, lower salinity for estuaries or near rivers)?
-```{r}
+```{r environment-plot}
 envrplot <- ggplot(SC2, aes(x = datetime)) +
     geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
     geom_line(aes(y = temp, color = "Temperature (C)")) +
     ylim(0, 45) +
-    labs(x = "Time", y = "Range of environmental variables") +
+    labs(x = "Time", y = "Range of environmental variables", title = "Environmental Plot for SC2 - Oyster Landing") +
     scale_color_manual(values = c("Salinity (ppt)" = "blue", "Temperature (C)" = "red")) +
-    theme_minimal()
-
-salplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = salinity, color = "Salinity (ppt)", title = "Salinity Plot for SC2 - Oyster Landing")) +
-    ylim(0,40) +
-    labs(x = "Time", y = "Salinity ppt") +
-    scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
-    theme_minimal()
-
-tempplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = temp, color = "Temperature (C)"), title = "Temperature Plot for SC2 - Oyster Landing") +
-    ylim(0, 45) +
-    labs(x = "Time", y = "Temperature C") +
-    scale_color_manual(values = c( "Temperature (C)" = "red")) +
     theme_minimal()
 
 
 envrplot
+
+```
+
+
+```{r salinity-plot}
+salplot <- ggplot(SC2, aes(x = datetime)) +
+    geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
+    ylim(0,40) +
+    labs(x = "Time", y = "Salinity ppt", title = "Salinity Plot for SC2 - Oyster Landing") +
+    scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
+    theme_minimal()
+
 salplot
+```
+
+
+```{r temperature-plot}
+tempplot <- ggplot(SC2, aes(x = datetime)) +
+    geom_line(aes(y = temp, color = "Temperature (C)")) +
+    ylim(0, 45) +
+    labs(x = "Time", y = "Temperature C", title = "Temperature Plot for SC2 - Oyster Landing") +
+    scale_color_manual(values = c( "Temperature (C)" = "red")) +
+    theme_minimal()
+
+
 tempplot
 ```
 
@@ -164,7 +174,7 @@ print(SC2_envryear)
 
 ```
 ### Plot the months and years of data collection to check if there are any collection gaps in the data.
-```{r}
+```{r timeplot}
 timeplot <- ggplot(SC2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
     labs(x = "Time", y = "Month", title = "Timeplot for SC2 - Oyster Landing") +
