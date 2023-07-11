@@ -1,2 +1,2 @@
-"","site_name","download_date","source_description","lat","lon","firstyear","finalyear","Mean_Annual_Temperature_C","Mean_max_temperature_C","Mean_min_temperature_C","Temperature_st_dev","Temperature_n","Temperature_years"
-"1","SC2","07-06-2023","BCCWMS Coastal Volunteer Monitoring Data","33.52401","-79.06198","2008","2022","19.9819453044376","28.9577777777778","8.55777777777778","6.82921337760818","323","15"
+"","site_name","download_date","source_description","lat","lon","firstyear","finalyear","Mean_Annual_Temperature_C","Mean_max_temperature_C","Mean_min_temperature_C","Temperature_st_dev","Temperature_n","Temperature_years","collection_type"
+"1","SC2","07-06-2023","BCCWMS Coastal Volunteer Monitoring Data","33.52401","-79.06198","2008","2022","19.9819453044376","28.9577777777778","8.55777777777778","6.82921337760818","323","15","intermittent_bimonthly"

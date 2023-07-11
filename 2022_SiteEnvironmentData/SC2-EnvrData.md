@@ -51,6 +51,7 @@ library("ggplot2")
 download_date <- ("07-06-2023")
 source_description <- ("BCCWMS Coastal Volunteer Monitoring Data")
 site_name <- ("SC2") #Use site code with site number based on lat position and state
+collection_type <- ("intermittent_bimonthly")
 ```
 
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the “Files” window in R studio. Store the file in a variable with the “raw_ID_Site” format. If salinity and temperature data are in separate files, read in both and store them with “\_sal” or “\_temp” in the variable names.
@@ -376,7 +377,7 @@ Temperature_n <- nrow(SC2)
 Temperature_years <- nrow(SC2_envryear)
 
 #Create a data frame to store the temperature results
-SC2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
+SC2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years, collection_type)
 print(SC2_temp)
 ```
 
@@ -386,8 +387,8 @@ print(SC2_temp)
     ## [1,] "33.52401" "-79.06198" "2008"    "2022"    "19.9819453044376"       
     ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
     ## [1,] "28.9577777777778"     "8.55777777777778"     "6.82921337760818"
-    ##      Temperature_n Temperature_years
-    ## [1,] "323"         "15"
+    ##      Temperature_n Temperature_years collection_type         
+    ## [1,] "323"         "15"              "intermittent_bimonthly"
 
 ``` r
 write.table(SC2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_temperature.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
@@ -413,7 +414,7 @@ Salinity_years <- nrow(SC2_envryear)
 
 
 #Create a data frame to store the temperature results
-SC2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
+SC2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
 print(SC2_salinity)
 ```
 
@@ -423,8 +424,8 @@ print(SC2_salinity)
     ## [1,] "33.52401" "-79.06198" "2008"    "2022"    "34.07826625387"        
     ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
     ## [1,] "35.9655555555556"    "31.0724444444444"    "1.44934387143534" "323"     
-    ##      Salinity_years
-    ## [1,] "15"
+    ##      Salinity_years collection_type         
+    ## [1,] "15"           "intermittent_bimonthly"
 
 ``` r
 write.table(SC2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
