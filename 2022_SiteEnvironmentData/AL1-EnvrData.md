@@ -44,12 +44,13 @@ library("ggplot2")
 
 ``` r
 #Data was downloaded on 7/7/2023
-#Source - https://cdmo.baruch.sc.edu//dges/ - Selected Mission Aransas, Copano Bay West. The station code is MARCWWQ.  
+#Source - https://cdmo.baruch.sc.edu//dges/ - Selected Grand Bay, Point Aux Chenes Bay. The station code is GNDPCWQ.  
 
 #Create text strings with metadata information that we want to include in the final data frame. 
 download_date <- ("07-11-2023")
 source_description <- ("NERR Centralized Data. Grand Bay - Point Aux Chenes Bay GNDPCWQ")
 site_name <- ("AL1") #Use site code with site number based on lat position and state
+collection_type <- ("continuous")
 ```
 
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the “Files” window in R studio. Store the file in a variable with the “raw_ID_Site” format. If salinity and temperature data are in separate files, read in both and store them with “\_sal” or “\_temp” in the variable names.
@@ -108,10 +109,9 @@ View(raw_AL1)
 
 ``` r
 # SKIP combining, date and time of collection is already in a column together 
-# combined_datetime <- paste(raw_SC2$collection_date, raw_SC2$collection_time) 
 
 # Use unclass to view the way that the time and date are stored 
-# unclass(raw_TX2$DateTimeStamp)
+# unclass(raw_AL1$DateTimeStamp)
 # The data is stored in month-day-yearXX hours(12):minutes format
 
 #Convert to POSIXct format. Store it into a column named datetime in the data frame.
@@ -424,7 +424,7 @@ Temperature_n <- nrow(AL1)
 Temperature_years <- nrow(AL1_envryear)
 
 #Create a data frame to store the temperature results
-AL1_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
+AL1_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years, collection_type)
 print(AL1_temp)
 ```
 
@@ -436,8 +436,8 @@ print(AL1_temp)
     ## [1,] "30.3486" "-88.4185" "2005"    "2022"    "22.4536938624431"       
     ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
     ## [1,] "33.3631578947368"     "6.72631578947368"     "6.89561189615538"
-    ##      Temperature_n Temperature_years
-    ## [1,] "468737"      "19"
+    ##      Temperature_n Temperature_years collection_type
+    ## [1,] "468737"      "19"              "continuous"
 
 ``` r
 # Write to the combined file with all sites 
@@ -458,7 +458,7 @@ Salinity_years <- nrow(AL1_envryear)
 
 
 #Create a data frame to store the temperature results
-AL1_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
+AL1_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
 print(AL1_salinity)
 ```
 
@@ -470,8 +470,8 @@ print(AL1_salinity)
     ## [1,] "30.3486" "-88.4185" "2005"    "2022"    "21.934934302178"       
     ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
     ## [1,] "31.0789473684211"    "7.87894736842105"    "5.75666706161516" "468737"  
-    ##      Salinity_years
-    ## [1,] "19"
+    ##      Salinity_years collection_type
+    ## [1,] "19"           "continuous"
 
 ``` r
 # Write to the combined file with all sites 
