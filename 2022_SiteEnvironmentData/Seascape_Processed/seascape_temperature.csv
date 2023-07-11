@@ -1,7 +1,7 @@
-﻿site_name,download_date,source_description,lat,lon,firstyear,finalyear,Mean_Annual_Temperature_C,Mean_max_temperature_C,Mean_min_temperature_C,Temperature_st_dev,Temperature_n,Temperature_years,collection_type
-SC2,7/6/23,BCCWMS Coastal Volunteer Monitoring Data,33.52401,-79.06198,2008,2022,19.9819453,28.95777778,8.557777778,6.829213378,323,15,intermittent_bimonthly
-GA1,7/11/23,NERR Centralized Data. Sapelo Island - Lower Duplin SAPLDWQ,31.41794,-81.29605,1999,2022,21.43557384,31.676,8.624,6.635617152,639023,25,continuous
-AL1,7/11/23,NERR Centralized Data. Grand Bay - Point Aux Chenes Bay GNDPCWQ,30.3486,-88.4185,2005,2022,22.45369386,33.36315789,6.726315789,6.895611896,468737,19,continuous
-TX2,7/7/23,NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ,28.0841,-97.2009,2008,2021,23.10540882,32.01764706,7.988235294,6.385468216,490107,17,continuous
-RI2,7/11/23,NERR Centralized Data. Narragansett Bay T-Wharf Bottom NARTBWQ,41.57836,-71.32112,2002,2022,12.18311963,23.87272727,1.186363636,6.70828115,629696,22,continuous"NH1","07-11-2023","NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ","43.0524","-70.91181","1997","2022","16.7170932303351","27.162962962963","2.54814814814815","6.44962480142627","432370","27","continuous"
-"NH1","07-11-2023","NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ","43.0524","-70.91181","1997","2022","16.7170932303351","27.162962962963","2.54814814814815","6.44962480142627","432370","27","continuous"
+﻿site_name,download_date,source_description,lat,lon,firstyear,finalyear,Mean_Annual_Temperature_C,Mean_max_temperature_C,Mean_min_temperature_C,Temperature_st_dev,Temperature_n,Temperature_years,collection_type,
+SC2,7/6/23,BCCWMS Coastal Volunteer Monitoring Data,33.52401,-79.06198,2008,2022,19.9819453,28.95777778,8.557777778,6.829213378,323,15,intermittent_bimonthly,
+GA1,7/11/23,NERR Centralized Data. Sapelo Island - Lower Duplin SAPLDWQ,31.41794,-81.29605,1999,2022,21.43557384,31.676,8.624,6.635617152,639023,25,continuous,
+AL1,7/11/23,NERR Centralized Data. Grand Bay - Point Aux Chenes Bay GNDPCWQ,30.3486,-88.4185,2005,2022,22.45369386,33.36315789,6.726315789,6.895611896,468737,19,continuous,
+TX2,7/7/23,NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ,28.0841,-97.2009,2008,2021,23.10540882,32.01764706,7.988235294,6.385468216,490107,17,continuous,
+RI2,7/11/23,NERR Centralized Data. Narragansett Bay T-Wharf Bottom NARTBWQ,41.57836,-71.32112,2002,2022,12.18311963,23.87272727,1.186363636,6.70828115,629696,22,continuous,
+NH1,7/11/23,NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ,43.0524,-70.91181,1997,2022,16.71709323,27.16296296,2.548148148,6.449624801,432370,27,continuous,
