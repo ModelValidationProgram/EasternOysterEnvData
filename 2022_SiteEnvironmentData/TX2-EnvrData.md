@@ -272,6 +272,15 @@ salplot <- ggplot(TX2, aes(x = datetime)) +
     scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
     theme_minimal()
 
+
+salplot
+```
+
+    ## Warning: Removed 60 rows containing missing values (`geom_line()`).
+
+![](TX2-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
+
+``` r
 tempplot <- ggplot(TX2, aes(x = datetime)) +
     geom_line(aes(y = temp, color = "Temperature (C)")) +
     ylim(0, 45) +
@@ -280,21 +289,12 @@ tempplot <- ggplot(TX2, aes(x = datetime)) +
     theme_minimal()
 
 
-
-salplot
-```
-
-    ## Warning: Removed 60 rows containing missing values (`geom_line()`).
-
-![](TX2-EnvrData_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
-
-``` r
 tempplot
 ```
 
     ## Warning: Removed 60 rows containing missing values (`geom_line()`).
 
-![](TX2-EnvrData_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](TX2-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
 ### We need to calculate the mean, maximum, and minimum values for salinity and temperature per month and year. First make two data frames to contain each of the annual and monthly averages.
 
@@ -380,7 +380,7 @@ print(TX2_envryear)
 ``` r
 timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
     geom_point(aes(y = month, color = length_salinity), size = 4) +
-    labs(x = "Time", y = "Month", title = "Timplot for TX2 - Copano Bay") +
+    labs(x = "Time", y = "Month", title = "Timeplot for TX2 - Copano Bay") +
     ylim(1,12) +
     theme_minimal()
 
@@ -389,7 +389,7 @@ timeplot
 
     ## Warning: Removed 1 rows containing missing values (`geom_point()`).
 
-![](TX2-EnvrData_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](TX2-EnvrData_files/figure-gfm/timeplot-1.png)<!-- -->
 
 ### We can now calculate a list of variables that we will have collected for all sites. This will allow us to compare sites easily. We will calculate the number of observations from each site, the mean annual, maximum annual, and minimum annual value for all variables.
 

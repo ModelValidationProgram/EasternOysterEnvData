@@ -210,51 +210,42 @@ envrplot <- ggplot(SC2, aes(x = datetime)) +
     geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
     geom_line(aes(y = temp, color = "Temperature (C)")) +
     ylim(0, 45) +
-    labs(x = "Time", y = "Range of environmental variables") +
+    labs(x = "Time", y = "Range of environmental variables", title = "Environmental Plot for SC2 - Oyster Landing") +
     scale_color_manual(values = c("Salinity (ppt)" = "blue", "Temperature (C)" = "red")) +
     theme_minimal()
 
-salplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = salinity, color = "Salinity (ppt)", title = "Salinity Plot for SC2 - Oyster Landing")) +
-    ylim(0,40) +
-    labs(x = "Time", y = "Salinity ppt") +
-    scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
-    theme_minimal()
-```
 
-    ## Warning in geom_line(aes(y = salinity, color = "Salinity (ppt)", title =
-    ## "Salinity Plot for SC2 - Oyster Landing")): Ignoring unknown aesthetics: title
-
-``` r
-tempplot <- ggplot(SC2, aes(x = datetime)) +
-    geom_line(aes(y = temp, color = "Temperature (C)"), title = "Temperature Plot for SC2 - Oyster Landing") +
-    ylim(0, 45) +
-    labs(x = "Time", y = "Temperature C") +
-    scale_color_manual(values = c( "Temperature (C)" = "red")) +
-    theme_minimal()
-```
-
-    ## Warning in geom_line(aes(y = temp, color = "Temperature (C)"), title =
-    ## "Temperature Plot for SC2 - Oyster Landing"): Ignoring unknown parameters:
-    ## `title`
-
-``` r
 envrplot
 ```
 
-![](SC2-EnvrData_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![](SC2-EnvrData_files/figure-gfm/environment-plot-1.png)<!-- -->
 
 ``` r
+salplot <- ggplot(SC2, aes(x = datetime)) +
+    geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
+    ylim(0,40) +
+    labs(x = "Time", y = "Salinity ppt", title = "Salinity Plot for SC2 - Oyster Landing") +
+    scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
+    theme_minimal()
+
 salplot
 ```
 
-![](SC2-EnvrData_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+![](SC2-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
 
 ``` r
+tempplot <- ggplot(SC2, aes(x = datetime)) +
+    geom_line(aes(y = temp, color = "Temperature (C)")) +
+    ylim(0, 45) +
+    labs(x = "Time", y = "Temperature C", title = "Temperature Plot for SC2 - Oyster Landing") +
+    scale_color_manual(values = c( "Temperature (C)" = "red")) +
+    theme_minimal()
+
+
 tempplot
 ```
 
-![](SC2-EnvrData_files/figure-gfm/unnamed-chunk-8-3.png)<!-- -->
+![](SC2-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
 ### We need to calculate the mean, maximum, and minimum values for salinity and temperature per month and year. First make two data frames to contain each of the annual and monthly averages.
 
@@ -345,7 +336,7 @@ timeplot <- ggplot(SC2_envrmonth, aes(x = year)) +
 timeplot
 ```
 
-![](SC2-EnvrData_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
+![](SC2-EnvrData_files/figure-gfm/timeplot-1.png)<!-- -->
 
 ### We can now calculate a list of variables that we will have collected for all sites. This will allow us to compare sites easily. We will calculate the number of observations from each site, the mean annual, maximum annual, and minimum annual value for all variables.
 
