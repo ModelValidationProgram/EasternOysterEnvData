@@ -23,7 +23,7 @@ library("ggplot2")
 
 ### Note the date of data download and source. All available data should be used for each site regardless of year. Note from the CSV file how often the site was sampled, and if there are replicates in the data. Also describe if the sampling occurred at only low tide, only high tide, or continuously.  
 ```{r}
-#Data was downloaded on 7/7/2023
+#Data was downloaded on 7/11/2023
 #Source - https://cdmo.baruch.sc.edu//dges/- Selected Sapelo Island, Lower Duplin. The station code is SAPLDWQ
 
 #Create text strings with metadata information that we want to include in the final data frame. 
@@ -35,7 +35,7 @@ collection_type <- ("continuous")
 
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the "Files" window in R studio. Store the file in a variable with the "raw_ID_Site" format. If salinity and temperature data are in separate files, read in both and store them with "_sal" or "_temp" in the variable names. 
 ```{r}
-#The file we will be working with is from Copano Bay, Texas. The ID_Site for this site is TX2. 
+#The file we will be working with is from Sapelo Island, GA. The ID_Site for this site is GA1. 
 raw_GA1 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/GA1-raw.csv")
 
 # View how the data is stored. Note the variable names and the format and units that the data are stored in.  
