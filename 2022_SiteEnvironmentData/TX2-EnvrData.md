@@ -48,8 +48,9 @@ library("ggplot2")
 
 #Create text strings with metadata information that we want to include in the final data frame. 
 download_date <- ("07-07-2023")
-source_description <- ("NERR Centralized Data. Mission Aransas - Copano Bay West")
+source_description <- ("NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ")
 site_name <- ("TX2") #Use site code with site number based on lat position and state
+collection_type <- ("continuous")
 ```
 
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the “Files” window in R studio. Store the file in a variable with the “raw_ID_Site” format. If salinity and temperature data are in separate files, read in both and store them with “\_sal” or “\_temp” in the variable names.
@@ -114,7 +115,6 @@ View(raw_TX2)
 
 ``` r
 # SKIP combining, date and time of collection is already in a column together 
-# combined_datetime <- paste(raw_SC2$collection_date, raw_SC2$collection_time) 
 
 # Use unclass to view the way that the time and date are stored 
 # unclass(raw_TX2$DateTimeStamp)
@@ -429,20 +429,20 @@ Temperature_n <- nrow(TX2)
 Temperature_years <- nrow(TX2_envryear)
 
 #Create a data frame to store the temperature results
-TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years)
+TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years, collection_type)
 print(TX2_temp)
 ```
 
     ##      site_name download_date
     ## [1,] "TX2"     "07-07-2023" 
-    ##      source_description                                         lat      
-    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West" "28.0841"
-    ##      lon        firstyear finalyear Mean_Annual_Temperature_C
-    ## [1,] "-97.2009" "2008"    "2021"    "23.1054088188906"       
+    ##      source_description                                                
+    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
+    ##      lat       lon        firstyear finalyear Mean_Annual_Temperature_C
+    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "23.1054088188906"       
     ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
     ## [1,] "32.0176470588235"     "7.98823529411765"     "6.38546821611257"
-    ##      Temperature_n Temperature_years
-    ## [1,] "490107"      "17"
+    ##      Temperature_n Temperature_years collection_type
+    ## [1,] "490107"      "17"              "continuous"
 
 ``` r
 # Write to the combined file with all sites 
@@ -463,20 +463,20 @@ Salinity_years <- nrow(TX2_envryear)
 
 
 #Create a data frame to store the temperature results
-TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years)
+TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
 print(TX2_salinity)
 ```
 
     ##      site_name download_date
     ## [1,] "TX2"     "07-07-2023" 
-    ##      source_description                                         lat      
-    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West" "28.0841"
-    ##      lon        firstyear finalyear Mean_Annual_Salinity_ppt
-    ## [1,] "-97.2009" "2008"    "2021"    "20.8578965409594"      
+    ##      source_description                                                
+    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
+    ##      lat       lon        firstyear finalyear Mean_Annual_Salinity_ppt
+    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "20.8578965409594"      
     ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
     ## [1,] "30.2235294117647"    "6.36470588235294"    "11.6639351083855" "490107"  
-    ##      Salinity_years
-    ## [1,] "17"
+    ##      Salinity_years collection_type
+    ## [1,] "17"           "continuous"
 
 ``` r
 # Write to the combined file with all sites 
