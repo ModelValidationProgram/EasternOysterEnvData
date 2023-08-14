@@ -71,7 +71,7 @@ site_name <- ("TX3") #Use site code with site number based on lat position and s
 collection_type <- ("continuous")
 ```
 
-## Read in the data using the USGS Data Retrieval Package in R. This will skip the step of downloading a .csv file or similar and importing that file from the desktop. We will import the salinity and temperature data separately and store them with “\_sal” or “\_temp” in the variable names. Then we will combine them into one file together.
+### Read in the data using the USGS Data Retrieval Package in R. This will skip the step of downloading a .csv file or similar and importing that file from the desktop. We will import the salinity and temperature data separately and store them with “\_sal” or “\_temp” in the variable names. Then we will combine them into one file together.
 
 ``` r
 siteNumber <- "08162675" # USGS Site Code
@@ -84,7 +84,7 @@ comment(TX3Info)
     ##  [1] "#"                                                                                        
     ##  [2] "#"                                                                                        
     ##  [3] "# US Geological Survey"                                                                   
-    ##  [4] "# retrieved: 2023-08-14 11:01:25 -04:00\t(vaas01)"                                        
+    ##  [4] "# retrieved: 2023-08-14 11:08:41 -04:00\t(vaas01)"                                        
     ##  [5] "#"                                                                                        
     ##  [6] "# The Site File stores location and general information about groundwater,"               
     ##  [7] "# surface water, and meteorological sites"                                                
@@ -155,10 +155,7 @@ View(rawUnitValues_sal)
 View(rawUnitValues_temp)
 ```
 
-Combine the salinity and temperature data into one common data frame and
-name it with the appropriate site code using the “raw\_” format. Filter
-the combined data frame to include no duplicate columns and rename
-column headers.
+### Combine the salinity and temperature data into one common data frame and name it with the appropriate site code using the “raw\_” format. Filter the combined data frame to include no duplicate columns and rename column headers.
 
 ``` r
 # Join the data frames by common time using the dateTime column
@@ -267,6 +264,16 @@ print(summary(filtered_TX3$temp))
 #Store our data into a variable name with just the site name. 
 TX3 <- filtered_TX3
 ```
+
+### Write the final processed data frame to a .csv file to create a reproducible “raw” file
+
+``` r
+write.table(TX3, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/TX3_raw.csv", sep = ",", append = TRUE, col.names = TRUE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+```
+
+    ## Warning in write.table(TX3,
+    ## "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/TX3_raw.csv", :
+    ## appending column names to file
 
 ### Visualize the salinity, temperature, and date ranges over time. This can help us see if there are any anomalies or gaps in the data and make sure the filtering was done correctly. Sanity check - do the temperature and salinity ranges look appropriate for the geography of the site (ex. near full ocean salinity for coastal sites, lower salinity for estuaries or near rivers)?
 
