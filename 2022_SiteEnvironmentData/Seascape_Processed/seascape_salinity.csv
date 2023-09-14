@@ -17,4 +17,5 @@ LA3,8/17/23,USGS Water Data Vermilion Bay - 07387040,29.71326575,-91.8803982,200
 LA6,8/17/23,USGS Water Data Lake Fortuna - 07374526,29.63354395,-89.5636694,2007,2022,9.574933836,24.3125,1.48125,5.899617703,147362,16,continuous,,
 NJ1,8/18/23,Delaware Water Quality - CEMA at University of Delaware,39.085,-75.186,2005,2022,22.70900662,26.79222222,17.39444444,4.247331359,151,18,monthly,,
 NJ2,8/18/23,Delaware Water Quality - CEMA at University of Delaware,39.455,-75.56,2005,2022,5.849733333,10.04,1.857777778,3.291231782,150,18,monthly,,
-MD1,8/18/23,"Maryland DNR/Eyes on the Bay - Lower Potomac River, Morgantown Bridge",38.3626,-76.9905,1986,2022,7.706231079,13.49459459,1.44972973,3.462920741,8456,37,weekly_intermittent,,
+MD1,8/18/23,"Maryland DNR/Eyes on the Bay - Lower Potomac River, Morgantown Bridge",38.3626,-76.9905,1986,2022,7.706231079,13.49459459,1.44972973,3.462920741,8456,37,weekly_intermittent,,"FL3","09-13-2023","National Parks Service Continuous Water Data - Timucuan Preserve","30.44116","-81.43908","2005","2022","32.3522536547562","37.2042051805","15.4224441766","3.71539685491799","249752","20","continuous"
+"FL3","09-13-2023","National Parks Service Continuous Water Data - Timucuan Preserve","30.44116","-81.43908","2005","2022","32.3522536547562","37.2042051805","15.4224441766","3.71539685491799","249752","20","continuous"
