@@ -1,7 +1,7 @@
 ---
 title: "VA2 - Processed Environmental Data"
 author: "Madeline Eppley"
-date: "9/13/2023"
+date: "9/22/2023"
 output: github_document
 ---
 
@@ -23,12 +23,12 @@ library("ggplot2")
 
 ### Note the date of data download and source. All available data should be used for each site regardless of year. Note from the CSV file how often the site was sampled, and if there are replicates in the data. Also describe if the sampling occurred at only low tide, only high tide, or continuously.  
 ```{r}
-#Data was downloaded on 9/13/2023
+#Data was downloaded on 9/22/2023
 #Source - https://irma.nps.gov/AQWebPortal/Data/Location/Summary/Location/COLO/Interval/Latest and https://cmc.vims.edu/#/home
 #The site was sampled intermittently
 
 #Create text strings with metadata information that we want to include in the final data frame. 
-download_date <- ("09-13-2023")
+download_date <- ("09-22-2023")
 source_description <- ("National Parks Service Continuous Water Data - Jamestown Island and Chesapeake Monitoring Coop/NERR/VIMS")
 site_name <- ("VA2") #Use site code with site number based on lat position and state
 collection_type <- ("intermittent")
@@ -67,21 +67,10 @@ head(raw_VA2_temp)
 #raw_VA2_sal <- raw_VA2_sal %>% rename("salinity" = "PSU")
 raw_VA2_temp <- raw_VA2_temp  %>% rename("temp" = "Temp")
 
-#Print the range (minimum and maximum) of dates of data collection. 
-#print(range(raw_VA2_sal$datetime))
-print(range(raw_VA2_temp$datetime))
-
-#Print the range (minimum and maximum) of the salinity values. 
-#print(range(raw_VA2_sal$salinity))
-
-#Print the range (minimum and maximum) of the temperature values.
-print(range(raw_VA2_temp$temp))
-
-
 #Store variables that we will include in the final data frame
 lat <- 37.21462
 lon <- -76.4483
-firstyear <- 2018
+firstyear <- 2010
 finalyear <- 2022
 ```
 
