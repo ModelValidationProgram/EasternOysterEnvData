@@ -4,6 +4,6 @@ authors:
   - family-names: Eppley
     given-names: Madeline G.
     orcid: https://orcid.org/0000-0003-2301-853X
-title: "Seascape Environmental Data Processing Template"
-version: 1.0.0
+title: "Seascape Environmental Data Processing Template (R Markdown)"
+url: "https://github.com/ModelValidationProgram/EasternOysterEnvData/blob/master/2022_SiteEnvironmentData/EnvrDataTemplateExample/EnvrDataTemplate.Rmd"
 date-released: 2023-10-01
