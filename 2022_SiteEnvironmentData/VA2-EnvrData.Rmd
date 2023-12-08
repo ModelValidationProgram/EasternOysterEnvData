@@ -181,7 +181,7 @@ print(VA2_envryear_temp)
 ```{r timeplot - temperature}
 timeplot <- ggplot(VA2_envrmonth_temp, aes(x = year)) +
     geom_point(aes(y = month, color = length_temp), size = 4) +
-    labs(x = "Time", y = "Month", title = "Temperature Timeplot for VA2 - Kingsley Plantation") +
+    labs(x = "Time", y = "Month", title = "Temperature Timeplot for VA2 - Deep Water Shoal") +
     ylim(1,12) +
     theme_minimal()
 
