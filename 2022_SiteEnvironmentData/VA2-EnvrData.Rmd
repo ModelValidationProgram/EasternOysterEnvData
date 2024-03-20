@@ -1,7 +1,7 @@
 ---
 title: "VA2 - Processed Environmental Data"
 author: "Madeline Eppley"
-date: "9/22/2023"
+date: "3/20/2024"
 output: github_document
 ---
 
@@ -37,26 +37,26 @@ collection_type <- ("intermittent")
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the "Files" window in R studio. Store the file in a variable with the "raw_ID_Site" format. If salinity and temperature data are in separate files, read in both and store them with "_sal" or "_temp" in the variable names. 
 ```{r}
 #The file we will be working with is from Lower Cedar Point, Maryland. The ID_Site for this site is VA2. 
-#raw_VA2_sal <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/VA2-raw_sal.csv")
+raw_VA2_sal <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/VA2-raw_sal.csv")
 raw_VA2_temp <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/VA2-raw_temp.csv")
 
 # View how the data is stored. Note the variable names and the format and units that the data are stored in.  
-#spec(raw_VA2_sal)
+spec(raw_VA2_sal)
 #View(raw_VA2_sal)
 
 spec(raw_VA2_temp)
-View(raw_VA2_temp)
+#View(raw_VA2_temp)
 ```
 
 ### Start with the date and time of collection. We will use the lubridate package to standardize all values into the date-time format called POSIXct. This format stores the date and time in number of seconds since a past point (1/1/1970). This makes comparisons easy and helps to standardizes values. 
 ```{r}
 
 #Convert to POSIXct format. Store it into a column named datetime in the data frame.
-#raw_VA2_sal$datetime <- as.POSIXct(raw_VA2_sal$Timestamp, "%m/%d/%y %H:%M", tz = "")
+raw_VA2_sal$datetime <- as.POSIXct(raw_VA2_sal$DateRetrieved, "%d-%b-%y", tz = "")
 raw_VA2_temp$datetime <- as.POSIXct(raw_VA2_temp$Timestamp, "%m/%d/%y %H:%M", tz = "")
 
 #Print the new data frame and examine to make sure the new datetime column is in the correct format. 
-#head(raw_VA2_sal)
+head(raw_VA2_sal)
 head(raw_VA2_temp)
 ```
 
@@ -64,7 +64,7 @@ head(raw_VA2_temp)
 ```{r}
 #Standardize column and variable names. We will use "temp" for temperature in degrees C, "salinity" for salinity in parts per thousand (ppt), "lat" for latitude in degrees, and "lon" for longitude in degrees. 
 #Use the dyplr format to rename multiple columns in the format "dataframe %>% rename("new name 1" = "old name 1", "new name 2", "old name 2")
-#raw_VA2_sal <- raw_VA2_sal %>% rename("salinity" = "PSU")
+raw_VA2_sal <- raw_VA2_sal %>% rename("salinity" = "Salinity")
 raw_VA2_temp <- raw_VA2_temp  %>% rename("temp" = "Temp")
 
 #Store variables that we will include in the final data frame
@@ -78,33 +78,33 @@ finalyear <- 2022
 ### Filter any of the variables that have data points outside of normal range. We will use 0-40 as the accepted range for salinity (ppt) and temperature (C) values. Note, in the summer, salinity values can sometimes exceed 40. Check to see if there are values above 40. In this case, adjust the range or notify someone that the site has particularly high salinity values. 
 ```{r}
 #Filter the data between the values of 0 and 40 for both salinity and temperature. 
-#filtered_VA2_sal <- raw_VA2_sal %>%
-    #filter(between(salinity, 0, 42)) 
+filtered_VA2_sal <- raw_VA2_sal %>%
+    filter(between(salinity, 0, 42)) 
            
 filtered_VA2_temp <- raw_VA2_temp %>%
     filter(between(temp, 0, 40))
 
 # Sanity check - print the ranges to ensure values are filtered properly. We can see that the ranges for both are now in the appropriate range.  
-#print(summary(filtered_VA2_sal$salinity))
+print(summary(filtered_VA2_sal$salinity))
 print(summary(filtered_VA2_temp$temp))
 
 #Store our data into a variable name with just the site name. 
 VA2_temp <- filtered_VA2_temp
-#VA2_sal <- filtered_VA2_sal
+VA2_sal <- filtered_VA2_sal
 
 ```
 
 ### Visualize the salinity, temperature, and date ranges over time. This can help us see if there are any anomalies or gaps in the data and make sure the filtering was done correctly. Sanity check - do the temperature and salinity ranges look appropriate for the geography of the site (ex. near full ocean salinity for coastal sites, lower salinity for estuaries or near rivers)?
 
 ```{r salinity-plot}
-#salplot <- ggplot(VA2_sal, aes(x = datetime)) +
-    #geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
-    #ylim(0,40) +
-    #labs(x = "Time", y = "Salinity ppt", title = "Salinity Plot for VA2 - Kingsley Plantation") +
-    #scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
-    #theme_minimal()
+salplot <- ggplot(VA2_sal, aes(x = datetime)) +
+    geom_line(aes(y = salinity, color = "Salinity (ppt)")) +
+    ylim(0,40) +
+    labs(x = "Time", y = "Salinity ppt", title = "Salinity Plot for VA2 - Deep Water Shoal") +
+    scale_color_manual(values = c("Salinity (ppt)" = "blue")) +
+    theme_minimal()
 
-#salplot
+salplot
 ```
 
 
@@ -123,14 +123,14 @@ tempplot
 ### We need to calculate the mean, maximum, and minimum values for salinity and temperature per month and year. First make two data frames to contain each of the annual and monthly averages.
 ```{r}
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each month. 
-#VA2_envrmonth_sal <- VA2_sal %>%
-   # mutate(year = year(datetime), month = month(datetime)) %>%
-    #group_by(year, month) %>%
-    #summarise(
-     # min_salinity = min(salinity),
-     # max_salinity = max(salinity),
-      #mean_salinity = mean(salinity),
-      #length_salinity = length(salinity))
+VA2_envrmonth_sal <- VA2_sal %>%
+    mutate(year = year(datetime), month = month(datetime)) %>%
+    group_by(year, month) %>%
+    summarise(
+      min_salinity = min(salinity),
+      max_salinity = max(salinity),
+      mean_salinity = mean(salinity),
+      length_salinity = length(salinity))
       
 VA2_envrmonth_temp <- VA2_temp %>%
     mutate(year = year(datetime), month = month(datetime)) %>%
@@ -141,18 +141,18 @@ VA2_envrmonth_temp <- VA2_temp %>%
       mean_temp = mean(temp),
       length_temp = length(temp))
   
-#print(VA2_envrmonth_sal)
+print(VA2_envrmonth_sal)
 print(VA2_envrmonth_temp)
 
 
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each year. 
-#VA2_envryear_sal <- VA2_sal %>%
-    #mutate(year = year(datetime)) %>%
-    #group_by(year) %>%
-    #summarise(
-     # min_salinity = min(salinity),
-     # max_salinity = max(salinity),
-     # mean_salinity = mean(salinity))
+VA2_envryear_sal <- VA2_sal %>%
+    mutate(year = year(datetime)) %>%
+    group_by(year) %>%
+    summarise(
+      min_salinity = min(salinity),
+      max_salinity = max(salinity),
+      mean_salinity = mean(salinity))
 
 VA2_envryear_temp <- VA2_temp %>%
     mutate(year = year(datetime)) %>%
@@ -162,19 +162,19 @@ VA2_envryear_temp <- VA2_temp %>%
       max_temp = max(temp),
       mean_temp = mean(temp))
 
-#print(VA2_envryear_sal)
+print(VA2_envryear_sal)
 print(VA2_envryear_temp)
 
 ```
 ### Plot the months and years of data collection to check if there are any collection gaps in the data.
 ```{r timeplot - salinity}
-#timeplot <- ggplot(VA2_envrmonth_sal, aes(x = year)) +
-   # geom_point(aes(y = month, color = length_salinity), size = 4) +
-    #labs(x = "Time", y = "Month", title = "Salinity Timeplot for VA2 - Kinglsey Plantation") +
-    #ylim(1,12) +
-    #theme_minimal()
+timeplot <- ggplot(VA2_envrmonth_sal, aes(x = year)) +
+    geom_point(aes(y = month, color = length_salinity), size = 4) +
+    labs(x = "Time", y = "Month", title = "Salinity Timeplot for VA2 - Deep Water Shoal") +
+    ylim(1,12) +
+    theme_minimal()
 
-#timeplot
+timeplot
 ```
 
 ### Plot the months and years of data collection to check if there are any collection gaps in the data.
@@ -230,21 +230,21 @@ write.csv(VA2_temp, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_Site
 
 ```{r}
 #Calculate the salinity variables
-#Mean_Annual_Salinity_ppt <- mean(VA2_sal$salinity)
-#Mean_max_Salinity_ppt <- mean(VA2_envryear_sal$max_salinity)
-#Mean_min_Salinity_ppt <- mean(VA2_envryear_sal$min_salinity)
-#Salinity_st_dev <- sd(VA2_sal$salinity)
-#Salinity_n <- nrow(VA2_sal)
-#Salinity_years <- nrow(VA2_envryear_sal)
+Mean_Annual_Salinity_ppt <- mean(VA2_sal$salinity)
+Mean_max_Salinity_ppt <- mean(VA2_envryear_sal$max_salinity)
+Mean_min_Salinity_ppt <- mean(VA2_envryear_sal$min_salinity)
+Salinity_st_dev <- sd(VA2_sal$salinity)
+Salinity_n <- nrow(VA2_sal)
+Salinity_years <- nrow(VA2_envryear_sal)
 
 
 #Create a data frame to store the temperature results
-#VA2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
-#print(VA2_salinity)
+VA2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
+print(VA2_salinity)
 
 # Write to the combined file with all sites 
-#write.table(VA2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
+write.table(VA2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/seascape_salinity.csv", sep = ",", append = TRUE, col.names = FALSE, row.names = FALSE) # The column names should be changed to FALSE after 1st row is added to the data frame
 
 # Write to a unique new CSV file
-#write.csv(VA2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/VA2_salinity.csv", row.names = FALSE)
+write.csv(VA2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/VA2_salinity.csv", row.names = FALSE)
 ```
