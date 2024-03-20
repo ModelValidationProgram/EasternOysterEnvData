@@ -21,5 +21,6 @@ MD1,8/18/23,"Maryland DNR/Eyes on the Bay - Lower Potomac River, Morgantown Brid
 FL3,9/13/23,National Parks Service Continuous Water Data - Timucuan Preserve,30.44116,-81.43908,2005,2022,22.1556673,30.6387,10.38665,5.707664316,258086,20,continuous
 VA2,9/13/23,National Parks Service Continuous Water Data - Jamestown Island and Chesapeake Monitoring Coop/NERR/VIMS,37.21462,-76.4483,2018,2022,29.03708083,31.216,20.58,1.573296407,2029,2,intermittent
 GA2,3/19/24,USGS Water Data Meridian Landing - 022035975,31.45333333,-81.3627778,2007,2022,21.84500814,33.025,8.15,6.618344122,495777,16,continuous
-GA4,3/20/24,National Parks Service Continuous Water Data - Fort Pulaski NM - Lazaretto Creek Dock,32.01414,-80.88412,2006,2022,20.85897517,30.44470401,8.338666667,6.761183644,242645,18,continuous"FL2","03-20-2024","NERR Centralized Data. Apalachicola Bay - Cat Point APACPWQ","29.7021","-84.8802","2002","2023","22.9266798904317","32.4","9.28260869565217","6.22572742984679","635220","23","continuous"
-"FL2","03-20-2024","NERR Centralized Data. Apalachicola Bay - Cat Point APACPWQ","29.7021","-84.8802","2002","2023","22.9266798904317","32.4","9.28260869565217","6.22572742984679","635220","23","continuous"
+GA4,3/20/24,National Parks Service Continuous Water Data - Fort Pulaski NM - Lazaretto Creek Dock,32.01414,-80.88412,2006,2022,20.85897517,30.44470401,8.338666667,6.761183644,242645,18,continuous
+FL2,3/20/24,NERR Centralized Data. Apalachicola Bay - Cat Point APACPWQ,29.7021,-84.8802,2002,2023,22.92667989,32.4,9.282608696,6.22572743,635220,23,continuous
+FL1,3/20/24,NERR Centralized Data. Apalachicola Bay - Dry Bar APADBWQ,29.6747,-85.0583,2002,2023,22.76206101,32.55652174,7.77826087,6.264802699,601948,23,continuous
