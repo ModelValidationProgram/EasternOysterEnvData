@@ -1,0 +1,46 @@
+﻿Station Name,Date,Time,Sample Type,Sample Media,Depth,Parameter,Concentration,Unit,Qualifier Code,Detection Limit,Detection Limit Unit,Quantitation Level,Quantitation Level Unit,Lab Name,Analytical Method Number,Sediment Particle Size,Particle Size Unit,Fish Sample Type,Fish Taxa,Comments,Location,Watershed Code,Monitor 1,Monitor 2
+WW89,5/11/16,8:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",14.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,5/13/16,9:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",15.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,5/13/16,9:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",17,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,5/28/16,8:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",16,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,Volunteer questioned shallow DO4,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,5/28/16,8:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",19,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,Volunteer questioned shallow DO5,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,6/11/16,,Grab,Water,0.5,"Salinity, (ppt) - 00480",18.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,,
+WW89,6/11/16,,Grab,Water,3,"Salinity, (ppt) - 00480",20,ppt,N,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,,
+WW89,7/9/16,9:45:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",17.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,7/9/16,9:45:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,7/21/16,8:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,7/21/16,8:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,8/7/16,1:55:00 PM,Grab,Water,0.5,"Salinity, (ppt) - 00480",21.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,8/7/16,1:55:00 PM,Grab,Water,3,"Salinity, (ppt) - 00480",20.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,8/21/16,12:12:00 PM,Grab,Water,0.5,"Salinity, (ppt) - 00480",21,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,8/21/16,12:12:00 PM,Grab,Water,3,"Salinity, (ppt) - 00480",22,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,8/28/16,11:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",22,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Flood,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,8/28/16,11:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",21.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Flood,NR 03 - Lower Pond A,PE,Eric Kohlsaat,Jennifer Kohlsaat
+WW89,9/10/16,8:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",21.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,9/10/16,8:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",22,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,9/23/16,8:45:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",23.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,9/23/16,8:45:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",23.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,10/9/16,9:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",24.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,10/9/16,9:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",24.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW89,10/21/16,9:15:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",26.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 03 - Lower Pond A,PE,C.Wakefield,
+WW91,5/14/16,9:45:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",13.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,5/29/16,10:45:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",8,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,5/29/16,10:45:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",13,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,6/11/16,8:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",16,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,6/11/16,8:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",19,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,7/23/16,8:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",19,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,7/23/16,8:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,8/6/16,8:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,
+WW91,8/6/16,8:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",20,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,
+WW91,8/21/16,9:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",21,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,8/21/16,9:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",22.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,8/27/16,9:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",22.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,8/27/16,9:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",23.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,9/10/16,9:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",21.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,9/10/16,9:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",22,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Ebb,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,9/24/16,9:00:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",22.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,9/24/16,9:00:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",22.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,Felix Sarubbi
+WW91,10/8/16,10:15:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",23.5,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Low,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,10/8/16,10:15:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",23,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,State of tide: Low,NR 04 - Lower Pond B,PE,C. Wood,
+WW91,10/22/16,10:30:00 AM,Grab,Water,0.5,"Salinity, (ppt) - 00480",25,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,
+WW91,10/22/16,10:30:00 AM,Grab,Water,3,"Salinity, (ppt) - 00480",25,ppt,,0.4,ppt,0.4,ppt,URIWW,,,,,,,NR 04 - Lower Pond B,PE,Carol Sarubbi,

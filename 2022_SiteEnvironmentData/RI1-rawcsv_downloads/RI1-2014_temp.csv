@@ -1,0 +1,54 @@
+﻿Station Name,Date,Time,Sample Type,Sample Media,Depth,Parameter,Concentration,Unit,Qualifier Code,Detection Limit,Detection Limit Unit,Quantitation Level,Quantitation Level Unit,Lab Name,Analytical Method Number,Comments,Location
+WW89,5/15/14,8:15:00 AM,Grab,Water,3,Temperature - 00011,15,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,5/15/14,8:15:00 AM,Grab,Water,1,Temperature - 00011,19,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,5/16/14,8:00:00 AM,Grab,Water,3,Temperature - 00011,16,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B
+WW91,5/16/14,8:00:00 AM,Grab,Water,0.5,Temperature - 00011,17.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B
+WW89,5/30/14,8:30:00 AM,Grab,Water,5,Temperature - 00011,12,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,5/30/14,8:30:00 AM,Grab,Water,1,Temperature - 00011,15,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,5/30/14,8:30:00 AM,Grab,Water,0.1,Temperature - 00011,16,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,5/30/14,9:00:00 AM,Grab,Water,3,Temperature - 00011,16,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,5/30/14,9:00:00 AM,Grab,Water,0.5,Temperature - 00011,17,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,6/13/14,7:45:00 AM,Grab,Water,3,Temperature - 00011,19.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,6/13/14,7:45:00 AM,Grab,Water,0.5,Temperature - 00011,20.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW89,6/20/14,8:00:00 AM,Grab,Water,0.1,Temperature - 00011,21,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,6/20/14,8:00:00 AM,Grab,Water,1,Temperature - 00011,21,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,6/20/14,8:00:00 AM,Grab,Water,3,Temperature - 00011,21,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,7/4/14,7:45:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,7/4/14,7:45:00 AM,Grab,Water,1,Temperature - 00011,25.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,7/4/14,7:45:00 AM,Grab,Water,0.1,Temperature - 00011,26,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,7/5/14,9:30:00 AM,Grab,Water,3,Temperature - 00011,23.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Flood tide,NR 04 - Lower Pond B 
+WW91,7/5/14,9:30:00 AM,Grab,Water,0.5,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Flood tide,NR 04 - Lower Pond B 
+WW89,7/18/14,8:00:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,7/18/14,8:00:00 AM,Grab,Water,0.1,Temperature - 00011,24.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,7/18/14,8:00:00 AM,Grab,Water,1,Temperature - 00011,24.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,7/19/14,9:35:00 AM,Grab,Water,0.5,Temperature - 00011,24.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Low tide,NR 04 - Lower Pond B 
+WW91,7/19/14,9:35:00 AM,Grab,Water,3,Temperature - 00011,24.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Low tide,NR 04 - Lower Pond B 
+WW89,8/1/14,8:00:00 AM,Grab,Water,0.1,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,8/1/14,8:00:00 AM,Grab,Water,0.5,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,8/1/14,8:00:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,8/1/14,2:00:00 PM,Grab,Water,3,Temperature - 00011,25,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,8/1/14,2:00:00 PM,Grab,Water,0.5,Temperature - 00011,27,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW89,8/16/14,10:00:00 AM,Grab,Water,1,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,8/16/14,10:00:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,8/16/14,8:30:00 AM,Grab,Water,0.5,Temperature - 00011,23,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,8/16/14,8:30:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW89,8/29/14,8:00:00 AM,Grab,Water,0.5,Temperature - 00011,23.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,8/29/14,8:00:00 AM,Grab,Water,0.1,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,8/29/14,8:00:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,8/31/14,10:00:00 AM,Grab,Water,0.5,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,8/31/14,10:00:00 AM,Grab,Water,3,Temperature - 00011,24,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW89,9/12/14,7:45:00 AM,Grab,Water,0.1,Temperature - 00011,21.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,9/12/14,7:45:00 AM,Grab,Water,0.5,Temperature - 00011,21.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,9/12/14,7:45:00 AM,Grab,Water,3,Temperature - 00011,22.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,9/13/14,8:45:00 AM,Grab,Water,3,Temperature - 00011,19.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Flood tide,NR 04 - Lower Pond B 
+WW91,9/13/14,8:45:00 AM,Grab,Water,0.5,Temperature - 00011,21,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Flood tide,NR 04 - Lower Pond B 
+WW89,9/19/14,7:45:00 AM,Grab,Water,0.5,Temperature - 00011,19.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,9/19/14,7:45:00 AM,Grab,Water,3,Temperature - 00011,20,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,9/19/14,7:45:00 AM,Grab,Water,0.1,Temperature - 00011,20.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,9/23/14,9:30:00 AM,Grab,Water,0.5,Temperature - 00011,20,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Ebb tide,NR 04 - Lower Pond B 
+WW91,9/23/14,9:30:00 AM,Grab,Water,3,Temperature - 00011,20,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,Ebb tide,NR 04 - Lower Pond B 
+WW89,10/3/14,9:15:00 AM,Grab,Water,0.1,Temperature - 00011,16.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,10/3/14,9:15:00 AM,Grab,Water,0.5,Temperature - 00011,17,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW89,10/3/14,9:15:00 AM,Grab,Water,3,Temperature - 00011,17.5,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 03 - Lower Pond A 
+WW91,10/17/14,4:00:00 PM,Grab,Water,3,Temperature - 00011,18,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
+WW91,10/17/14,4:00:00 PM,Grab,Water,0.5,Temperature - 00011,19,C,,-35,C,-35,C,URIWW,2550: Temperature of Water by Thermometer,,NR 04 - Lower Pond B 
