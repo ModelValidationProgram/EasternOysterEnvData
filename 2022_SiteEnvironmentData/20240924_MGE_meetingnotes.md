@@ -23,7 +23,7 @@ OR
 - long-term low resolution
 - short-term high resolution with captured seasonality
 
-## Sites in common between the two studies that pass QC where we are using the same data from seascape samples - check to make sure our data is the same for the sites that we have in common
+## Sites in common between the two studies that pass QC where we are using the same data from seascape samples to ensure we have the same data
 - NH1, passes check
 - ME2, passes check
 - FL3, passes check
