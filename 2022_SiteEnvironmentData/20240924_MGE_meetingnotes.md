@@ -9,8 +9,8 @@ Nicole's sites and the seascape overlap
 - LA Sister Lake (LA4)
 - TX Capano Bay (TX2)
 - VA James River Deep Water Shoal (VA1)
-- DEBY ()
-- LOLA (has ~May 2023 - May 2024 salinity and temperature for Coan River, VA)* short-term high resolution with seasonality
+- DEBY (passes QC)
+- LOLA (has ~ May 2023 - May 2024 salinity and temperature for Coan River, VA)* passes QC as a short-term high resolution site that captures seasonality
 
 Seascape environmental data inclusion protocol (M.G.E.)
 - 10_years_recent
@@ -19,14 +19,23 @@ Seascape environmental data inclusion protocol (M.G.E.)
 - 3_years_data total
 
 OR 
-long-term low resolution
-short-term high resolution with captured seasonality
+
+- long-term low resolution
+- short-term high resolution with captured seasonality
+
+## Sites in common between the two studies that pass QC where we are using the same data from seascape samples - check to make sure our data is the same for the sites that we have in common
+- NH1, passes check
+- ME2, passes check
+- FL3, passes check
+- LA4, passes check
+- TX2, passes check
+
+## Sites in common that are borderline QC
+- VA2: doesn't pass QC based on 6 months of seasonal data, we don't have any data outside of May - October and don't see range in low temps that we might expect
+
+## Conclusions
+- We have the same data for the sites listed above and the selection line data passed QC
+- Nicole + Madelin ewill run analyses with VA2 for now, we can check in to see how that site looks and if it's wonky we may have to remove it
 
 
-## Sites in common between the two studies that pass QC where we are using the same data
-- NH1
-- ME2
-- FL3
-- LA4
-- TX2
-  
+
