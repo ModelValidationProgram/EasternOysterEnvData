@@ -12,7 +12,7 @@ Nicole's sites and the seascape overlap
 - DEBY (passes QC)
 - LOLA (has ~ May 2023 - May 2024 salinity and temperature for Coan River, VA)* passes QC as a short-term high resolution site that captures seasonality
 
-Seascape environmental data inclusion protocol (M.G.E.)
+Seascape environmental data inclusion protocol (MGE)
 - 10_years_recent
 - 6_months_data (captures seasonality)
 - 1_daily_measure (1 data point per day)
@@ -23,7 +23,7 @@ OR
 - long-term low resolution
 - short-term high resolution with captured seasonality
 
-## Sites in common between the two studies that pass QC where we are using the same data from seascape samples to ensure we have the same data
+## Sites in common between the two studies that pass QC where we are using the same data that MGE collected
 - NH1, passes check
 - ME2, passes check
 - FL3, passes check
