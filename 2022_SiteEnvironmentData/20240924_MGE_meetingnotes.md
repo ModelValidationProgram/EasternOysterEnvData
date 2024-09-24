@@ -21,3 +21,12 @@ Seascape environmental data inclusion protocol (M.G.E.)
 OR 
 long-term low resolution
 short-term high resolution with captured seasonality
+
+
+## Sites in common between the two studies that pass QC where we are using the same data
+- NH1
+- ME2
+- FL3
+- LA4
+- TX2
+  
