@@ -4,7 +4,7 @@
 - Nicole made an environmental distance matrix with the data and Madeline noticed that the James River site (VA2) looked odd & notes it is borderline on passing QC
 
 Nicole's sites and the seascape overlap
-- ME Hog Island (ME2 is the closest site)
+- ME Hog Island (ME2)
 - NH Great Bay (NH1)
 - FL Atlantic Coast (FL3)
 - LA Sister Lake (LA4)
