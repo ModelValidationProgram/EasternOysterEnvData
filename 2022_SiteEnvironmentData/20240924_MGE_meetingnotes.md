@@ -9,7 +9,7 @@ Nicole's sites and the seascape overlap
 - FL Atlantic Coast (FL3)
 - LA Sister Lake (LA4)
 - TX Capano Bay (TX2)
-- VA James River Deep Water Shoal (VA1)
+- VA James River Deep Water Shoal (VA2)
 - DEBY (passes QC)
 - LOLA (has ~ May 2023 - May 2024 salinity and temperature for Coan River, VA)* passes QC as a short-term high resolution site that captures seasonality
 
@@ -30,6 +30,7 @@ OR
 - FL3, passes check
 - LA4, passes check
 - TX2, passes check
+- VA2, passes check
 
 ## Sites in common that are borderline QC
 - VA2: doesn't pass QC based on 6 months of seasonal data, we don't have any data outside of May - October and don't see range in low temps that we might expect
