@@ -11,31 +11,7 @@ setwd("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentDat
 
 ``` r
 library("dplyr") #Used for working with data frames
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library("lubridate") #Used for time-date conversions
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 library("readr") #Used to read the CSV file
 library("ggplot2") 
 ```
@@ -61,10 +37,10 @@ raw_TX2 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_Site
 ```
 
     ## Rows: 523354 Columns: 30
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
-    ## chr (16): Station_Code, isSWMP, DateTimeStamp, F_Record, F_Temp, F_SpCond, F...
-    ## dbl (14): Historical, ProvisionalPlus, Temp, SpCond, Sal, DO_pct, DO_mgl, De...
+    ## chr (16): Station_Code, isSWMP, DateTimeStamp, F_Record, F_Temp, F_SpCond, F_Sal, F_DO_pct, F_DO_...
+    ## dbl (14): Historical, ProvisionalPlus, Temp, SpCond, Sal, DO_pct, DO_mgl, Depth, cDepth, Level, c...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -127,70 +103,62 @@ raw_TX2$datetime <- as.POSIXct(raw_TX2$DateTimeStamp, "%m/%d/%y %H:%M", tz = "")
 summary(raw_TX2)
 ```
 
-    ##  Station_Code          isSWMP          DateTimeStamp        Historical    
-    ##  Length:523354      Length:523354      Length:523354      Min.   :0.0000  
-    ##  Class :character   Class :character   Class :character   1st Qu.:1.0000  
-    ##  Mode  :character   Mode  :character   Mode  :character   Median :1.0000  
-    ##                                                           Mean   :0.8024  
-    ##                                                           3rd Qu.:1.0000  
-    ##                                                           Max.   :1.0000  
-    ##                                                                           
-    ##  ProvisionalPlus   F_Record              Temp          F_Temp         
-    ##  Min.   :1       Length:523354      Min.   : 2.60   Length:523354     
-    ##  1st Qu.:1       Class :character   1st Qu.:18.10   Class :character  
-    ##  Median :1       Mode  :character   Median :24.10   Mode  :character  
-    ##  Mean   :1                          Mean   :23.15                     
-    ##  3rd Qu.:1                          3rd Qu.:29.10                     
-    ##  Max.   :1                          Max.   :33.90                     
-    ##                                     NA's   :26863                     
-    ##      SpCond        F_SpCond              Sal           F_Sal          
-    ##  Min.   : 0.13   Length:523354      Min.   : 0.10   Length:523354     
-    ##  1st Qu.:17.64   Class :character   1st Qu.:10.40   Class :character  
-    ##  Median :30.79   Mode  :character   Median :19.10   Mode  :character  
-    ##  Mean   :32.73                      Mean   :20.86                     
-    ##  3rd Qu.:48.97                      3rd Qu.:32.00                     
-    ##  Max.   :64.92                      Max.   :43.80                     
-    ##  NA's   :33247                      NA's   :33247                     
-    ##      DO_pct         F_DO_pct             DO_mgl        F_DO_mgl        
-    ##  Min.   :  4.60   Length:523354      Min.   : 0.40   Length:523354     
-    ##  1st Qu.: 93.40   Class :character   1st Qu.: 6.60   Class :character  
-    ##  Median : 97.50   Mode  :character   Median : 7.30   Mode  :character  
-    ##  Mean   : 97.68                      Mean   : 7.54                     
-    ##  3rd Qu.:102.20                      3rd Qu.: 8.40                     
-    ##  Max.   :173.90                      Max.   :13.60                     
-    ##  NA's   :39376                       NA's   :43965                     
-    ##      Depth          F_Depth              cDepth         F_cDepth        
-    ##  Min.   :0.4      Length:523354      Min.   :0.3      Length:523354     
-    ##  1st Qu.:1.1      Class :character   1st Qu.:1.0      Class :character  
-    ##  Median :1.4      Mode  :character   Median :1.1      Mode  :character  
-    ##  Mean   :1.3                         Mean   :1.2                        
-    ##  3rd Qu.:1.5                         3rd Qu.:1.4                        
-    ##  Max.   :2.2                         Max.   :2.2                        
-    ##  NA's   :322098                      NA's   :426464                     
-    ##      Level          F_Level              cLevel         F_cLevel        
-    ##  Min.   :-1.15    Length:523354      Min.   :-0.61    Length:523354     
-    ##  1st Qu.: 0.31    Class :character   1st Qu.: 0.26    Class :character  
-    ##  Median : 0.45    Mode  :character   Median : 0.42    Mode  :character  
-    ##  Mean   : 0.42                       Mean   : 0.39                      
-    ##  3rd Qu.: 0.58                       3rd Qu.: 0.56                      
-    ##  Max.   : 1.15                       Max.   : 1.12                      
-    ##  NA's   :238905                      NA's   :266391                     
-    ##        pH            F_pH                Turb           F_Turb         
-    ##  Min.   :7.00    Length:523354      Min.   :  -6.0   Length:523354     
-    ##  1st Qu.:8.10    Class :character   1st Qu.:  10.0   Class :character  
-    ##  Median :8.20    Mode  :character   Median :  21.0   Mode  :character  
-    ##  Mean   :8.17                       Mean   :  33.9                     
-    ##  3rd Qu.:8.30                       3rd Qu.:  42.0                     
-    ##  Max.   :9.20                       Max.   :1331.0                     
-    ##  NA's   :49308                      NA's   :36650                      
-    ##     ChlFluor       F_ChlFluor           datetime                     
-    ##  Min.   : -0.20   Length:523354      Min.   :2007-07-11 09:30:00.00  
-    ##  1st Qu.:  4.40   Class :character   1st Qu.:2011-04-04 07:18:45.00  
-    ##  Median :  6.90   Mode  :character   Median :2014-12-27 04:07:30.00  
-    ##  Mean   :  8.26                      Mean   :2014-12-27 03:46:17.44  
-    ##  3rd Qu.: 10.60                      3rd Qu.:2018-09-20 01:56:15.00  
-    ##  Max.   :153.20                      Max.   :2022-06-13 23:45:00.00  
-    ##  NA's   :77264                       NA's   :60
+    ##  Station_Code          isSWMP          DateTimeStamp        Historical     ProvisionalPlus
+    ##  Length:523354      Length:523354      Length:523354      Min.   :0.0000   Min.   :1      
+    ##  Class :character   Class :character   Class :character   1st Qu.:1.0000   1st Qu.:1      
+    ##  Mode  :character   Mode  :character   Mode  :character   Median :1.0000   Median :1      
+    ##                                                           Mean   :0.8024   Mean   :1      
+    ##                                                           3rd Qu.:1.0000   3rd Qu.:1      
+    ##                                                           Max.   :1.0000   Max.   :1      
+    ##                                                                                           
+    ##    F_Record              Temp          F_Temp              SpCond        F_SpCond        
+    ##  Length:523354      Min.   : 2.60   Length:523354      Min.   : 0.13   Length:523354     
+    ##  Class :character   1st Qu.:18.10   Class :character   1st Qu.:17.64   Class :character  
+    ##  Mode  :character   Median :24.10   Mode  :character   Median :30.79   Mode  :character  
+    ##                     Mean   :23.15                      Mean   :32.73                     
+    ##                     3rd Qu.:29.10                      3rd Qu.:48.97                     
+    ##                     Max.   :33.90                      Max.   :64.92                     
+    ##                     NA's   :26863                      NA's   :33247                     
+    ##       Sal           F_Sal               DO_pct         F_DO_pct             DO_mgl     
+    ##  Min.   : 0.10   Length:523354      Min.   :  4.60   Length:523354      Min.   : 0.40  
+    ##  1st Qu.:10.40   Class :character   1st Qu.: 93.40   Class :character   1st Qu.: 6.60  
+    ##  Median :19.10   Mode  :character   Median : 97.50   Mode  :character   Median : 7.30  
+    ##  Mean   :20.86                      Mean   : 97.68                      Mean   : 7.54  
+    ##  3rd Qu.:32.00                      3rd Qu.:102.20                      3rd Qu.: 8.40  
+    ##  Max.   :43.80                      Max.   :173.90                      Max.   :13.60  
+    ##  NA's   :33247                      NA's   :39376                       NA's   :43965  
+    ##    F_DO_mgl             Depth          F_Depth              cDepth         F_cDepth        
+    ##  Length:523354      Min.   :0.4      Length:523354      Min.   :0.3      Length:523354     
+    ##  Class :character   1st Qu.:1.1      Class :character   1st Qu.:1.0      Class :character  
+    ##  Mode  :character   Median :1.4      Mode  :character   Median :1.1      Mode  :character  
+    ##                     Mean   :1.3                         Mean   :1.2                        
+    ##                     3rd Qu.:1.5                         3rd Qu.:1.4                        
+    ##                     Max.   :2.2                         Max.   :2.2                        
+    ##                     NA's   :322098                      NA's   :426464                     
+    ##      Level          F_Level              cLevel         F_cLevel               pH       
+    ##  Min.   :-1.15    Length:523354      Min.   :-0.61    Length:523354      Min.   :7.00   
+    ##  1st Qu.: 0.31    Class :character   1st Qu.: 0.26    Class :character   1st Qu.:8.10   
+    ##  Median : 0.45    Mode  :character   Median : 0.42    Mode  :character   Median :8.20   
+    ##  Mean   : 0.42                       Mean   : 0.39                       Mean   :8.17   
+    ##  3rd Qu.: 0.58                       3rd Qu.: 0.56                       3rd Qu.:8.30   
+    ##  Max.   : 1.15                       Max.   : 1.12                       Max.   :9.20   
+    ##  NA's   :238905                      NA's   :266391                      NA's   :49308  
+    ##      F_pH                Turb           F_Turb             ChlFluor       F_ChlFluor       
+    ##  Length:523354      Min.   :  -6.0   Length:523354      Min.   : -0.20   Length:523354     
+    ##  Class :character   1st Qu.:  10.0   Class :character   1st Qu.:  4.40   Class :character  
+    ##  Mode  :character   Median :  21.0   Mode  :character   Median :  6.90   Mode  :character  
+    ##                     Mean   :  33.9                      Mean   :  8.26                     
+    ##                     3rd Qu.:  42.0                      3rd Qu.: 10.60                     
+    ##                     Max.   :1331.0                      Max.   :153.20                     
+    ##                     NA's   :36650                       NA's   :77264                      
+    ##     datetime                     
+    ##  Min.   :2007-07-11 09:30:00.00  
+    ##  1st Qu.:2011-04-04 07:18:45.00  
+    ##  Median :2014-12-27 04:07:30.00  
+    ##  Mean   :2014-12-27 03:46:17.44  
+    ##  3rd Qu.:2018-09-20 01:56:15.00  
+    ##  Max.   :2022-06-13 23:45:00.00  
+    ##  NA's   :60
 
 ### Analyze the ranges of all of our variables of interest - time, salinity, and temperature. Make sure that the latitude and longitude values are consistent for a static collection site. This is a quick check so we can determine how to conduct the next filtering step.
 
@@ -276,7 +244,7 @@ salplot <- ggplot(TX2, aes(x = datetime)) +
 salplot
 ```
 
-    ## Warning: Removed 60 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 60 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](TX2-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
 
@@ -292,7 +260,7 @@ tempplot <- ggplot(TX2, aes(x = datetime)) +
 tempplot
 ```
 
-    ## Warning: Removed 60 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 60 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](TX2-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
@@ -314,8 +282,7 @@ TX2_envrmonth <- TX2 %>%
       length_temp = length(temp))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 print(TX2_envrmonth)
@@ -323,20 +290,20 @@ print(TX2_envrmonth)
 
     ## # A tibble: 181 × 10
     ## # Groups:   year [17]
-    ##     year month min_salinity max_salinity mean_salinity length_salinity min_temp
-    ##    <dbl> <dbl>        <dbl>        <dbl>         <dbl>           <int>    <dbl>
-    ##  1  2007     7          0.1          2.7          1.08            1978     24.9
-    ##  2  2007     8          0.2          3            1.49            2975     28.5
-    ##  3  2007     9          1.3          3.5          2.49            2710     27.7
-    ##  4  2007    10          2.8          3.8          3.16            2841     17.9
-    ##  5  2007    11          3.6          6.3          4.40            2879     11.6
-    ##  6  2007    12          5.3          6.7          6.06            2975     13  
-    ##  7  2008     1          6.5          9.6          8.37            2975      9  
-    ##  8  2008     2          8.5         10.2          9.39            2784     12.9
-    ##  9  2008     3          9.6         12.4         10.8             2972     12.9
-    ## 10  2008     4          9.9         14.6         12.9             2879     20.1
+    ##     year month min_salinity max_salinity mean_salinity length_salinity min_temp max_temp mean_temp
+    ##    <dbl> <dbl>        <dbl>        <dbl>         <dbl>           <int>    <dbl>    <dbl>     <dbl>
+    ##  1  2007     7          0.1          2.7          1.08            1978     24.9     31.2      28.8
+    ##  2  2007     8          0.2          3            1.49            2975     28.5     33.2      30.6
+    ##  3  2007     9          1.3          3.5          2.49            2710     27.7     31.4      29.4
+    ##  4  2007    10          2.8          3.8          3.16            2841     17.9     30        25.4
+    ##  5  2007    11          3.6          6.3          4.40            2879     11.6     24.6      19.8
+    ##  6  2007    12          5.3          6.7          6.06            2975     13       22.8      16.6
+    ##  7  2008     1          6.5          9.6          8.37            2975      9       18.3      13.0
+    ##  8  2008     2          8.5         10.2          9.39            2784     12.9     21.7      17.8
+    ##  9  2008     3          9.6         12.4         10.8             2972     12.9     24.2      19.0
+    ## 10  2008     4          9.9         14.6         12.9             2879     20.1     26.1      23.3
     ## # ℹ 171 more rows
-    ## # ℹ 3 more variables: max_temp <dbl>, mean_temp <dbl>, length_temp <int>
+    ## # ℹ 1 more variable: length_temp <int>
 
 ``` r
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each year. 
@@ -387,7 +354,7 @@ timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](TX2-EnvrData_files/figure-gfm/timeplot-1.png)<!-- -->
 
@@ -433,16 +400,12 @@ TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firsty
 print(TX2_temp)
 ```
 
-    ##      site_name download_date
-    ## [1,] "TX2"     "07-07-2023" 
-    ##      source_description                                                
-    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
-    ##      lat       lon        firstyear finalyear Mean_Annual_Temperature_C
-    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "23.1054088188906"       
-    ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
-    ## [1,] "32.0176470588235"     "7.98823529411765"     "6.38546821611257"
-    ##      Temperature_n Temperature_years collection_type
-    ## [1,] "490107"      "17"              "continuous"
+    ##      site_name download_date source_description                                                
+    ## [1,] "TX2"     "07-07-2023"  "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
+    ##      lat       lon        firstyear finalyear Mean_Annual_Temperature_C Mean_max_temperature_C
+    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "23.1054088188906"        "32.0176470588235"    
+    ##      Mean_min_temperature_C Temperature_st_dev Temperature_n Temperature_years collection_type
+    ## [1,] "7.98823529411765"     "6.38546821611257" "490107"      "17"              "continuous"
 
 ``` r
 # Write to the combined file with all sites 
@@ -467,16 +430,12 @@ TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, fi
 print(TX2_salinity)
 ```
 
-    ##      site_name download_date
-    ## [1,] "TX2"     "07-07-2023" 
-    ##      source_description                                                
-    ## [1,] "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
-    ##      lat       lon        firstyear finalyear Mean_Annual_Salinity_ppt
-    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "20.8578965409594"      
-    ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
-    ## [1,] "30.2235294117647"    "6.36470588235294"    "11.6639351083855" "490107"  
-    ##      Salinity_years collection_type
-    ## [1,] "17"           "continuous"
+    ##      site_name download_date source_description                                                
+    ## [1,] "TX2"     "07-07-2023"  "NERR Centralized Data. Mission Aransas - Copano Bay West MARCWWQ"
+    ##      lat       lon        firstyear finalyear Mean_Annual_Salinity_ppt Mean_max_Salinity_ppt
+    ## [1,] "28.0841" "-97.2009" "2008"    "2021"    "20.8578965409594"       "30.2235294117647"   
+    ##      Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n Salinity_years collection_type
+    ## [1,] "6.36470588235294"    "11.6639351083855" "490107"   "17"           "continuous"
 
 ``` r
 # Write to the combined file with all sites 

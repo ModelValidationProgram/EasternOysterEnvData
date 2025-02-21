@@ -11,31 +11,7 @@ setwd("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentDat
 
 ``` r
 library("dplyr") #Used for working with data frames
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library("lubridate") #Used for time-date conversions
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 library("readr") #Used to read the CSV file
 library("ggplot2") 
 ```
@@ -62,7 +38,7 @@ raw_FL3_sal <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_
 ```
 
     ## Rows: 249752 Columns: 2
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (1): Timestamp
     ## dbl (1): PSU
@@ -75,7 +51,7 @@ raw_FL3_temp <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 258086 Columns: 2
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (1): Timestamp
     ## dbl (1): Temp
@@ -219,7 +195,7 @@ salplot <- ggplot(FL3_sal, aes(x = datetime)) +
 salplot
 ```
 
-    ## Warning: Removed 34 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 34 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](FL3-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
 
@@ -235,7 +211,7 @@ tempplot <- ggplot(FL3_temp, aes(x = datetime)) +
 tempplot
 ```
 
-    ## Warning: Removed 36 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 36 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](FL3-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
@@ -253,8 +229,7 @@ FL3_envrmonth_sal <- FL3_sal %>%
       length_salinity = length(salinity))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 FL3_envrmonth_temp <- FL3_temp %>%
@@ -267,8 +242,7 @@ FL3_envrmonth_temp <- FL3_temp %>%
       length_temp = length(temp))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 print(FL3_envrmonth_sal)
@@ -395,7 +369,7 @@ timeplot <- ggplot(FL3_envrmonth_sal, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](FL3-EnvrData_files/figure-gfm/timeplot%20-%20salinity-1.png)<!-- -->
 
@@ -411,7 +385,7 @@ timeplot <- ggplot(FL3_envrmonth_temp, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](FL3-EnvrData_files/figure-gfm/timeplot%20-%20temperature-1.png)<!-- -->
 
@@ -458,16 +432,12 @@ FL3_temp <- cbind(site_name, download_date, source_description, lat, lon, firsty
 print(FL3_temp)
 ```
 
-    ##      site_name download_date
-    ## [1,] "FL3"     "09-13-2023" 
-    ##      source_description                                                
-    ## [1,] "National Parks Service Continuous Water Data - Timucuan Preserve"
-    ##      lat        lon         firstyear finalyear Mean_Annual_Temperature_C
-    ## [1,] "30.44116" "-81.43908" "2005"    "2022"    "22.1556673008222"       
-    ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
-    ## [1,] "30.6387"              "10.38665"             "5.70766431643303"
-    ##      Temperature_n Temperature_years collection_type
-    ## [1,] "258086"      "20"              "continuous"
+    ##      site_name download_date source_description                                                
+    ## [1,] "FL3"     "09-13-2023"  "National Parks Service Continuous Water Data - Timucuan Preserve"
+    ##      lat        lon         firstyear finalyear Mean_Annual_Temperature_C Mean_max_temperature_C
+    ## [1,] "30.44116" "-81.43908" "2005"    "2022"    "22.1556673008222"        "30.6387"             
+    ##      Mean_min_temperature_C Temperature_st_dev Temperature_n Temperature_years collection_type
+    ## [1,] "10.38665"             "5.70766431643303" "258086"      "20"              "continuous"
 
 ``` r
 # Write to the combined file with all sites 
@@ -492,16 +462,12 @@ FL3_salinity <- cbind(site_name, download_date, source_description, lat, lon, fi
 print(FL3_salinity)
 ```
 
-    ##      site_name download_date
-    ## [1,] "FL3"     "09-13-2023" 
-    ##      source_description                                                
-    ## [1,] "National Parks Service Continuous Water Data - Timucuan Preserve"
-    ##      lat        lon         firstyear finalyear Mean_Annual_Salinity_ppt
-    ## [1,] "30.44116" "-81.43908" "2005"    "2022"    "32.3522536547562"      
-    ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
-    ## [1,] "37.2042051805"       "15.4224441766"       "3.71539685491799" "249752"  
-    ##      Salinity_years collection_type
-    ## [1,] "20"           "continuous"
+    ##      site_name download_date source_description                                                
+    ## [1,] "FL3"     "09-13-2023"  "National Parks Service Continuous Water Data - Timucuan Preserve"
+    ##      lat        lon         firstyear finalyear Mean_Annual_Salinity_ppt Mean_max_Salinity_ppt
+    ## [1,] "30.44116" "-81.43908" "2005"    "2022"    "32.3522536547562"       "37.2042051805"      
+    ##      Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n Salinity_years collection_type
+    ## [1,] "15.4224441766"       "3.71539685491799" "249752"   "20"           "continuous"
 
 ``` r
 # Write to the combined file with all sites 

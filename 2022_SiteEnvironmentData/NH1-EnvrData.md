@@ -11,31 +11,7 @@ setwd("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentDat
 
 ``` r
 library("dplyr") #Used for working with data frames
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library("lubridate") #Used for time-date conversions
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 library("readr") #Used to read the CSV file
 library("ggplot2") 
 ```
@@ -61,10 +37,10 @@ raw_NH1 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_Site
 ```
 
     ## Rows: 591234 Columns: 26
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
-    ## chr (14): Station_Code, isSWMP, DateTimeStamp, F_Record, F_Temp, F_SpCond, F...
-    ## dbl (12): Historical, ProvisionalPlus, Temp, SpCond, Sal, DO_pct, DO_mgl, De...
+    ## chr (14): Station_Code, isSWMP, DateTimeStamp, F_Record, F_Temp, F_SpCond, F_Sal, F_DO_pct, F_DO_...
+    ## dbl (12): Historical, ProvisionalPlus, Temp, SpCond, Sal, DO_pct, DO_mgl, Depth, cDepth, pH, Turb...
     ## 
     ## ℹ Use `spec()` to retrieve the full column specification for this data.
     ## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
@@ -123,62 +99,54 @@ raw_NH1$datetime <- as.POSIXct(raw_NH1$DateTimeStamp, "%m/%d/%y %H:%M", tz = "")
 summary(raw_NH1)
 ```
 
-    ##  Station_Code          isSWMP          DateTimeStamp        Historical    
-    ##  Length:591234      Length:591234      Length:591234      Min.   :0.0000  
-    ##  Class :character   Class :character   Class :character   1st Qu.:1.0000  
-    ##  Mode  :character   Mode  :character   Mode  :character   Median :1.0000  
-    ##                                                           Mean   :0.8252  
-    ##                                                           3rd Qu.:1.0000  
-    ##                                                           Max.   :1.0000  
-    ##                                                                           
-    ##  ProvisionalPlus    F_Record              Temp           F_Temp         
-    ##  Min.   :0.0000   Length:591234      Min.   :-0.7     Length:591234     
-    ##  1st Qu.:1.0000   Class :character   1st Qu.:11.9     Class :character  
-    ##  Median :1.0000   Mode  :character   Median :18.0     Mode  :character  
-    ##  Mean   :0.9412                      Mean   :16.8                       
-    ##  3rd Qu.:1.0000                      3rd Qu.:22.3                       
-    ##  Max.   :1.0000                      Max.   :29.4                       
-    ##                                      NA's   :153499                     
-    ##      SpCond         F_SpCond              Sal            F_Sal          
-    ##  Min.   : 0.01    Length:591234      Min.   : 0.00    Length:591234     
-    ##  1st Qu.:21.57    Class :character   1st Qu.:12.90    Class :character  
-    ##  Median :32.13    Mode  :character   Median :20.00    Mode  :character  
-    ##  Mean   :29.73                       Mean   :18.64                      
-    ##  3rd Qu.:39.91                       3rd Qu.:25.40                      
-    ##  Max.   :52.33                       Max.   :34.50                      
-    ##  NA's   :158356                      NA's   :158863                     
-    ##      DO_pct         F_DO_pct             DO_mgl         F_DO_mgl        
-    ##  Min.   : 24.50   Length:591234      Min.   : 1.90    Length:591234     
-    ##  1st Qu.: 85.70   Class :character   1st Qu.: 7.10    Class :character  
-    ##  Median : 93.20   Mode  :character   Median : 8.10    Mode  :character  
-    ##  Mean   : 93.43                      Mean   : 8.28                      
-    ##  3rd Qu.:101.10                      3rd Qu.: 9.40                      
-    ##  Max.   :500.00                      Max.   :39.00                      
-    ##  NA's   :163864                      NA's   :168659                     
-    ##      Depth          F_Depth              cDepth         F_cDepth        
-    ##  Min.   : 0.03    Length:591234      Min.   : 0.0     Length:591234     
-    ##  1st Qu.: 1.35    Class :character   1st Qu.: 1.4     Class :character  
-    ##  Median : 1.98    Mode  :character   Median : 2.0     Mode  :character  
-    ##  Mean   : 2.05                       Mean   : 2.0                       
-    ##  3rd Qu.: 2.61                       3rd Qu.: 2.6                       
-    ##  Max.   :26.14                       Max.   :26.3                       
-    ##  NA's   :158167                      NA's   :335102                     
-    ##        pH             F_pH                Turb            F_Turb         
-    ##  Min.   : 5.20    Length:591234      Min.   :  -4.00   Length:591234     
-    ##  1st Qu.: 7.30    Class :character   1st Qu.:   7.00   Class :character  
-    ##  Median : 7.60    Mode  :character   Median :  14.00   Mode  :character  
-    ##  Mean   : 7.58                       Mean   :  28.51                     
-    ##  3rd Qu.: 7.80                       3rd Qu.:  27.00                     
-    ##  Max.   :11.10                       Max.   :2502.00                     
-    ##  NA's   :163399                      NA's   :179436                      
-    ##     ChlFluor       F_ChlFluor           datetime                     
-    ##  Min.   :  0.4    Length:591234      Min.   :1997-07-21 14:30:00.00  
-    ##  1st Qu.:  4.0    Class :character   1st Qu.:2008-04-19 12:41:15.00  
-    ##  Median :  5.4    Mode  :character   Median :2012-09-24 17:22:30.00  
-    ##  Mean   :  6.4                       Mean   :2012-05-13 11:25:56.24  
-    ##  3rd Qu.:  7.3                       3rd Qu.:2017-05-16 00:18:45.00  
-    ##  Max.   :398.3                       Max.   :2022-08-15 23:45:00.00  
-    ##  NA's   :479896                      NA's   :46
+    ##  Station_Code          isSWMP          DateTimeStamp        Historical     ProvisionalPlus 
+    ##  Length:591234      Length:591234      Length:591234      Min.   :0.0000   Min.   :0.0000  
+    ##  Class :character   Class :character   Class :character   1st Qu.:1.0000   1st Qu.:1.0000  
+    ##  Mode  :character   Mode  :character   Mode  :character   Median :1.0000   Median :1.0000  
+    ##                                                           Mean   :0.8252   Mean   :0.9412  
+    ##                                                           3rd Qu.:1.0000   3rd Qu.:1.0000  
+    ##                                                           Max.   :1.0000   Max.   :1.0000  
+    ##                                                                                            
+    ##    F_Record              Temp           F_Temp              SpCond         F_SpCond        
+    ##  Length:591234      Min.   :-0.7     Length:591234      Min.   : 0.01    Length:591234     
+    ##  Class :character   1st Qu.:11.9     Class :character   1st Qu.:21.57    Class :character  
+    ##  Mode  :character   Median :18.0     Mode  :character   Median :32.13    Mode  :character  
+    ##                     Mean   :16.8                        Mean   :29.73                      
+    ##                     3rd Qu.:22.3                        3rd Qu.:39.91                      
+    ##                     Max.   :29.4                        Max.   :52.33                      
+    ##                     NA's   :153499                      NA's   :158356                     
+    ##       Sal            F_Sal               DO_pct         F_DO_pct             DO_mgl      
+    ##  Min.   : 0.00    Length:591234      Min.   : 24.50   Length:591234      Min.   : 1.90   
+    ##  1st Qu.:12.90    Class :character   1st Qu.: 85.70   Class :character   1st Qu.: 7.10   
+    ##  Median :20.00    Mode  :character   Median : 93.20   Mode  :character   Median : 8.10   
+    ##  Mean   :18.64                       Mean   : 93.43                      Mean   : 8.28   
+    ##  3rd Qu.:25.40                       3rd Qu.:101.10                      3rd Qu.: 9.40   
+    ##  Max.   :34.50                       Max.   :500.00                      Max.   :39.00   
+    ##  NA's   :158863                      NA's   :163864                      NA's   :168659  
+    ##    F_DO_mgl             Depth          F_Depth              cDepth         F_cDepth        
+    ##  Length:591234      Min.   : 0.03    Length:591234      Min.   : 0.0     Length:591234     
+    ##  Class :character   1st Qu.: 1.35    Class :character   1st Qu.: 1.4     Class :character  
+    ##  Mode  :character   Median : 1.98    Mode  :character   Median : 2.0     Mode  :character  
+    ##                     Mean   : 2.05                       Mean   : 2.0                       
+    ##                     3rd Qu.: 2.61                       3rd Qu.: 2.6                       
+    ##                     Max.   :26.14                       Max.   :26.3                       
+    ##                     NA's   :158167                      NA's   :335102                     
+    ##        pH             F_pH                Turb            F_Turb             ChlFluor     
+    ##  Min.   : 5.20    Length:591234      Min.   :  -4.00   Length:591234      Min.   :  0.4   
+    ##  1st Qu.: 7.30    Class :character   1st Qu.:   7.00   Class :character   1st Qu.:  4.0   
+    ##  Median : 7.60    Mode  :character   Median :  14.00   Mode  :character   Median :  5.4   
+    ##  Mean   : 7.58                       Mean   :  28.51                      Mean   :  6.4   
+    ##  3rd Qu.: 7.80                       3rd Qu.:  27.00                      3rd Qu.:  7.3   
+    ##  Max.   :11.10                       Max.   :2502.00                      Max.   :398.3   
+    ##  NA's   :163399                      NA's   :179436                       NA's   :479896  
+    ##   F_ChlFluor           datetime                     
+    ##  Length:591234      Min.   :1997-07-21 14:30:00.00  
+    ##  Class :character   1st Qu.:2008-04-19 12:41:15.00  
+    ##  Mode  :character   Median :2012-09-24 17:22:30.00  
+    ##                     Mean   :2012-05-13 11:25:56.24  
+    ##                     3rd Qu.:2017-05-16 00:18:45.00  
+    ##                     Max.   :2022-08-15 23:45:00.00  
+    ##                     NA's   :46
 
 ### Analyze the ranges of all of our variables of interest - time, salinity, and temperature. Make sure that the latitude and longitude values are consistent for a static collection site. This is a quick check so we can determine how to conduct the next filtering step.
 
@@ -191,12 +159,10 @@ raw_NH1 <- raw_NH1 %>% rename("temp" = "Temp", "salinity" = "Sal") #No lat and l
 print(summary(raw_NH1$datetime))
 ```
 
-    ##                       Min.                    1st Qu. 
-    ## "1997-07-21 14:30:00.0000" "2008-04-19 12:41:15.0000" 
-    ##                     Median                       Mean 
-    ## "2012-09-24 17:22:30.0000" "2012-05-13 11:25:56.2369" 
-    ##                    3rd Qu.                       Max. 
-    ## "2017-05-16 00:18:45.0000" "2022-08-15 23:45:00.0000" 
+    ##                       Min.                    1st Qu.                     Median 
+    ## "1997-07-21 14:30:00.0000" "2008-04-19 12:41:15.0000" "2012-09-24 17:22:30.0000" 
+    ##                       Mean                    3rd Qu.                       Max. 
+    ## "2012-05-13 11:25:56.2369" "2017-05-16 00:18:45.0000" "2022-08-15 23:45:00.0000" 
     ##                       NA's 
     ##                       "46"
 
@@ -271,7 +237,7 @@ salplot <- ggplot(NH1, aes(x = datetime)) +
 salplot
 ```
 
-    ## Warning: Removed 2 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 2 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](NH1-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
 
@@ -287,7 +253,7 @@ tempplot <- ggplot(NH1, aes(x = datetime)) +
 tempplot
 ```
 
-    ## Warning: Removed 2 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 2 rows containing missing values or values outside the scale range (`geom_line()`).
 
 ![](NH1-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
@@ -309,8 +275,7 @@ NH1_envrmonth <- NH1 %>%
       length_temp = length(temp))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 print(NH1_envrmonth)
@@ -318,20 +283,20 @@ print(NH1_envrmonth)
 
     ## # A tibble: 222 × 10
     ## # Groups:   year [27]
-    ##     year month min_salinity max_salinity mean_salinity length_salinity min_temp
-    ##    <dbl> <dbl>        <dbl>        <dbl>         <dbl>           <int>    <dbl>
-    ##  1  1997     7         12           24.5         19.7              499     19.1
-    ##  2  1997     8         11.8         27.9         22.5             1430     19.2
-    ##  3  1997     9         13.1         26.5         21.6             1312     14.3
-    ##  4  1997    10         14.2         27.1         22.7             1327      6.9
-    ##  5  1997    11          1.2         23.7         13.2             1307      0.8
-    ##  6  1998     4          0.1         14.9          5.16             358      9.3
-    ##  7  1998     5          0           21.8          6.00            1429     11.1
-    ##  8  1998     6          0           22.1          4.45            1115     15.7
-    ##  9  1998     7          0.1         24.4         11.7             1044     19.6
-    ## 10  1998     8         13.4         29.9         25.9              873     20.2
+    ##     year month min_salinity max_salinity mean_salinity length_salinity min_temp max_temp mean_temp
+    ##    <dbl> <dbl>        <dbl>        <dbl>         <dbl>           <int>    <dbl>    <dbl>     <dbl>
+    ##  1  1997     7         12           24.5         19.7              499     19.1     24.8     22.6 
+    ##  2  1997     8         11.8         27.9         22.5             1430     19.2     26.6     23.0 
+    ##  3  1997     9         13.1         26.5         21.6             1312     14.3     22.3     18.9 
+    ##  4  1997    10         14.2         27.1         22.7             1327      6.9     16.6     12.1 
+    ##  5  1997    11          1.2         23.7         13.2             1307      0.8     11.4      5.09
+    ##  6  1998     4          0.1         14.9          5.16             358      9.3     15       11.1 
+    ##  7  1998     5          0           21.8          6.00            1429     11.1     23.2     16.5 
+    ##  8  1998     6          0           22.1          4.45            1115     15.7     23.3     19.4 
+    ##  9  1998     7          0.1         24.4         11.7             1044     19.6     27       22.8 
+    ## 10  1998     8         13.4         29.9         25.9              873     20.2     25.6     22.5 
     ## # ℹ 212 more rows
-    ## # ℹ 3 more variables: max_temp <dbl>, mean_temp <dbl>, length_temp <int>
+    ## # ℹ 1 more variable: length_temp <int>
 
 ``` r
 #Calculate the mean, maximum, and minimum values for salinity and temperature for each year. 
@@ -376,7 +341,7 @@ timeplot <- ggplot(NH1_envrmonth, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](NH1-EnvrData_files/figure-gfm/timeplot-1.png)<!-- -->
 
@@ -422,16 +387,12 @@ NH1_temp <- cbind(site_name, download_date, source_description, lat, lon, firsty
 print(NH1_temp)
 ```
 
-    ##      site_name download_date
-    ## [1,] "NH1"     "07-11-2023" 
-    ##      source_description                                            lat      
-    ## [1,] "NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ" "43.0524"
-    ##      lon         firstyear finalyear Mean_Annual_Temperature_C
-    ## [1,] "-70.91181" "1997"    "2022"    "16.7170932303351"       
-    ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
-    ## [1,] "27.162962962963"      "2.54814814814815"     "6.44962480142627"
-    ##      Temperature_n Temperature_years collection_type
-    ## [1,] "432370"      "27"              "continuous"
+    ##      site_name download_date source_description                                            lat      
+    ## [1,] "NH1"     "07-11-2023"  "NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ" "43.0524"
+    ##      lon         firstyear finalyear Mean_Annual_Temperature_C Mean_max_temperature_C
+    ## [1,] "-70.91181" "1997"    "2022"    "16.7170932303351"        "27.162962962963"     
+    ##      Mean_min_temperature_C Temperature_st_dev Temperature_n Temperature_years collection_type
+    ## [1,] "2.54814814814815"     "6.44962480142627" "432370"      "27"              "continuous"
 
 ``` r
 # Write to the combined file with all sites 
@@ -456,16 +417,12 @@ NH1_salinity <- cbind(site_name, download_date, source_description, lat, lon, fi
 print(NH1_salinity)
 ```
 
-    ##      site_name download_date
-    ## [1,] "NH1"     "07-11-2023" 
-    ##      source_description                                            lat      
-    ## [1,] "NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ" "43.0524"
-    ##      lon         firstyear finalyear Mean_Annual_Salinity_ppt
-    ## [1,] "-70.91181" "1997"    "2022"    "18.6413907070333"      
-    ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
-    ## [1,] "30.0444444444444"    "1.14444444444444"    "8.32092581976783" "432370"  
-    ##      Salinity_years collection_type
-    ## [1,] "27"           "continuous"
+    ##      site_name download_date source_description                                            lat      
+    ## [1,] "NH1"     "07-11-2023"  "NERR Centralized Data. Great Bay - Squamscott River GRBSQWQ" "43.0524"
+    ##      lon         firstyear finalyear Mean_Annual_Salinity_ppt Mean_max_Salinity_ppt
+    ## [1,] "-70.91181" "1997"    "2022"    "18.6413907070333"       "30.0444444444444"   
+    ##      Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n Salinity_years collection_type
+    ## [1,] "1.14444444444444"    "8.32092581976783" "432370"   "27"           "continuous"
 
 ``` r
 # Write to the combined file with all sites 

@@ -11,31 +11,7 @@ setwd("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentDat
 
 ``` r
 library("dplyr") #Used for working with data frames
-```
-
-    ## 
-    ## Attaching package: 'dplyr'
-
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
-
-``` r
 library("lubridate") #Used for time-date conversions
-```
-
-    ## 
-    ## Attaching package: 'lubridate'
-
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     date, intersect, setdiff, union
-
-``` r
 library("readr") #Used to read the CSV file
 library("ggplot2") 
 ```
@@ -51,7 +27,7 @@ library("ggplot2")
 download_date <- ("03-21-2024")
 source_description <- ("PIELTER Long-Term Montitoring Data")
 site_name <- ("MA1") #Use site code with site number based on lat position and state
-collection_type <- ("continuous seasonal")
+collection_type <- ("continuous_seasonal")
 ```
 
 ### Use the file path name in your working directory or desktop, see example below. Or, import data set through the “Files” window in R studio. Store the file in a variable with the “raw_ID_Site” format. If salinity and temperature data are in separate files, read in both and store them with “\_sal” or “\_temp” in the variable names.
@@ -62,7 +38,7 @@ raw_MA1<- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteE
 ```
 
     ## Rows: 15257 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -75,7 +51,7 @@ raw_MA1_2014 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 13342 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -88,7 +64,7 @@ raw_MA1_2015 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 9672 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -101,7 +77,7 @@ raw_MA1_2016 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 18119 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -114,7 +90,7 @@ raw_MA1_2017 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 17367 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -127,7 +103,7 @@ raw_MA1_2018 <- read_csv("/Users/madelineeppley/GitHub/EasternOysterEnvData/2022
 ```
 
     ## Rows: 20810 Columns: 4
-    ## ── Column specification ────────────────────────────────────────────────────────
+    ## ── Column specification ─────────────────────────────────────────────────────────────────────────────
     ## Delimiter: ","
     ## chr (2): Timestamp, Station
     ## dbl (2): Temp, Salinity
@@ -266,7 +242,8 @@ salplot <- ggplot(MA1, aes(x = datetime)) +
 salplot
 ```
 
-    ## Warning: Removed 35431 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 35431 rows containing missing values or values outside the scale range
+    ## (`geom_line()`).
 
 ![](MA1-EnvrData_files/figure-gfm/salinity-plot-1.png)<!-- -->
 
@@ -282,7 +259,8 @@ tempplot <- ggplot(MA1, aes(x = datetime)) +
 tempplot
 ```
 
-    ## Warning: Removed 35431 rows containing missing values (`geom_line()`).
+    ## Warning: Removed 35431 rows containing missing values or values outside the scale range
+    ## (`geom_line()`).
 
 ![](MA1-EnvrData_files/figure-gfm/temperature-plot-1.png)<!-- -->
 
@@ -300,8 +278,7 @@ MA1_envrmonth_sal <- MA1 %>%
       length_salinity = length(salinity))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 MA1_envrmonth_temp <- MA1 %>%
@@ -314,8 +291,7 @@ MA1_envrmonth_temp <- MA1 %>%
       length_temp = length(temp))
 ```
 
-    ## `summarise()` has grouped output by 'year'. You can override using the
-    ## `.groups` argument.
+    ## `summarise()` has grouped output by 'year'. You can override using the `.groups` argument.
 
 ``` r
 print(MA1_envrmonth_sal)
@@ -416,7 +392,7 @@ timeplot <- ggplot(MA1_envrmonth_sal, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](MA1-EnvrData_files/figure-gfm/timeplot%20-%20salinity-1.png)<!-- -->
 
@@ -432,7 +408,7 @@ timeplot <- ggplot(MA1_envrmonth_temp, aes(x = year)) +
 timeplot
 ```
 
-    ## Warning: Removed 1 rows containing missing values (`geom_point()`).
+    ## Warning: Removed 1 row containing missing values or values outside the scale range (`geom_point()`).
 
 ![](MA1-EnvrData_files/figure-gfm/timeplot%20-%20temperature-1.png)<!-- -->
 
@@ -479,14 +455,12 @@ MA1_temp <- cbind(site_name, download_date, source_description, lat, lon, firsty
 print(MA1_temp)
 ```
 
-    ##      site_name download_date source_description                   lat        
-    ## [1,] "MA1"     "03-21-2024"  "PIELTER Long-Term Montitoring Data" "42.762543"
-    ##      lon          firstyear finalyear Mean_Annual_Temperature_C
-    ## [1,] "-70.857724" "2014"    "2022"    "18.9376238662831"       
-    ##      Mean_max_temperature_C Mean_min_temperature_C Temperature_st_dev
-    ## [1,] "26.9554285714286"     "7.96671428571429"     "5.1213203634221" 
-    ##      Temperature_n Temperature_years collection_type      
-    ## [1,] "72990"       "7"               "continuous seasonal"
+    ##      site_name download_date source_description                   lat         lon          firstyear
+    ## [1,] "MA1"     "03-21-2024"  "PIELTER Long-Term Montitoring Data" "42.762543" "-70.857724" "2014"   
+    ##      finalyear Mean_Annual_Temperature_C Mean_max_temperature_C Mean_min_temperature_C
+    ## [1,] "2022"    "18.9376238662831"        "26.9554285714286"     "7.96671428571429"    
+    ##      Temperature_st_dev Temperature_n Temperature_years collection_type      
+    ## [1,] "5.1213203634221"  "72990"       "7"               "continuous_seasonal"
 
 ``` r
 # Write to the combined file with all sites 
@@ -511,14 +485,12 @@ MA1_salinity <- cbind(site_name, download_date, source_description, lat, lon, fi
 print(MA1_salinity)
 ```
 
-    ##      site_name download_date source_description                   lat        
-    ## [1,] "MA1"     "03-21-2024"  "PIELTER Long-Term Montitoring Data" "42.762543"
-    ##      lon          firstyear finalyear Mean_Annual_Salinity_ppt
-    ## [1,] "-70.857724" "2014"    "2022"    "22.3683140156186"      
-    ##      Mean_max_Salinity_ppt Mean_min_Salinity_ppt Salinity_st_dev    Salinity_n
-    ## [1,] "31.0942857142857"    "5.28428571428571"    "7.34753323475334" "72990"   
-    ##      Salinity_years collection_type      
-    ## [1,] "7"            "continuous seasonal"
+    ##      site_name download_date source_description                   lat         lon          firstyear
+    ## [1,] "MA1"     "03-21-2024"  "PIELTER Long-Term Montitoring Data" "42.762543" "-70.857724" "2014"   
+    ##      finalyear Mean_Annual_Salinity_ppt Mean_max_Salinity_ppt Mean_min_Salinity_ppt
+    ## [1,] "2022"    "22.3683140156186"       "31.0942857142857"    "5.28428571428571"   
+    ##      Salinity_st_dev    Salinity_n Salinity_years collection_type      
+    ## [1,] "7.34753323475334" "72990"    "7"            "continuous_seasonal"
 
 ``` r
 # Write to the combined file with all sites 

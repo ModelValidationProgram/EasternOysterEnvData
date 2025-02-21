@@ -19,6 +19,7 @@ library("dplyr") #Used for working with data frames
 library("lubridate") #Used for time-date conversions
 library("readr") #Used to read the CSV file
 library("ggplot2") 
+library("viridis")
 ```
 
 ### Note the date of data download and source. All available data should be used for each site regardless of year. Note from the CSV file how often the site was sampled, and if there are replicates in the data. Also describe if the sampling occurred at only low tide, only high tide, or continuously.  
@@ -55,7 +56,13 @@ View(raw_TX2)
 raw_TX2$datetime <- as.POSIXct(raw_TX2$DateTimeStamp, "%m/%d/%y %H:%M", tz = "")
 
 #Print the new data frame and examine to make sure the new datetime column is in the correct format. 
-summary(raw_TX2)
+summary(raw_TX2$datetime)
+
+# we have NAs, so remove those
+raw_TX2 <- raw_TX2 %>%
+    filter(!is.na(datetime))
+summary(raw_TX2$datetime)
+
 ```
 
 ### Analyze the ranges of all of our variables of interest - time, salinity, and temperature. Make sure that the latitude and longitude values are consistent for a static collection site. This is a quick check so we can determine how to conduct the next filtering step. 
@@ -77,7 +84,7 @@ print(summary(raw_TX2$temp))
 #Store variables that we will include in the final data frame
 lat <- 28.08410
 lon <- -97.20090
-firstyear <- 2008
+firstyear <- 2007
 finalyear <- 2021
 ```
 
@@ -171,6 +178,195 @@ timeplot <- ggplot(TX2_envrmonth, aes(x = year)) +
 timeplot
 ```
 
+# Calculate days above and below thresholds and plot
+```{r}
+# open up a blank data frame that spans all 12 months for all years of data collection for this site
+# we will merge this with the observations so that we can plot over time 
+
+complete_year_month <- expand.grid(
+  year = unique(firstyear:finalyear),
+  month = 1:12
+)
+
+```
+
+# start with low salinity stress 
+```{r}
+# first calculate for low salinity
+TX2$low_sal_stress <- TX2$salinity < 12
+
+low_sal_stress_count <- TX2 %>%
+  mutate(year = year(datetime), 
+         month = month(datetime), 
+         day = day(datetime)) %>% 
+  filter(low_sal_stress == 1) %>%  
+  distinct(year, month, day) %>%  # remove dups
+  group_by(year, month) %>%
+  summarise(low_sal_stress = n(), .groups = "drop") # group all occurrences together by month rather than by numeric day
+
+print(low_sal_stress_count)
+
+# this plots low sal stress days only, years with no observations of low salinity stress will not appear in the graph 
+ggplot(low_sal_stress_count, aes(x = factor(month), y = low_sal_stress, fill = factor(month))) +
+  geom_bar(stat = "identity", fill = "#1f77b4") +
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of low salinity (< 12 ppt) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+# Merge with the original dataset, filling missing values with 0 for low_sal_stress
+low_sal_complete_data <- complete_year_month %>%
+  left_join(low_sal_stress_count, by = c("year", "month")) %>%
+  mutate(low_sal_stress = ifelse(is.na(low_sal_stress), 0, low_sal_stress))
+
+low_sal_complete_data$month <- as.numeric(low_sal_complete_data$month)
+
+# bars
+ggplot(low_sal_complete_data, aes(x = factor(month), y = low_sal_stress)) +
+  geom_bar(stat = "identity", fill = "#1f77b4") + 
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of low salinity (< 12 ppt) days per month",
+       x = "month",
+       y = "count of low salinity stress days") +
+  theme_minimal()
+
+# points
+ggplot(low_sal_complete_data, aes(x = factor(month), y = low_sal_stress)) +
+  geom_point(color = "#1f77b4", size = 2) + 
+  facet_wrap(~ year) +  
+  labs(title = "TX2: count of low salinity (< 12 ppt) days per month",
+       x = "month",
+       y = "count of low salinity stress days") +
+  theme_minimal()
+```
+
+# now calculate for high salinity stress
+```{r}
+TX2$high_sal_stress <- TX2$salinity > 35
+
+high_sal_stress_count <- TX2 %>%
+  mutate(year = year(datetime), 
+         month = month(datetime), 
+         day = day(datetime)) %>% 
+  filter(high_sal_stress == 1) %>%  
+  distinct(year, month, day) %>%  # remove dups
+  group_by(year, month) %>%
+  summarise(high_sal_stress = n(), .groups = "drop") # group all occurrences together by month rather than by numeric day
+
+print(high_sal_stress_count)
+
+ggplot(high_sal_stress_count, aes(x = factor(month), y = high_sal_stress, fill = factor(month))) +
+  geom_bar(stat = "identity", fill = "#1B9AAA") +
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of high salinity (> 35 ppt) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+
+high_sal_complete_data <- complete_year_month %>%
+  left_join(high_sal_stress_count, by = c("year", "month")) %>%
+  mutate(high_sal_stress = ifelse(is.na(high_sal_stress), 0, high_sal_stress))
+
+high_sal_complete_data$month <- as.numeric(high_sal_complete_data$month)
+
+# bars
+ggplot(high_sal_complete_data, aes(x = factor(month), y = high_sal_stress)) +
+  geom_bar(stat = "identity", fill = "#1B9AAA") + 
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of high salinity (> 35 ppt) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+# points
+ggplot(high_sal_complete_data, aes(x = factor(month), y = high_sal_stress)) +
+  geom_point(color = "#1B9AAA", size = 2) + 
+  facet_wrap(~ year) +  
+  labs(title = "TX2: count of high salinity (> 35 ppt) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+```
+
+```{r combined-salinity-stress}
+ggplot() +
+  geom_bar(data = low_sal_complete_data, aes(x = factor(month), y = low_sal_stress), 
+           stat = "identity", fill = "#1f77b4") +
+  geom_bar(data = high_sal_complete_data, aes(x = factor(month), y = high_sal_stress), 
+           stat = "identity", fill = "#1B9AAA") + 
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of stressful salinity days per month", 
+       x = "month", 
+       y = "count of days") + 
+  theme_minimal()
+
+ggplot() +
+  geom_point(data = low_sal_complete_data, aes(x = factor(month), y = low_sal_stress), 
+           color = "#1f77b4", size = 2) +
+  geom_point(data = high_sal_complete_data, aes(x = factor(month), y = high_sal_stress), 
+           color = "#1B9AAA", size = 2) + 
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of stressful salinity days per month", 
+       x = "month", 
+       y = "count of days") + 
+  theme_minimal()
+
+```
+
+
+# high temp stress calculations
+```{r}
+TX2$high_temp_stress <- TX2$temp > 28
+
+high_temp_stress_count <- TX2 %>%
+  mutate(year = year(datetime), 
+         month = month(datetime), 
+         day = day(datetime)) %>% 
+  filter(high_temp_stress == 1) %>%  
+  distinct(year, month, day) %>%  # remove dups
+  group_by(year, month) %>%
+  summarise(high_temp_stress = n(), .groups = "drop") # group all occurrences together by month rather than by numeric day
+
+print(high_temp_stress_count)
+
+ggplot(high_temp_stress_count, aes(x = factor(month), y = high_temp_stress, fill = factor(month))) +
+  geom_bar(stat = "identity", fill = "#DD4124FF") +
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of high temperature (> 28 C) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+
+high_temp_complete_data <- complete_year_month %>%
+  left_join(high_temp_stress_count, by = c("year", "month")) %>%
+  mutate(high_temp_stress = ifelse(is.na(high_temp_stress), 0, high_temp_stress))
+
+high_temp_complete_data$month <- as.numeric(high_temp_complete_data$month)
+
+# bars
+ggplot(high_temp_complete_data, aes(x = as.numeric(month), y = high_temp_stress)) +
+  geom_bar(stat = "identity", fill = "#DD4124FF") + 
+  facet_wrap(~ year) +
+  labs(title = "TX2: count of high temperature (> 28 C) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+# points
+ggplot(high_temp_complete_data, aes(x = as.numeric(month), y = high_temp_stress)) +
+  geom_point(color = "#DD4124FF", size = 2) + 
+  facet_wrap(~ year) +  
+  labs(title = "TX2: count of high temperature (> 28 C) days per month",
+       x = "month",
+       y = "count of days") +
+  theme_minimal()
+
+```
+
 ### We can now calculate a list of variables that we will have collected for all sites. This will allow us to compare sites easily. We will calculate the number of observations from each site, the mean annual, maximum annual, and minimum annual value for all variables. 
 
 Our list of variables includes: 
@@ -198,8 +394,23 @@ Temperature_st_dev <- sd(TX2$temp)
 Temperature_n <- nrow(TX2)
 Temperature_years <- nrow(TX2_envryear)
 
+Mean_Monthly_Temperature_C <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>% 
+  group_by(month) %>%
+  summarise(Mean_Temperature = mean(mean_temp))
+
+Mean_min_Monthly_Temperature_C <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>% 
+  group_by(month) %>%
+  summarise(Mean_min_Temperature = mean(min_temp))
+
+Mean_max_Monthly_Temperature_C <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>% 
+  group_by(month) %>%
+  summarise(Mean_max_Temperature = mean(max_temp))
+
 #Create a data frame to store the temperature results
-TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Temperature_st_dev, Temperature_n, Temperature_years, collection_type)
+TX2_temp <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Temperature_C, Mean_max_temperature_C, Mean_min_temperature_C, Mean_Monthly_Temperature_C, Mean_min_Monthly_Temperature_C, Mean_max_Monthly_Temperature_C, Temperature_st_dev, Temperature_n, Temperature_years, collection_type)
 print(TX2_temp)
 
 # Write to the combined file with all sites 
@@ -219,9 +430,23 @@ Salinity_st_dev <- sd(TX2$salinity)
 Salinity_n <- nrow(TX2)
 Salinity_years <- nrow(TX2_envryear)
 
+Mean_Monthly_Salinity <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>%
+  group_by(month) %>%
+  summarise(Mean_Salinity = mean(mean_salinity))
+
+Min_Monthly_Salinity <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>%
+  group_by(month) %>%
+  summarise(Min_Salinity = mean(min_salinity))
+
+Max_Monthly_Salinity <- TX2_envrmonth %>%
+  filter(!is.na(month)) %>%
+  group_by(month) %>%
+  summarise(Max_Salinity = mean(max_salinity))
 
 #Create a data frame to store the temperature results
-TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
+TX2_salinity <- cbind(site_name, download_date, source_description, lat, lon, firstyear, finalyear, Mean_Annual_Salinity_ppt, Mean_max_Salinity_ppt, Mean_min_Salinity_ppt, Mean_Monthly_Salinity, Min_Monthly_Salinity, Max_Monthly_Salinity, Salinity_st_dev, Salinity_n, Salinity_years, collection_type)
 print(TX2_salinity)
 
 # Write to the combined file with all sites 
@@ -229,5 +454,6 @@ write.table(TX2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/202
 
 # Write to a unique new CSV file
 write.csv(TX2_salinity, "/Users/madelineeppley/GitHub/EasternOysterEnvData/2022_SiteEnvironmentData/Seascape_Processed/TX2_salinity.csv")
+
 
 ```
